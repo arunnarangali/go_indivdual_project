@@ -1,0 +1,35 @@
+[ERROR] 2023/09/29 15:01:44 log.go:37: open templates/Home1.html: no such file or directory
+[ERROR] 2023/09/29 17:37:48 log.go:46: open templates/Home1.html: no such file or directory
+[ERROR] 2023/09/29 17:39:01 log.go:46: open templates/Home1.html: no such file or directory
+[ERROR] 2023/09/29 17:39:38 log.go:46: open templates/Home.html: no such file or directory
+[ERROR] 2023/09/29 17:39:40 log.go:46: open templates/Home.html: no such file or directory
+[ERROR] 2023/09/29 17:39:44 log.go:46: open templates/Home.html: no such file or directory
+[INFO] 2023/09/29 17:48:59 log.go:38: hai
+[INFO] 2023/09/29 17:54:05 log.go:38: hai
+[INFO] 2023/09/29 18:03:28 log.go:38: hai
+[ERROR] 2023/09/29 18:26:33 log.go:46: http: no such file
+[WARNING] 2023/09/30 10:35:09 log.go:42: invalid csv format
+[ERROR] 2023/09/30 10:35:09 log.go:46: invalid CSV format
+[WARNING] 2023/09/30 10:43:54 log.go:42: invalid csv format
+[ERROR] 2023/09/30 10:43:54 log.go:46: invalid CSV format
+[WARNING] 2023/09/30 10:44:21 log.go:42: invalid csv format
+[ERROR] 2023/09/30 10:44:21 log.go:46: invalid CSV format
+[WARNING] 2023/09/30 12:49:07 log.go:42: invalid csv format
+[ERROR] 2023/09/30 12:49:07 log.go:46: invalid CSV format
+[WARNING] 2023/09/30 18:03:20 log.go:42: invalid csv format
+[ERROR] 2023/09/30 18:03:20 log.go:46: invalid CSV format
+[WARNING] 2023/09/30 18:06:07 log.go:42: invalid csv format
+[ERROR] 2023/09/30 18:06:07 log.go:46: invalid CSV format
+[WARNING] 2023/09/30 18:11:00 log.go:42: invalid csv format
+[ERROR] 2023/09/30 18:11:00 log.go:46: invalid CSV format
+[WARNING] 2023/09/30 18:12:31 log.go:42: invalid csv format
+[ERROR] 2023/09/30 18:12:31 log.go:46: invalid CSV format
+[WARNING] 2023/10/03 11:52:03 log.go:42: invalid csv format
+[ERROR] 2023/10/03 11:52:03 log.go:46: invalid CSV format
+[ERROR] 2023/10/03 12:27:02 log.go:46: template: success.html:19:9: executing "success.html" at <.Age>: can't evaluate field Age in type types.CSVData
+[ERROR] 2023/10/03 12:29:17 log.go:46: template: success.html:19:9: executing "success.html" at <.Age>: can't evaluate field Age in type types.CSVData
+[ERROR] 2023/10/03 12:30:39 log.go:46: template: success.html:19:9: executing "success.html" at <.Age>: can't evaluate field Age in type types.CSVData
+[ERROR] 2023/10/03 12:32:02 log.go:46: template: success.html:19:9: executing "success.html" at <.Age>: can't evaluate field Age in type types.CSVData
+[ERROR] 2023/10/03 12:37:20 log.go:46: template: success.html:19:9: executing "success.html" at <.Age>: can't evaluate field Age in type types.CSVData
+[WARNING] 2023/10/03 12:41:25 log.go:42: invalid csv format
+[ERROR] 2023/10/03 12:41:25 log.go:46: invalid CSV format

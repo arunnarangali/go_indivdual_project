@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>CSV Data</title>
+</head>
+
+<body>
+	<h1>Processed CSV Data</h1>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Json</th>
+		</tr>
+		{{range .}}
+		<tr>
+			<td>{{.Name}}</td>
+			<td>{{.Email}}</td>
+			<td>{{.Json}}</td>
+		</tr>
+		{{end}}
+	</table>
+</body>
+
+</html>
