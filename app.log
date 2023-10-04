@@ -33,3 +33,11 @@
 [ERROR] 2023/10/03 12:37:20 log.go:46: template: success.html:19:9: executing "success.html" at <.Age>: can't evaluate field Age in type types.CSVData
 [WARNING] 2023/10/03 12:41:25 log.go:42: invalid csv format
 [ERROR] 2023/10/03 12:41:25 log.go:46: invalid CSV format
+[ERROR] 2023/10/04 18:37:58 log.go:46: http: no such file
+[WARNING] 2023/10/04 18:38:02 log.go:42: invalid csv format
+[ERROR] 2023/10/04 18:38:02 log.go:46: invalid CSV format
+[ERROR] 2023/10/04 18:39:06 log.go:46: template: success.html:20:9: executing "success.html" at <.Json>: can't evaluate field Json in type types.Contacts
+[ERROR] 2023/10/04 18:40:30 log.go:46: template: success.html:20:9: executing "success.html" at <.Json>: can't evaluate field Json in type types.Contacts
+[ERROR] 2023/10/04 18:40:48 log.go:46: template: success.html:20:9: executing "success.html" at <.Json>: can't evaluate field Json in type types.Contacts
+[ERROR] 2023/10/04 18:43:47 log.go:46: template: success.html:20:9: executing "success.html" at <.Json>: can't evaluate field Json in type types.Contacts
+[ERROR] 2023/10/04 18:47:55 log.go:46: template: success.html:20:9: executing "success.html" at <.Json>: can't evaluate field Json in type types.Contacts

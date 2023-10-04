@@ -1,14 +1,14 @@
 package api
 
 import (
+	"datastream/database"
 	"datastream/dataprocessing"
 	"datastream/logs"
 	"datastream/types"
 	"fmt"
-	"sync"
-
 	"html/template"
 	"net/http"
+	"sync"
 )
 
 func HomePageHandler(w http.ResponseWriter, r *http.Request) {
@@ -47,7 +47,22 @@ func generateActivitiesInBackground(csvData []types.Contacts, wg *sync.WaitGroup
 
 	for _, row := range csvData {
 		fmt.Printf("{%d,%s, %s, %s}\n", row.ID, row.Name, row.Email, row.Details)
-		dataprocessing.CallActivity(row.ID, row)
+		//   conta	dataprocessing.CallActivity(row.ID, row)
+		contactStatus, activitiesString := dataprocessing.CallActivity(row.ID, row)
+		fmt.Println(contactStatus)
+		fmt.Println("Activities:")
+		fmt.Println(activitiesString)
+		err := database.ProduceKafkaMessageActivity(activitiesString)
+		if err != nil {
+			// logs.Fatalf("Error producing Kafka message: %v", err)
+			fmt.Printf("Error producing kafka message %v", err)
+		}
+		err = database.ProduceKafkaMessageContacts(contactStatus)
+		if err != nil {
+			// logs.Fatalf("Error producing Kafka message: %v", err)
+			fmt.Printf("Error producing kafka message %v", err)
+		}
+
 	}
 }
 
@@ -110,7 +125,7 @@ func HandleUpload(w http.ResponseWriter, r *http.Request) {
 		fmt.Printf("After generateActivitiesInBackground")
 
 		fmt.Printf("Before redirectToSuccessPage")
-		// redirectToSuccessPage(w, r, csvData)
+		redirectToSuccessPage(w, r, csvData)
 		fmt.Print("After redirectToSuccessPage")
 		return
 	}
