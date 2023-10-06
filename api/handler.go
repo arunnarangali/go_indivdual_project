@@ -42,6 +42,7 @@ func GetDataFromClickHouse() {
 }
 
 func generateActivitiesInBackground(csvData []types.Contacts, wg *sync.WaitGroup) {
+	log1 := logs.Createlogfile()
 	defer fmt.Printf("generate activity func stopped\n")
 	defer wg.Done() // Decrease the wait group counter when the goroutine completes
 
@@ -49,17 +50,19 @@ func generateActivitiesInBackground(csvData []types.Contacts, wg *sync.WaitGroup
 		fmt.Printf("{%d,%s, %s, %s}\n", row.ID, row.Name, row.Email, row.Details)
 		//   conta	dataprocessing.CallActivity(row.ID, row)
 		contactStatus, activitiesString := dataprocessing.CallActivity(row.ID, row)
-		fmt.Println(contactStatus)
-		fmt.Println("Activities:")
-		fmt.Println(activitiesString)
+		log1.Info(fmt.Sprintln(contactStatus))
+		log1.Info(fmt.Sprintln("Activities:"))
+		log1.Info(fmt.Sprintln(activitiesString))
 		err := database.ProduceKafkaMessageActivity(activitiesString)
 		if err != nil {
-			// logs.Fatalf("Error producing Kafka message: %v", err)
+			log1.Error(fmt.Sprintf("Error producing kafka message %v", err))
+
 			fmt.Printf("Error producing kafka message %v", err)
 		}
 		err = database.ProduceKafkaMessageContacts(contactStatus)
 		if err != nil {
-			// logs.Fatalf("Error producing Kafka message: %v", err)
+			log1.Error(fmt.Sprintf("Error producing kafka message %v", err))
+
 			fmt.Printf("Error producing kafka message %v", err)
 		}
 
@@ -67,14 +70,17 @@ func generateActivitiesInBackground(csvData []types.Contacts, wg *sync.WaitGroup
 }
 
 func Eof() {
+	log1 := logs.Createlogfile()
 	err := database.ProduceKafkaMessageActivity("Eof")
 	if err != nil {
-		// logs.Fatalf("Error producing Kafka message: %v", err)
+		log1.Error(fmt.Sprintf("Error producing kafka message %v", err))
+
 		fmt.Printf("Error producing kafka message %v", err)
 	}
 	err = database.ProduceKafkaMessageContacts("Eof")
 	if err != nil {
-		// logs.Fatalf("Error producing Kafka message: %v", err)
+		log1.Error(fmt.Sprintf("Error producing kafka message %v", err))
+
 		fmt.Printf("Error producing kafka message %v", err)
 	}
 }
@@ -134,34 +140,28 @@ func HandleUpload(w http.ResponseWriter, r *http.Request) {
 
 		// Wait for all activities to be generated
 		wg.Wait()
-		Eof()
-		fmt.Printf("After generateActivitiesInBackground")
-
-		fmt.Printf("Before redirectToSuccessPage")
+		Eof() // call for produec eof msg
 		redirectToSuccessPage(w, r, csvData)
 		fmt.Print("After redirectToSuccessPage")
 		mysqlConnector, err := database.ConfigureMySQLDB()
 		if err != nil {
+			log1.Error(fmt.Sprintf("Error configuring MySQL database: %v\n", err))
 			fmt.Printf("Error configuring MySQL database: %v\n", err)
 			return
 		}
-
-		err = database.ConsumeKafkaMessages(mysqlConnector)
-		if err != nil {
-			fmt.Printf("Error consuming Kafka messages: %v\n", err)
-		}
-
-		mysqlConnector, err = database.ConfigureMySQLDB()
-		if err != nil {
-			fmt.Printf("Error configuring MySQL database: %v\n", err)
-			return
-		}
-
+		log1.Info(fmt.Sprintln("insertion starting in mysql Contacts table"))
 		err = database.ConsumeKafkaMessagesContact(mysqlConnector)
 		if err != nil {
+			log1.Error(fmt.Sprintf("Error consuming Kafka messages: %v\n", err))
 			fmt.Printf("Error consuming Kafka messages: %v\n", err)
 		}
-		fmt.Printf("inserted")
+		log1.Info(fmt.Sprintln("insertion starting in mysql Activity table"))
+		err = database.ConsumeKafkaMessages(mysqlConnector)
+		if err != nil {
+			log1.Error(fmt.Sprintf("Error consuming Kafka messages: %v\n", err))
+			fmt.Printf("Error consuming Kafka messages: %v\n", err)
+		}
+
 		return
 	}
 

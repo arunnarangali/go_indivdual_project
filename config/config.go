@@ -219,8 +219,8 @@ func LoadDatabaseConfig(dbType string) (DatabaseConfig, error) {
 	case "kafka":
 		kafkaConfig := KafkaConfig{
 			Broker: os.Getenv("KAFKA_BROKER"),
-			Topic1: os.Getenv("TOPIC1"),
-			Topic2: os.Getenv("TOPIC2"),
+			Topic1: os.Getenv("KAFAKA_ACTIVITY_TOPIC"),
+			Topic2: os.Getenv("KAFAKA_CONTACT_TOPIC"),
 		}
 		return kafkaConfig, nil
 	case "clickhouse":
