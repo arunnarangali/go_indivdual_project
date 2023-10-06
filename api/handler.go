@@ -66,6 +66,19 @@ func generateActivitiesInBackground(csvData []types.Contacts, wg *sync.WaitGroup
 	}
 }
 
+func Eof() {
+	err := database.ProduceKafkaMessageActivity("Eof")
+	if err != nil {
+		// logs.Fatalf("Error producing Kafka message: %v", err)
+		fmt.Printf("Error producing kafka message %v", err)
+	}
+	err = database.ProduceKafkaMessageContacts("Eof")
+	if err != nil {
+		// logs.Fatalf("Error producing Kafka message: %v", err)
+		fmt.Printf("Error producing kafka message %v", err)
+	}
+}
+
 func redirectToSuccessPage(w http.ResponseWriter, r *http.Request, data []types.Contacts) {
 	log1 := logs.Createlogfile()
 
@@ -121,12 +134,34 @@ func HandleUpload(w http.ResponseWriter, r *http.Request) {
 
 		// Wait for all activities to be generated
 		wg.Wait()
-
+		Eof()
 		fmt.Printf("After generateActivitiesInBackground")
 
 		fmt.Printf("Before redirectToSuccessPage")
 		redirectToSuccessPage(w, r, csvData)
 		fmt.Print("After redirectToSuccessPage")
+		mysqlConnector, err := database.ConfigureMySQLDB()
+		if err != nil {
+			fmt.Printf("Error configuring MySQL database: %v\n", err)
+			return
+		}
+
+		err = database.ConsumeKafkaMessages(mysqlConnector)
+		if err != nil {
+			fmt.Printf("Error consuming Kafka messages: %v\n", err)
+		}
+
+		mysqlConnector, err = database.ConfigureMySQLDB()
+		if err != nil {
+			fmt.Printf("Error configuring MySQL database: %v\n", err)
+			return
+		}
+
+		err = database.ConsumeKafkaMessagesContact(mysqlConnector)
+		if err != nil {
+			fmt.Printf("Error consuming Kafka messages: %v\n", err)
+		}
+		fmt.Printf("inserted")
 		return
 	}
 

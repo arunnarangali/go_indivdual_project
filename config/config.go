@@ -31,7 +31,7 @@ type MySQLConfig struct {
 
 // implements the DBConnector interface for MySQL.
 type MySQLConnector struct {
-	config MySQLConfig
+	Config MySQLConfig
 	Db     *sql.DB
 }
 
@@ -83,11 +83,11 @@ func (m *MySQLConnector) Connect() (*sql.DB, error) {
 
 	// Create a MySQL database connection.
 	dataSourceName := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s",
-		m.config.Username,
-		m.config.Password,
-		m.config.Hostname,
-		m.config.Port,
-		m.config.DBName)
+		m.Config.Username,
+		m.Config.Password,
+		m.Config.Hostname,
+		m.Config.Port,
+		m.Config.DBName)
 
 	db, err := sql.Open("mysql", dataSourceName)
 	if err != nil {

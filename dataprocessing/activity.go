@@ -226,12 +226,12 @@ func CallActivity(id int, contacts types.Contacts) (string, string) {
 	result := generateData(id, contacts)
 
 	// Print ContactStatus
-	contactStatus := fmt.Sprintf("(%d,%s, %s, %s, %d)\n", result.Contact.ID, result.Contact.Name, result.Contact.Email, result.Contact.Details, result.Status)
+	contactStatus := fmt.Sprintf("%s, %s, %d,'%s'\n", result.Contact.Name, result.Contact.Email, result.Status, result.Contact.Details)
 
 	activityStrings := make([]string, len(ContactActivities))
 	// Print ContactActivities slice
 	for index, activity := range ContactActivities {
-		activityStrings[index] = fmt.Sprintf("( %d, %d, %d,\"%s\"),", activity.ContactID, activity.CampaignID, activity.ActivityType, activity.ActivityDate)
+		activityStrings[index] = fmt.Sprintf("%d,%d,%d,\"%s\",\n", activity.ContactID, activity.CampaignID, activity.ActivityType, activity.ActivityDate)
 	}
 	// Join the activity strings into a single string
 	activitiesString := strings.Join(activityStrings, "")
