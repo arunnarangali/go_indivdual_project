@@ -7,5 +7,5 @@ import (
 
 func SetupRoutes() {
 	http.HandleFunc("/", api.HomePageHandler)
-	http.HandleFunc("/upload", api.HandleUpload)
+	http.HandleFunc("/upload", api.UploadHandler)
 }

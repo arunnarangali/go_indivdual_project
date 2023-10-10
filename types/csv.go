@@ -51,3 +51,5 @@ func (r MyCSVReader) ReadCSV(reader io.Reader) ([]Contacts, error) {
 
 	return data, nil
 }
+
+

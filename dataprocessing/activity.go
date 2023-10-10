@@ -204,6 +204,7 @@ func generateData(id int, contacts types.Contacts) types.ContactStatus {
 		}
 	} else {
 		Contacts = generateData(id, contacts)
+
 	}
 	return Contacts
 }

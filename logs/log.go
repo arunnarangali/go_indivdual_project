@@ -7,6 +7,8 @@ import (
 	"os"
 )
 
+// var Logger *SimpleLogger
+
 type SimpleLogger struct {
 	infoLogger    *log.Logger
 	warningLogger *log.Logger
@@ -29,7 +31,7 @@ func Createlogfile() *SimpleLogger {
 
 	Logger, err := NewSimpleLogger("app.log")
 	if err != nil {
-		fmt.Printf("faile to create")
+		Logger.Error(fmt.Sprintln("faile to create"))
 	}
 	return Logger
 }

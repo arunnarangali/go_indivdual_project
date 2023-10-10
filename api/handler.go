@@ -7,7 +7,10 @@ import (
 	"datastream/types"
 	"fmt"
 	"html/template"
+	"io"
+	"log"
 	"net/http"
+	"os"
 	"sync"
 )
 
@@ -42,46 +45,30 @@ func GetDataFromClickHouse() {
 }
 
 func generateActivitiesInBackground(csvData []types.Contacts, wg *sync.WaitGroup) {
-	log1 := logs.Createlogfile()
 	defer fmt.Printf("generate activity func stopped\n")
 	defer wg.Done() // Decrease the wait group counter when the goroutine completes
-
 	for _, row := range csvData {
 		fmt.Printf("{%d,%s, %s, %s}\n", row.ID, row.Name, row.Email, row.Details)
 		//   conta	dataprocessing.CallActivity(row.ID, row)
 		contactStatus, activitiesString := dataprocessing.CallActivity(row.ID, row)
-		log1.Info(fmt.Sprintln(contactStatus))
-		log1.Info(fmt.Sprintln("Activities:"))
-		log1.Info(fmt.Sprintln(activitiesString))
-		err := database.ProduceKafkaMessageActivity(activitiesString)
-		if err != nil {
-			log1.Error(fmt.Sprintf("Error producing kafka message %v", err))
-
-			fmt.Printf("Error producing kafka message %v", err)
-		}
-		err = database.ProduceKafkaMessageContacts(contactStatus)
-		if err != nil {
-			log1.Error(fmt.Sprintf("Error producing kafka message %v", err))
-
-			fmt.Printf("Error producing kafka message %v", err)
+		if err := database.RunKafkaProducerContacts(contactStatus); err != nil {
+			log.Fatalf("Error running Kafka producer: %v", err)
 		}
 
+		if err := database.RunKafkaProducerActivity(activitiesString); err != nil {
+			log.Fatalf("Error running Kafka producer: %v", err)
+		}
 	}
 }
 
-func Eof() {
-	log1 := logs.Createlogfile()
-	err := database.ProduceKafkaMessageActivity("Eof")
-	if err != nil {
-		log1.Error(fmt.Sprintf("Error producing kafka message %v", err))
+func produceEofmsg() {
 
-		fmt.Printf("Error producing kafka message %v", err)
+	if err := database.RunKafkaProducerContacts("Eof"); err != nil {
+		log.Fatalf("Error running Kafka producer: %v", err)
 	}
-	err = database.ProduceKafkaMessageContacts("Eof")
-	if err != nil {
-		log1.Error(fmt.Sprintf("Error producing kafka message %v", err))
 
-		fmt.Printf("Error producing kafka message %v", err)
+	if err := database.RunKafkaProducerActivity("Eof"); err != nil {
+		log.Fatalf("Error running Kafka producer: %v", err)
 	}
 }
 
@@ -107,20 +94,13 @@ func redirectToSuccessPage(w http.ResponseWriter, r *http.Request, data []types.
 }
 
 func HandleUpload(w http.ResponseWriter, r *http.Request) {
-	log1 := logs.Createlogfile()
+
 	if r.Method == http.MethodPost {
-		// Parse the form data to retrieve the uploaded file
-		err := r.ParseMultipartForm(10 << 20) // 10 MB maximum file size
-		if err != nil {
-			http.Error(w, "Unable to parse form", http.StatusBadRequest)
-			log1.Error(err.Error())
-			return
-		}
 
 		file, _, err := r.FormFile("csvfile")
 		if err != nil {
 			http.Error(w, "Unable to get the file", http.StatusBadRequest)
-			log1.Error(err.Error())
+
 			return
 		}
 		defer file.Close()
@@ -128,7 +108,6 @@ func HandleUpload(w http.ResponseWriter, r *http.Request) {
 		// You can now process the uploaded CSV file directly
 		csvData, err := types.MyCSVReader{}.ReadCSV(file)
 		if err != nil {
-			log1.Error(err.Error())
 			http.Error(w, "Error processing CSV file: "+err.Error(), http.StatusInternalServerError)
 			return
 		}
@@ -140,26 +119,18 @@ func HandleUpload(w http.ResponseWriter, r *http.Request) {
 
 		// Wait for all activities to be generated
 		wg.Wait()
-		Eof() // call for produec eof msg
+		produceEofmsg() // call for produec eof msg
 		redirectToSuccessPage(w, r, csvData)
 		fmt.Print("After redirectToSuccessPage")
-		mysqlConnector, err := database.ConfigureMySQLDB()
-		if err != nil {
-			log1.Error(fmt.Sprintf("Error configuring MySQL database: %v\n", err))
-			fmt.Printf("Error configuring MySQL database: %v\n", err)
-			return
+
+		// Run the Kafka consumer function.
+		if err := database.RunKafkaConsumerContacts(); err != nil {
+			log.Fatalf("Error running Kafka consumer: %v", err)
 		}
-		log1.Info(fmt.Sprintln("insertion starting in mysql Contacts table"))
-		err = database.ConsumeKafkaMessagesContact(mysqlConnector)
-		if err != nil {
-			log1.Error(fmt.Sprintf("Error consuming Kafka messages: %v\n", err))
-			fmt.Printf("Error consuming Kafka messages: %v\n", err)
-		}
-		log1.Info(fmt.Sprintln("insertion starting in mysql Activity table"))
-		err = database.ConsumeKafkaMessages(mysqlConnector)
-		if err != nil {
-			log1.Error(fmt.Sprintf("Error consuming Kafka messages: %v\n", err))
-			fmt.Printf("Error consuming Kafka messages: %v\n", err)
+
+		// Run the Kafka consumer function.
+		if err := database.RunKafkaConsumerActivity(); err != nil {
+			log.Fatalf("Error running Kafka consumer: %v", err)
 		}
 
 		return
@@ -167,4 +138,105 @@ func HandleUpload(w http.ResponseWriter, r *http.Request) {
 
 	// If the request method is not POST, you can provide an informative message
 	fmt.Fprintln(w, "Use POST method to upload a CSV file")
+}
+
+func UploadHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method == http.MethodPost {
+		// Parse the form data to retrieve the uploaded file
+		file, _, err := r.FormFile("csvfile")
+		if err != nil {
+			http.Error(w, "Unable to get the file", http.StatusBadRequest)
+			return
+		}
+		defer file.Close()
+
+		// Open the original file for writing
+		originalFile, err := os.Create("original.csv")
+		if err != nil {
+			http.Error(w, "Unable to open the original file", http.StatusInternalServerError)
+			return
+		}
+		defer originalFile.Close()
+
+		// Copy the contents of the uploaded file to the original file
+		_, err = io.Copy(originalFile, file)
+		if err != nil {
+			http.Error(w, "Error copying file contents", http.StatusInternalServerError)
+			return
+		}
+
+		fmt.Fprintln(w, "CSV file has been updated successfully")
+		go Readfile()
+
+		return
+	}
+
+	// If the request method is not POST, you can provide an informative message
+	fmt.Fprintln(w, "Use POST method to upload a CSV file")
+}
+
+// Assuming csvData is a []types.Contacts
+func processCSVData(csvData []types.Contacts) error {
+	var wg sync.WaitGroup
+
+	wg.Add(1) // Add one to the wait group for the generateActivitiesInBackground goroutine
+	generateActivitiesInBackground(csvData, &wg)
+
+	// Wait for all activities to be generated
+	wg.Wait()
+	produceEofmsg() // call for produce eof msg
+	return nil
+}
+
+// Separate function for running Kafka consumer for Contacts
+func runKafkaConsumerForContacts() error {
+	if err := database.RunKafkaConsumerContacts(); err != nil {
+		return fmt.Errorf("error running Kafka consumer for Contacts: %v", err)
+	}
+	return nil
+}
+
+// Separate function for running Kafka consumer for Activity
+func runKafkaConsumerForActivity() error {
+	if err := database.RunKafkaConsumerActivity(); err != nil {
+		return fmt.Errorf("error running Kafka consumer for Activity: %v", err)
+	}
+	return nil
+}
+
+// Modified Readfile function
+func Readfile() error {
+	filePath := "/home/arun/Documents/project/project/go_indivdual_project/original.csv"
+
+	// Open the CSV file
+	file, err := os.Open(filePath)
+	if err != nil {
+		return fmt.Errorf("unable to open the file: %v", err)
+	}
+	defer file.Close()
+
+	// You can now process the opened CSV file directly
+	csvData, err := types.MyCSVReader{}.ReadCSV(file)
+	if err != nil {
+		return fmt.Errorf("error processing CSV file: %v", err)
+	}
+
+	// Process CSV data concurrently
+	if err := processCSVData(csvData); err != nil {
+		return err
+	}
+
+	// Run the Kafka consumer for Contacts
+	if err := runKafkaConsumerForContacts(); err != nil {
+		return err
+	}
+
+	// Run the Kafka consumer for Activity
+	if err := runKafkaConsumerForActivity(); err != nil {
+		return err
+	}
+
+	// Continue with the rest of your code
+
+	return nil // Return nil to indicate success
 }

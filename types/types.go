@@ -1,5 +1,12 @@
 package types
 
+import (
+	"fmt"
+	"strconv"
+	"strings"
+	"time"
+)
+
 type Contacts struct {
 	ID      int
 	Name    string
@@ -52,6 +59,86 @@ func (f DefaultContactFactory) CreateContactStatus(id int, name string, email st
 		Contact: contact,
 		Status:  status,
 	}
+}
+func Extractmsgcontacts(msg []string) ([]ContactStatus, error) {
+	contactStatuses := []ContactStatus{}
+
+	for _, message := range msg {
+		message = strings.TrimSpace(message)
+		lines := strings.Split(message, "\n")
+
+		for _, line := range lines {
+			values := strings.SplitN(line, ",", 4)
+
+			if len(values) >= 4 {
+				name := strings.TrimSpace(values[0])
+				email := strings.TrimSpace(values[1])
+				statusStr := strings.TrimSpace(values[2])
+				detailsStr := strings.TrimSpace(values[3])
+
+				fmt.Printf("Processing message: name=%s, email=%s, details=%s, status=%s\n",
+					name, email, detailsStr, statusStr)
+
+				status, err := strconv.Atoi(statusStr)
+				if err != nil {
+					return nil, fmt.Errorf("invalid status format: %v", err)
+				}
+
+				contactStatus := ContactStatus{
+					Contact: Contacts{
+						Name:    name,
+						Email:   email,
+						Details: detailsStr,
+					},
+					Status: status,
+				}
+				contactStatuses = append(contactStatuses, contactStatus)
+			}
+		}
+	}
+	return contactStatuses, nil
+}
+
+func ExtractmsgActivity(msg []string) ([]ContactActivity, error) {
+	contactStatuses := []ContactActivity{} // Corrected declaration to create a slice
+	fmt.Printf("this is Acticitystring:%s", msg)
+
+	for _, message := range msg {
+		// message = strings.TrimSpace(message)
+		lines := strings.Split(message, "\n")
+		for _, line := range lines {
+			values := strings.Split(line, ",")
+
+			if len(values) >= 4 {
+				contactsid, _ := strconv.Atoi(values[0])
+				campaignidStr := strings.TrimSpace(values[1])
+				campaignid, _ := strconv.Atoi(campaignidStr)
+
+				activitytypeStr := strings.TrimSpace(values[2])
+				activitytype, _ := strconv.Atoi(activitytypeStr)
+
+				activitydateStr := strings.TrimSpace(values[3])
+
+				// Remove double quotes from activitydateStr.
+				activitydateStr = strings.Trim(activitydateStr, `"`)
+
+				// Parse 'activitydate' string to a time.Time object.
+				activitydate, _ := time.Parse("2006-01-02", activitydateStr)
+
+				fmt.Printf("Processing message:contactid=%d, campaindid=%d, activitytype=%d, activitydate=%s\n",
+					contactsid, campaignid, activitytype, activitydate)
+
+				contactactivity := ContactActivity{
+					ContactID:    contactsid,
+					CampaignID:   campaignid,
+					ActivityType: activitytype,
+					ActivityDate: activitydateStr,
+				}
+				contactStatuses = append(contactStatuses, contactactivity)
+			}
+		}
+	}
+	return contactStatuses, nil
 }
 
 type QueryOutput struct {
