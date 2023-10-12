@@ -2,6 +2,7 @@ package service
 
 import (
 	"datastream/config"
+	"datastream/logs"
 	"log"
 	"strings"
 
@@ -25,11 +26,13 @@ func NewKafkaConnector(kafkaConfig config.KafkaConfig) (*KafkaConnector, error) 
 
 	consumerGroup, err := sarama.NewConsumer([]string{broker}, nil)
 	if err != nil {
+		logs.Logger.Error("error:", err)
 		return nil, err
 	}
 
 	producer, err := sarama.NewSyncProducer([]string{broker}, config)
 	if err != nil {
+		logs.Logger.Error("error:", err)
 		return nil, err
 	}
 
@@ -51,26 +54,49 @@ func (kc *KafkaConnector) Close() error {
 	return nil
 }
 
-// ProduceMessage produces a message into the specified Kafka topic.
-func (kc *KafkaConnector) ProduceMessage(topic string, messageValue string) error {
-	// Create a new message to send to Kafka.
-	msg := &sarama.ProducerMessage{
-		Topic: topic,
-		Value: sarama.StringEncoder(messageValue),
-	}
+// // ProduceMessage produces a message into the specified Kafka topic.
+func (kc *KafkaConnector) ProduceMessages(topic string, messageValues []string) error {
+	count := 0
+	var msg []string
 
-	// Send the message to the Kafka topic using the producer.
-	_, _, err := kc.Producer.SendMessage(msg)
-	if err != nil {
-		return err
+	for _, messageValue := range messageValues {
+		msg = append(msg, messageValue)
+		count++
+		if count == 50 {
+			msgToProduce := &sarama.ProducerMessage{
+				Topic: topic,
+				Value: sarama.StringEncoder(strings.Join(msg, "\n")),
+			}
+			_, _, err := kc.Producer.SendMessage(msgToProduce)
+			if err != nil {
+				logs.Logger.Error("error:", err)
+				return err
+			}
+			count = 0
+			msg = []string{}
+		}
+	}
+	if count > 0 {
+		msgToProduce := &sarama.ProducerMessage{
+			Topic: topic,
+			Value: sarama.StringEncoder(strings.Join(msg, "\n")),
+		}
+
+		_, _, err := kc.Producer.SendMessage(msgToProduce)
+		if err != nil {
+			logs.Logger.Error("error:", err)
+			return err
+		}
 	}
 
 	return nil
 }
+
 func (kc *KafkaConnector) ConsumeMessages(topic string) error {
 	// Create a new consumer for the specified topic and partition.
 	partitionConsumer, err := kc.Consumer.ConsumePartition(topic, 0, sarama.OffsetOldest)
 	if err != nil {
+		logs.Logger.Error("error:", err)
 		return err
 	}
 	defer partitionConsumer.Close()
@@ -82,39 +108,39 @@ func (kc *KafkaConnector) ConsumeMessages(topic string) error {
 			log.Printf("Error in Kafka consumer: %v", err)
 			// Handle the error as needed.
 		case msg := <-partitionConsumer.Messages():
-			// Process the consumed message here.
+
 			log.Printf("Received message from topic %s, partition %d: %s",
 				msg.Topic, msg.Partition, string(msg.Value))
 			message := string(msg.Value)
 			msgStrings := []string{string(msg.Value)}
 
-			// Check if the message contains "Eof" anywhere in it.
 			if !strings.Contains(message, "Eof") {
-				// Assuming you have a dbConnector instance
 				err := Getmsg(msgStrings, topic)
 				if err != nil {
 					log.Printf("Error inserting contact: %v", err)
-					// Handle the error as needed, possibly continue processing.
+
 				} else {
-					log.Printf("Contact inserted successfully ")
+					log.Printf(" inserted successfully ")
 				}
 			} else {
-				return nil // Return nil when the message contains "Eof."
+				return nil
 			}
 		}
 	}
 }
 
 func ConfigureKafka() (*KafkaConnector, *string, *string, error) {
-	// Load Kafka configuration from your environment variables or config file.
+
 	kafkaConfig, err := config.LoadDatabaseConfig("kafka")
 	if err != nil {
+		logs.Logger.Error("error:", err)
 		return nil, nil, nil, err
 	}
 
 	// Create a KafkaConnector instance.
 	kafkaConnector, err := NewKafkaConnector(kafkaConfig.(config.KafkaConfig))
 	if err != nil {
+		logs.Logger.Error("error:", err)
 		return nil, nil, nil, err
 	}
 	// Specify the topic and message value you want to produce.

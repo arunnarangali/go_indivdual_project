@@ -45,3 +45,34 @@
 [ERROR] 2023/10/10 15:41:14 log.go:48: invalid CSV format
 [WARNING] 2023/10/10 15:45:51 log.go:44: invalid csv format
 [ERROR] 2023/10/10 15:45:51 log.go:48: invalid CSV format
+[ERROR] 2023/10/12 11:47:56 log.go:82: error in get homepage: open templates/HomePage1.html: no such file or directory
+[ERROR] 2023/10/12 13:15:28 log.go:82: Unable to get the file: http: no such file
+[ERROR] 2023/10/12 13:15:35 log.go:82: Unable to get the file: http: no such file
+[ERROR] 2023/10/12 15:58:31 log.go:82: error:: sql: expected 5 arguments, got 4
+[ERROR] 2023/10/12 15:58:31 log.go:82: error inserting contact:: sql: expected 5 arguments, got 4
+[ERROR] 2023/10/12 15:58:31 log.go:82: error inserting contact: : error inserting contact: sql: expected 5 arguments, got 4
+[ERROR] 2023/10/12 15:58:31 log.go:82: error in handle topic:: error inserting contact: error inserting contact: sql: expected 5 arguments, got 4
+[ERROR] 2023/10/12 16:01:59 log.go:82: error:: Error 1264 (22003): Out of range value for column 'ID' at row 1
+[ERROR] 2023/10/12 16:01:59 log.go:82: error inserting contact:: Error 1264 (22003): Out of range value for column 'ID' at row 1
+[ERROR] 2023/10/12 16:01:59 log.go:82: error inserting contact: : error inserting contact: Error 1264 (22003): Out of range value for column 'ID' at row 1
+[ERROR] 2023/10/12 16:01:59 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1264 (22003): Out of range value for column 'ID' at row 1
+[ERROR] 2023/10/12 16:08:37 log.go:82: error:: Error 1264 (22003): Out of range value for column 'ID' at row 1
+[ERROR] 2023/10/12 16:08:37 log.go:82: error inserting contact:: Error 1264 (22003): Out of range value for column 'ID' at row 1
+[ERROR] 2023/10/12 16:08:37 log.go:82: error inserting contact: : error inserting contact: Error 1264 (22003): Out of range value for column 'ID' at row 1
+[ERROR] 2023/10/12 16:08:37 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1264 (22003): Out of range value for column 'ID' at row 1
+[ERROR] 2023/10/12 16:18:35 log.go:82: error:: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
+[ERROR] 2023/10/12 16:18:35 log.go:82: error inserting contact:: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
+[ERROR] 2023/10/12 16:18:35 log.go:82: error inserting contact: : error inserting contact: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
+[ERROR] 2023/10/12 16:18:35 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
+[ERROR] 2023/10/12 16:27:51 log.go:82: error:: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
+[ERROR] 2023/10/12 16:27:51 log.go:82: error inserting contact:: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
+[ERROR] 2023/10/12 16:27:51 log.go:82: error inserting contact: : error inserting contact: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
+[ERROR] 2023/10/12 16:27:51 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
+[ERROR] 2023/10/12 16:34:02 log.go:82: error:: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
+[ERROR] 2023/10/12 16:34:02 log.go:82: error inserting contact:: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
+[ERROR] 2023/10/12 16:34:02 log.go:82: error inserting contact: : error inserting contact: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
+[ERROR] 2023/10/12 16:34:02 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
+[ERROR] 2023/10/12 18:16:58 log.go:82: error:: kafka: invalid configuration (Attempt to produce message larger than configured Producer.MaxMessageBytes: 1317496 > 1000000)
+[ERROR] 2023/10/12 18:16:58 log.go:82: error:: kafka: invalid configuration (Attempt to produce message larger than configured Producer.MaxMessageBytes: 1317496 > 1000000)
+[ERROR] 2023/10/12 18:19:23 log.go:82: error:: kafka: invalid configuration (Attempt to produce message larger than configured Producer.MaxMessageBytes: 1443083 > 1000000)
+[ERROR] 2023/10/12 18:19:23 log.go:82: error:: kafka: invalid configuration (Attempt to produce message larger than configured Producer.MaxMessageBytes: 1443083 > 1000000)

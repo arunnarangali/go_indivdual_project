@@ -3,7 +3,9 @@ package service
 import (
 	"database/sql"
 	"datastream/config"
+	"datastream/logs"
 	"datastream/types"
+	"strconv"
 
 	"log"
 	"os"
@@ -26,12 +28,6 @@ type MySQLConnector struct {
 	Db     *sql.DB
 }
 
-// // ClickHouseConnector implements the DBConnector interface for ClickHouse.
-// type ClickHouseConnector struct {
-// 	config config.ClickHouseConfig // Use the ClickHouseConfig from the config package
-// 	db     *sql.DB
-// }
-
 // Implement the Connect method for MySQLConnector.
 func (m *MySQLConnector) Connect() (*sql.DB, error) {
 	if m.Db != nil {
@@ -48,11 +44,13 @@ func (m *MySQLConnector) Connect() (*sql.DB, error) {
 
 	db, err := sql.Open("mysql", dataSourceName)
 	if err != nil {
+		logs.Logger.Error("error:", err)
 		return nil, err
 	}
 
 	// Test the connection.
 	if err := db.Ping(); err != nil {
+		logs.Logger.Error("error:", err)
 		return nil, err
 	}
 
@@ -65,6 +63,7 @@ func (m *MySQLConnector) Close() error {
 	if m.Db != nil {
 		err := m.Db.Close()
 		m.Db = nil
+		logs.Logger.Error("error:", err)
 		return err
 	}
 	return nil
@@ -74,6 +73,7 @@ func ConfigureMySQLDB() (*MySQLConnector, error) {
 
 	configData, err := config.LoadDatabaseConfig("mysql")
 	if err != nil {
+		logs.Logger.Error("error:", err)
 		return nil, fmt.Errorf("failed to load database config: %v", err)
 	}
 	// Ensure the database type is MySQL.
@@ -91,16 +91,19 @@ func Getmsg(msg []string, topic string) error {
 
 	dbConnector, err := ConfigureMySQLDB()
 	if err != nil {
+		logs.Logger.Error("error to get config", err)
 		return fmt.Errorf("error to get config: %v", err)
 	}
 	// Connect to the database
 	db, err := dbConnector.Connect()
 	if err != nil {
+		logs.Logger.Error("error connecting to the database:", err)
 		return fmt.Errorf("error connecting to the database: %v", err)
 	}
 	defer db.Close()
 	err = handleTopic(db, msg, topic)
 	if err != nil {
+		logs.Logger.Error("error in handle topic:", err)
 		return fmt.Errorf("error in handle topic: %v", err)
 	}
 	return nil
@@ -108,20 +111,23 @@ func Getmsg(msg []string, topic string) error {
 
 func handleTopic(db *sql.DB, msg []string, topic string) error {
 	if err := godotenv.Load(); err != nil {
+		logs.Logger.Error("Error loading .env file: ", err)
 		log.Fatalf("Error loading .env file: %v", err)
 		return err
 	}
 
 	if topic == os.Getenv("KAFAKA_CONTACT_TOPIC") {
 		// Call InsertContact to insert the contacts
-		Contactid, err := InsertContact(db, msg)
+		Contactid, err := InsertContacts(db, msg)
 		if err != nil {
+			logs.Logger.Error("error inserting contact: ", err)
 			return fmt.Errorf("error inserting contact: %v", err)
 		}
 		fmt.Println(Contactid)
 	} else if topic == os.Getenv("KAFAKA_ACTIVITY_TOPIC") {
 		activityid, err := InsertContactActivity(db, msg)
 		if err != nil {
+			logs.Logger.Error("error inserting contact activity: ", err)
 			return fmt.Errorf("error inserting contact activity: %v", err)
 		}
 		fmt.Println(activityid)
@@ -130,69 +136,77 @@ func handleTopic(db *sql.DB, msg []string, topic string) error {
 	return nil
 }
 
-func InsertContact(db *sql.DB, msg []string) ([]int64, error) {
-	// Begin a transaction
+// InsertContacts inserts multiple contact records into the database in a transaction.
+func InsertContacts(db *sql.DB, msg []string) ([]int64, error) {
 	tx, err := db.Begin()
 	if err != nil {
+		logs.Logger.Error("error starting a transaction", err)
 		return nil, fmt.Errorf("error starting a transaction: %v", err)
 	}
-	defer tx.Rollback() // Rollback the transaction if there is an error
+	defer tx.Rollback()
 
 	contactIDs := []int64{}
 
 	contactStatuses, err := types.Extractmsgcontacts(msg)
 	if err != nil {
+		logs.Logger.Error("error extracting contact statuses", err)
 		return nil, fmt.Errorf("error extracting contact statuses: %v", err)
 	}
 
-	// Perform the insert operation with the transaction
+	stmt, err := tx.Prepare("INSERT INTO Contacts (ID,Name, Email, Details, Status) VALUES (?,?, ?, ?, ?)")
+	if err != nil {
+		logs.Logger.Error("error preparing statement:", err)
+		return nil, fmt.Errorf("error preparing statement: %v", err)
+	}
+	defer stmt.Close()
+
 	for _, contactStatus := range contactStatuses {
-		lastInsertID, err := InsertSingleContactWithTx(tx,
-			contactStatus.Contact.Name, contactStatus.Contact.Email, contactStatus.Contact.Details,
-			contactStatus.Status)
+		lastInsertID, err := insertSingleContactWithTx(stmt, contactStatus.Contact, contactStatus.Status)
 		if err != nil {
+			logs.Logger.Error("error inserting contact:", err)
 			return nil, fmt.Errorf("error inserting contact: %v", err)
 		}
 		contactIDs = append(contactIDs, lastInsertID)
 	}
 
-	// Commit the transaction if all inserts were successful
 	if err := tx.Commit(); err != nil {
+		logs.Logger.Error("error committing transaction:", err)
 		return nil, fmt.Errorf("error committing transaction: %v", err)
 	}
 
 	return contactIDs, nil
 }
 
-func InsertSingleContactWithTx(tx *sql.Tx, name, email, details string, status int) (int64, error) {
-	// Insert a single contact using the provided transaction
-	// Replace this with your actual insert query
-	result, err := tx.Exec("INSERT INTO contacts (name, email, details, status) VALUES (?, ?, ?, ?)",
-		name, email, details, status)
+func insertSingleContactWithTx(stmt *sql.Stmt, contact types.Contacts, status int) (int64, error) {
+	res, err := stmt.Exec(contact.ID, contact.Name, contact.Email, contact.Details, status)
 	if err != nil {
+		logs.Logger.Error("error:", err)
 		return 0, err
 	}
 
-	lastInsertID, err := result.LastInsertId()
+	lastInsertID, err := res.LastInsertId()
 	if err != nil {
+		logs.Logger.Error("error:", err)
 		return 0, err
 	}
 
 	return lastInsertID, nil
 }
 
-func InsertContactActivity(db *sql.DB, msg []string) ([]int64, error) {
+func InsertContactActivity(db *sql.DB, msg []string) ([]string, error) {
 	// Begin a transaction
 	tx, err := db.Begin()
 	if err != nil {
+		logs.Logger.Error("error starting a transation:", err)
 		return nil, fmt.Errorf("error starting a transaction: %v", err)
 	}
-	defer tx.Rollback() // Rollback the transaction if there is an error
+	defer tx.Rollback()
 
-	contactIDs := []int64{}
+	contactIDs := []string{}
 
 	contactActivity, err := types.ExtractmsgActivity(msg)
 	if err != nil {
+		logs.Logger.Error("error extracting contact stauses:", err)
 		return nil, fmt.Errorf("error extracting contact statuses: %v", err)
 	}
 
@@ -201,6 +215,7 @@ func InsertContactActivity(db *sql.DB, msg []string) ([]int64, error) {
 		lastInsertID, err := InsertSingleContactActivityWithTx(tx,
 			activity.ContactID, activity.CampaignID, activity.ActivityType, activity.ActivityDate)
 		if err != nil {
+			logs.Logger.Error("error inserting contact:", err)
 			return nil, fmt.Errorf("error inserting contact: %v", err)
 		}
 		contactIDs = append(contactIDs, lastInsertID)
@@ -208,25 +223,27 @@ func InsertContactActivity(db *sql.DB, msg []string) ([]int64, error) {
 
 	// Commit the transaction if all inserts were successful
 	if err := tx.Commit(); err != nil {
+		logs.Logger.Error("error commiting transaction:", err)
 		return nil, fmt.Errorf("error committing transaction: %v", err)
 	}
 
 	return contactIDs, nil
 }
-
-func InsertSingleContactActivityWithTx(tx *sql.Tx, contactsid, campaignid, activitytype int, actiivtydate string) (int64, error) {
+func InsertSingleContactActivityWithTx(tx *sql.Tx, contactsid string, campaignid, activitytype int, actiivtydate string) (string, error) {
 	// Insert a single contact using the provided transaction
-	// Replace this with your actual insert query
-	result, err := tx.Exec("INSERT INTO contact_activity (ContactsID,CampaignID,ActivityType,ActivityDate)VALUES (?, ?, ?, ?)",
+	result, err := tx.Exec("INSERT INTO ContactActivity (ContactsID, CampaignID, ActivityType, ActivityDate) VALUES (?, ?, ?, ?)",
 		contactsid, campaignid, activitytype, actiivtydate)
 	if err != nil {
-		return 0, err
+		logs.Logger.Error("error:", err)
+		return "", err
 	}
 
 	lastInsertID, err := result.LastInsertId()
 	if err != nil {
-		return 0, err
+		logs.Logger.Error("error:", err)
+		return "", err
 	}
 
-	return lastInsertID, nil
+	lastInsertIDStr := strconv.FormatInt(lastInsertID, 10) // Convert int64 to string
+	return lastInsertIDStr, nil
 }

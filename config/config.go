@@ -1,6 +1,7 @@
 package config
 
 import (
+	"datastream/logs"
 	"fmt"
 	"log"
 	"os"
@@ -8,12 +9,10 @@ import (
 	"github.com/joho/godotenv"
 )
 
-// DatabaseConfig is an interface for database configurations.
 type DatabaseConfig interface {
 	GetConfig() map[string]string
 }
 
-// MySQL connection configuration.
 type MySQLConfig struct {
 	Username string
 	Password string
@@ -22,14 +21,12 @@ type MySQLConfig struct {
 	DBName   string
 }
 
-// Kafka connection configuration.
 type KafkaConfig struct {
 	Broker string
 	Topic1 string
 	Topic2 string
 }
 
-// ClickHouseConfig represents the configuration for ClickHouse.
 type ClickHouseConfig struct {
 	Username string
 	Password string
@@ -38,7 +35,6 @@ type ClickHouseConfig struct {
 	DBName   string
 }
 
-// Implement the DatabaseConfig interface for MySQLConfig.
 func (m MySQLConfig) GetConfig() map[string]string {
 	return map[string]string{
 		"Username": m.Username,
@@ -49,14 +45,12 @@ func (m MySQLConfig) GetConfig() map[string]string {
 	}
 }
 
-// Implement the DatabaseConfig interface for KafkaConfig.
 func (k KafkaConfig) GetConfig() map[string]string {
 	return map[string]string{
 		"Broker": k.Broker,
 	}
 }
 
-// Implement the DatabaseConfig interface for ClickHouseConfig.
 func (c ClickHouseConfig) GetConfig() map[string]string {
 	return map[string]string{
 		"Username": c.Username,
@@ -69,6 +63,7 @@ func (c ClickHouseConfig) GetConfig() map[string]string {
 
 func LoadDatabaseConfig(dbType string) (DatabaseConfig, error) {
 	if err := godotenv.Load(); err != nil {
+		logs.Logger.Error("Error loading .env file:", err)
 		log.Fatalf("Error loading .env file: %v", err)
 		return nil, err
 	}
@@ -100,6 +95,7 @@ func LoadDatabaseConfig(dbType string) (DatabaseConfig, error) {
 		}
 		return clickHouseConfig, nil
 	default:
+		logs.Logger.Warning("unsupported DB_TYPE:")
 		return nil, fmt.Errorf("unsupported DB_TYPE: %s", dbType)
 	}
 }

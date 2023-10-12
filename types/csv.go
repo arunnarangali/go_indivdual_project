@@ -1,10 +1,14 @@
 package types
 
 import (
+	crypto "crypto/rand"
 	"datastream/logs"
 	"encoding/csv"
 	"fmt"
 	"io"
+	"strings"
+
+	"github.com/google/uuid"
 )
 
 // type CSVData struct {
@@ -21,10 +25,9 @@ type CSVReader interface {
 type MyCSVReader struct{}
 
 func (r MyCSVReader) ReadCSV(reader io.Reader) ([]Contacts, error) {
-	log1 := logs.Createlogfile()
+
 	csvReader := csv.NewReader(reader)
 	var data []Contacts
-	id := 0 // Declare the id variable outside the loop
 
 	for {
 		record, err := csvReader.Read()
@@ -32,16 +35,16 @@ func (r MyCSVReader) ReadCSV(reader io.Reader) ([]Contacts, error) {
 			break
 		}
 		if err != nil {
-			log1.Error(err.Error())
+			logs.Logger.Error("Error in reading", err)
 			return nil, err
 		}
 
 		if len(record) != 3 { // Expecting four columns per row
-			log1.Warning("invalid csv format")
+			logs.Logger.Warning("invalid csv format")
 			return nil, fmt.Errorf("invalid CSV format")
 		}
 
-		id++ // Increment the id for each row
+		id := generateRandomID()
 		name := record[0]
 		email := record[1]
 		json := record[2]
@@ -52,4 +55,30 @@ func (r MyCSVReader) ReadCSV(reader io.Reader) ([]Contacts, error) {
 	return data, nil
 }
 
+func generateRandomID() string {
 
+	uuidObj, err := uuid.NewRandom()
+
+	if err != nil {
+
+		logs.Logger.Error("Error creating id", err)
+
+	}
+
+	randomBytes := make([]byte, 8)
+
+	_, err = io.ReadFull(crypto.Reader, randomBytes) // Use rand.Reader from crypto/rand
+
+	if err != nil {
+
+		logs.Logger.Error("Error creating id", err)
+
+	}
+
+	randomString := fmt.Sprintf("%s-%x", uuidObj, randomBytes)
+
+	randomString = strings.ReplaceAll(randomString, "-", "")
+
+	return randomString
+
+}

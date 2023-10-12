@@ -1,6 +1,7 @@
 package types
 
 import (
+	"datastream/logs"
 	"fmt"
 	"strconv"
 	"strings"
@@ -8,7 +9,7 @@ import (
 )
 
 type Contacts struct {
-	ID      int
+	ID      string
 	Name    string
 	Email   string
 	Details string
@@ -16,7 +17,7 @@ type Contacts struct {
 
 type ContactActivity struct {
 	ID           int
-	ContactID    int
+	ContactID    string
 	CampaignID   int
 	ActivityType int
 	ActivityDate string
@@ -37,7 +38,8 @@ type ContactFactory interface {
 // DefaultContactFactory struct
 type DefaultContactFactory struct{}
 
-func (f DefaultContactFactory) CreateContactActivity(id int, contactid int, campaignid int, activitytytype int, activitydate string) ContactActivity {
+func (f DefaultContactFactory) CreateContactActivity(id int, contactid string, campaignid int,
+	activitytytype int, activitydate string) ContactActivity {
 	return ContactActivity{
 		ID:           id,
 		ContactID:    contactid,
@@ -47,7 +49,7 @@ func (f DefaultContactFactory) CreateContactActivity(id int, contactid int, camp
 	}
 }
 
-func (f DefaultContactFactory) CreateContactStatus(id int, name string, email string, details string, status int) ContactStatus {
+func (f DefaultContactFactory) CreateContactStatus(id string, name string, email string, details string, status int) ContactStatus {
 	contact := Contacts{
 		ID:      id,
 		Name:    name,
@@ -62,30 +64,33 @@ func (f DefaultContactFactory) CreateContactStatus(id int, name string, email st
 }
 func Extractmsgcontacts(msg []string) ([]ContactStatus, error) {
 	contactStatuses := []ContactStatus{}
-
 	for _, message := range msg {
-		message = strings.TrimSpace(message)
+		// message = strings.TrimSpace(message)
+
 		lines := strings.Split(message, "\n")
 
 		for _, line := range lines {
-			values := strings.SplitN(line, ",", 4)
+			values := strings.SplitN(line, ",", 5)
 
-			if len(values) >= 4 {
-				name := strings.TrimSpace(values[0])
-				email := strings.TrimSpace(values[1])
-				statusStr := strings.TrimSpace(values[2])
-				detailsStr := strings.TrimSpace(values[3])
+			if len(values) >= 5 {
+				id := strings.TrimSpace(values[0])
+				name := strings.TrimSpace(values[1])
+				email := strings.TrimSpace(values[2])
+				statusStr := strings.TrimSpace(values[3])
+				detailsStr := strings.TrimSpace(values[4])
 
-				fmt.Printf("Processing message: name=%s, email=%s, details=%s, status=%s\n",
-					name, email, detailsStr, statusStr)
+				fmt.Printf("Processing message:id=%s , name=%s, email=%s, details=%s, status=%s\n",
+					id, name, email, detailsStr, statusStr)
 
 				status, err := strconv.Atoi(statusStr)
 				if err != nil {
+					logs.Logger.Error("invalid status format:", err)
 					return nil, fmt.Errorf("invalid status format: %v", err)
 				}
 
 				contactStatus := ContactStatus{
 					Contact: Contacts{
+						ID:      id,
 						Name:    name,
 						Email:   email,
 						Details: detailsStr,
@@ -110,7 +115,7 @@ func ExtractmsgActivity(msg []string) ([]ContactActivity, error) {
 			values := strings.Split(line, ",")
 
 			if len(values) >= 4 {
-				contactsid, _ := strconv.Atoi(values[0])
+				contactsid := strings.TrimSpace(values[0])
 				campaignidStr := strings.TrimSpace(values[1])
 				campaignid, _ := strconv.Atoi(campaignidStr)
 
@@ -125,7 +130,7 @@ func ExtractmsgActivity(msg []string) ([]ContactActivity, error) {
 				// Parse 'activitydate' string to a time.Time object.
 				activitydate, _ := time.Parse("2006-01-02", activitydateStr)
 
-				fmt.Printf("Processing message:contactid=%d, campaindid=%d, activitytype=%d, activitydate=%s\n",
+				fmt.Printf("Processing message:contactid=%s, campaindid=%d, activitytype=%d, activitydate=%s\n",
 					contactsid, campaignid, activitytype, activitydate)
 
 				contactactivity := ContactActivity{
@@ -142,4 +147,6 @@ func ExtractmsgActivity(msg []string) ([]ContactActivity, error) {
 }
 
 type QueryOutput struct {
+	ContactID int
+	Click     int
 }

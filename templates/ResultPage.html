@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Top Contact Activity</title>
+</head>
+
+<body>
+	<h1>Top Contact Activity</h1>
+	<button id="loadResults">Load Results</button>
+	<div id="resultsTable" style="display: none;">
+		<table border="1">
+			<tr>
+				<th>Contact ID</th>
+				<th>Clicked</th>
+			</tr>
+			<!-- Results will be displayed here -->
+		</table>
+	</div>
+
+	<script>
+		document.getElementById("loadResults").addEventListener("click", function () {
+			fetch("/result")
+				.then(response => response.json())
+				.then(data => {
+					const resultsTable = document.getElementById("resultsTable");
+					resultsTable.style.display = "block";
+					const table = resultsTable.querySelector("table");
+					table.innerHTML = "<tr><th>Contact ID</th><th>Clicked</th></tr>";
+
+					data.forEach(row => {
+						table.innerHTML += `<tr><td>${row.ContactID}</td><td>${row.Click}</td></tr>`;
+					});
+				});
+		});
+	</script>
+</body>
+
+</html>
