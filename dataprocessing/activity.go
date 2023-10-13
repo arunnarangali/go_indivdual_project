@@ -217,7 +217,7 @@ func appendContactActivity(contactID string, campaignID, activityType int, activ
 }
 
 func CallActivity(id string, contacts types.Contacts) (string, string) {
-	activityDateX, _ = time.Parse("2006-01-02", "2023-01-01")
+	activityDateX, _ = time.Parse("2006-01-02", "2023-07-01")
 	activityDate = activityDateX
 	calculateActivityDate()
 	i = 0

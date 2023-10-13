@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"html/template"
 	"io"
-	"log"
+
 	"net/http"
 	"os"
 	"sync"
@@ -32,14 +32,14 @@ func HomePageHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func generateActivitiesInBackground(csvData []types.Contacts, wg *sync.WaitGroup) {
-	defer fmt.Printf("generate activity func stopped\n")
+	defer logs.Logger.Info("generate activity func stopped\n")
 	defer wg.Done()
 
 	var contactStatuses []string
 	var activitiesStrings []string
 
 	for _, row := range csvData {
-		fmt.Printf("{%s,%s, %s, %s}\n", row.ID, row.Name, row.Email, row.Details)
+		// fmt.Printf("{%s,%s, %s, %s}\n", row.ID, row.Name, row.Email, row.Details)
 
 		contactStatus, activitiesString := dataprocessing.CallActivity(row.ID, row)
 		contactStatuses = append(contactStatuses, contactStatus)
@@ -47,39 +47,21 @@ func generateActivitiesInBackground(csvData []types.Contacts, wg *sync.WaitGroup
 	}
 
 	if err := database.RunKafkaProducerContacts(contactStatuses); err != nil {
-		log.Fatalf("Error running Kafka producer for contacts: %v", err)
+		logs.Logger.Error("Error running Kafka producer for contacts:", err)
 	}
 
 	if err := database.RunKafkaProducerActivity(activitiesStrings); err != nil {
-		log.Fatalf("Error running Kafka producer for activities: %v", err)
+		logs.Logger.Error("Error running Kafka producer for activities:", err)
 	}
 }
 
 func produceEofmsg() {
 	if err := database.RunKafkaProducerContacts([]string{"Eof"}); err != nil {
-		log.Fatalf("Error running Kafka producer for contacts: %v", err)
+		logs.Logger.Error("Error running Kafka producer for eof:", err)
 	}
 
 	if err := database.RunKafkaProducerActivity([]string{"Eof"}); err != nil {
-		log.Fatalf("Error running Kafka producer for activities: %v", err)
-	}
-}
-
-func redirectToSuccessPage(w http.ResponseWriter, r *http.Request, data []types.Contacts) {
-
-	fmt.Println("Redirecting to success page")
-	tmpl, err := template.ParseFiles("templates/success.html")
-	if err != nil {
-		logs.Logger.Error("Internal Server Error", err)
-		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
-
-		return
-	}
-	err = tmpl.Execute(w, data)
-	if err != nil {
-		logs.Logger.Error("error on excute succces page", err)
-		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
-		return
+		logs.Logger.Error("Error running Kafka producer for eof:", err)
 	}
 }
 
@@ -88,7 +70,6 @@ func UploadHandler(w http.ResponseWriter, r *http.Request) {
 		file, _, err := r.FormFile("csvfile")
 		if err != nil {
 			logs.Logger.Error("Unable to get the file", err)
-			http.Error(w, "Unable to get the file", http.StatusBadRequest)
 			return
 		}
 		defer file.Close()
@@ -96,7 +77,6 @@ func UploadHandler(w http.ResponseWriter, r *http.Request) {
 		originalFile, err := os.Create("original.csv")
 		if err != nil {
 			logs.Logger.Error("unable to open the original file", err)
-			http.Error(w, "Unable to open the original file", http.StatusInternalServerError)
 			return
 		}
 		defer originalFile.Close()
@@ -105,7 +85,6 @@ func UploadHandler(w http.ResponseWriter, r *http.Request) {
 		_, err = io.Copy(originalFile, file)
 		if err != nil {
 			logs.Logger.Error("Error copying file Contents", err)
-			http.Error(w, "Error copying file contents", http.StatusInternalServerError)
 			return
 		}
 

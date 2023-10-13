@@ -147,6 +147,6 @@ func ExtractmsgActivity(msg []string) ([]ContactActivity, error) {
 }
 
 type QueryOutput struct {
-	ContactID int
+	ContactID string
 	Click     int
 }

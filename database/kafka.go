@@ -23,6 +23,7 @@ func RunKafkaProducerContacts(messages []string) error {
 		logs.Logger.Error("Error:", err)
 		return err
 	}
+	logs.Logger.Info("Messages successfully produced to kafka")
 	fmt.Println("Messages successfully produced to Kafka.")
 	return nil
 }
@@ -66,6 +67,7 @@ func RunKafkaProducerActivity(messages []string) error {
 		logs.Logger.Error("error:", err)
 		return err
 	}
+	logs.Logger.Info("Message successfully produced to Kafka")
 	fmt.Println("Message successfully produced to Kafka.")
 	return nil
 }

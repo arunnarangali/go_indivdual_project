@@ -123,14 +123,14 @@ func handleTopic(db *sql.DB, msg []string, topic string) error {
 			logs.Logger.Error("error inserting contact: ", err)
 			return fmt.Errorf("error inserting contact: %v", err)
 		}
-		fmt.Println(Contactid)
+		fmt.Printf("Contactid length: %d\n", len(Contactid))
 	} else if topic == os.Getenv("KAFAKA_ACTIVITY_TOPIC") {
 		activityid, err := InsertContactActivity(db, msg)
 		if err != nil {
 			logs.Logger.Error("error inserting contact activity: ", err)
 			return fmt.Errorf("error inserting contact activity: %v", err)
 		}
-		fmt.Println(activityid)
+		fmt.Printf("activityid length: %d\n", len(activityid))
 	}
 
 	return nil

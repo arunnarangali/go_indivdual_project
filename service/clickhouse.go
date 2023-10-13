@@ -89,7 +89,7 @@ func QueryTopContactActivity() ([]types.QueryOutput, error) {
 
 	query := `
 		SELECT ContactsID, clicked
-		FROM mydatabase.contact_activity_summary_mv_last_three_month_contacts
+		FROM arun_campaign.contact_activity_summary_mv_last_three_month_contacts3 FINAL
 		ORDER BY clicked DESC
 		LIMIT 5
 	`
