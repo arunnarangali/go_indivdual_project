@@ -1,7 +1,6 @@
 package api
 
 import (
-	"datastream/database"
 	"datastream/dataprocessing"
 	"datastream/logs"
 	"datastream/service"
@@ -77,21 +76,21 @@ func generateActivitiesInBackground(csvData []types.Contacts, wg *sync.WaitGroup
 		activitiesStrings = append(activitiesStrings, activitiesString)
 	}
 
-	if err := database.RunKafkaProducerContacts(contactStatuses); err != nil {
+	if err := service.RunKafkaProducerContacts(contactStatuses); err != nil {
 		logs.Logger.Error("Error running Kafka producer for contacts:", err)
 	}
 
-	if err := database.RunKafkaProducerActivity(activitiesStrings); err != nil {
+	if err := service.RunKafkaProducerActivity(activitiesStrings); err != nil {
 		logs.Logger.Error("Error running Kafka producer for activities:", err)
 	}
 }
 
 func produceEofmsg() {
-	if err := database.RunKafkaProducerContacts([]string{"Eof"}); err != nil {
+	if err := service.RunKafkaProducerContacts([]string{"Eof"}); err != nil {
 		logs.Logger.Error("Error running Kafka producer for eof:", err)
 	}
 
-	if err := database.RunKafkaProducerActivity([]string{"Eof"}); err != nil {
+	if err := service.RunKafkaProducerActivity([]string{"Eof"}); err != nil {
 		logs.Logger.Error("Error running Kafka producer for eof:", err)
 	}
 }
@@ -108,7 +107,7 @@ func processCSVData(csvData []types.Contacts) error {
 }
 
 func runKafkaConsumerForContacts() error {
-	if err := database.RunKafkaConsumerContacts(); err != nil {
+	if err := service.RunKafkaConsumerContacts(); err != nil {
 		logs.Logger.Error("error running Kafka consumer for Contacts", err)
 		return fmt.Errorf("error running Kafka consumer for Contacts: %v", err)
 	}
@@ -117,7 +116,7 @@ func runKafkaConsumerForContacts() error {
 
 // Separate function for running Kafka consumer for Activity
 func runKafkaConsumerForActivity() error {
-	if err := database.RunKafkaConsumerActivity(); err != nil {
+	if err := service.RunKafkaConsumerActivity(); err != nil {
 		logs.Logger.Error("error running Kafka consumer for Activity: ", err)
 		return fmt.Errorf("error running Kafka consumer for Activity: %v", err)
 	}
