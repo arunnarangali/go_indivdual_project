@@ -7,7 +7,6 @@ import (
 	"datastream/types"
 	"strconv"
 
-	"log"
 	"os"
 
 	"fmt"
@@ -112,7 +111,6 @@ func Getmsg(msg []string, topic string) error {
 func handleTopic(db *sql.DB, msg []string, topic string) error {
 	if err := godotenv.Load(); err != nil {
 		logs.Logger.Error("Error loading .env file: ", err)
-		log.Fatalf("Error loading .env file: %v", err)
 		return err
 	}
 
@@ -124,12 +122,14 @@ func handleTopic(db *sql.DB, msg []string, topic string) error {
 			return fmt.Errorf("error inserting contact: %v", err)
 		}
 		fmt.Printf("Contactid length: %d\n", len(Contactid))
+		logs.Logger.Info(fmt.Sprintf("Contactid length: %d\n", len(Contactid)))
 	} else if topic == os.Getenv("KAFAKA_ACTIVITY_TOPIC") {
 		activityid, err := InsertContactActivity(db, msg)
 		if err != nil {
 			logs.Logger.Error("error inserting contact activity: ", err)
 			return fmt.Errorf("error inserting contact activity: %v", err)
 		}
+		logs.Logger.Info(fmt.Sprintf("activityid length: %d\n", len(activityid)))
 		fmt.Printf("activityid length: %d\n", len(activityid))
 	}
 

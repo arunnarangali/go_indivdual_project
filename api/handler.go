@@ -31,6 +31,37 @@ func HomePageHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func UploadHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method == http.MethodPost {
+		file, _, err := r.FormFile("csvfile")
+		if err != nil {
+			logs.Logger.Error("Unable to get the file", err)
+			return
+		}
+		defer file.Close()
+
+		originalFile, err := os.Create("original.csv")
+		if err != nil {
+			logs.Logger.Error("unable to open the original file", err)
+			return
+		}
+		defer originalFile.Close()
+
+		// Copy the contents of the uploaded file to the original file
+		_, err = io.Copy(originalFile, file)
+		if err != nil {
+			logs.Logger.Error("Error copying file Contents", err)
+			return
+		}
+
+		go Readfile()
+		http.Redirect(w, r, "/resultpage", http.StatusSeeOther)
+		return
+	}
+	logs.Logger.Warning("Use POST method upload a csv file")
+	fmt.Fprintln(w, "Use POST method to upload a CSV file")
+}
+
 func generateActivitiesInBackground(csvData []types.Contacts, wg *sync.WaitGroup) {
 	defer logs.Logger.Info("generate activity func stopped\n")
 	defer wg.Done()
@@ -63,37 +94,6 @@ func produceEofmsg() {
 	if err := database.RunKafkaProducerActivity([]string{"Eof"}); err != nil {
 		logs.Logger.Error("Error running Kafka producer for eof:", err)
 	}
-}
-
-func UploadHandler(w http.ResponseWriter, r *http.Request) {
-	if r.Method == http.MethodPost {
-		file, _, err := r.FormFile("csvfile")
-		if err != nil {
-			logs.Logger.Error("Unable to get the file", err)
-			return
-		}
-		defer file.Close()
-
-		originalFile, err := os.Create("original.csv")
-		if err != nil {
-			logs.Logger.Error("unable to open the original file", err)
-			return
-		}
-		defer originalFile.Close()
-
-		// Copy the contents of the uploaded file to the original file
-		_, err = io.Copy(originalFile, file)
-		if err != nil {
-			logs.Logger.Error("Error copying file Contents", err)
-			return
-		}
-
-		go Readfile()
-		http.Redirect(w, r, "/resultpage", http.StatusSeeOther)
-		return
-	}
-	logs.Logger.Warning("Use POST method upload a csv file")
-	fmt.Fprintln(w, "Use POST method to upload a CSV file")
 }
 
 func processCSVData(csvData []types.Contacts) error {
