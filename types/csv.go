@@ -48,8 +48,8 @@ func (r MyCSVReader) ReadCSV(reader io.Reader) ([]Contacts, error) {
 		name := record[0]
 		email := record[1]
 		json := record[2]
-
-		data = append(data, Contacts{ID: id, Name: name, Email: email, Details: json})
+		contact := Contacts{ID: id, Name: name, Email: email, Details: json}
+		data = append(data, contact)
 	}
 
 	return data, nil

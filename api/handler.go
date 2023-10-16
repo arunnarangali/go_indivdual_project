@@ -5,39 +5,60 @@ import (
 	"datastream/logs"
 	"datastream/service"
 	"datastream/types"
+	"encoding/csv"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"html/template"
 	"io"
+	"mime/multipart"
+	"strings"
 
 	"net/http"
 	"os"
 	"sync"
 )
 
+var uploadPage = template.Must(template.ParseFiles("/home/arun/test4/go_indivdual_project/templates/HomePage.html"))
+
 func HomePageHandler(w http.ResponseWriter, r *http.Request) {
 
-	tmpl, err := template.ParseFiles("templates/HomePage.html")
+	tmpl, err := template.ParseFiles("/home/arun/test4/go_indivdual_project/templates/HomePage.html")
 	if err != nil {
 		logs.Logger.Error("error in get homepage", err)
-		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 	err = tmpl.Execute(w, nil)
 	if err != nil {
 		logs.Logger.Error("error in load page", err)
-		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 }
 
 func UploadHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodPost {
-		file, _, err := r.FormFile("csvfile")
+
+		file, header, err := r.FormFile("csvfile")
 		if err != nil {
-			logs.Logger.Error("Unable to get the file", err)
+			logs.Logger.Error("Error", err)
+			RespondWithError(w, "please choose csv file")
 			return
 		}
 		defer file.Close()
+
+		if header.Header.Get("Content-Type") != "text/csv" {
+			logs.Logger.Warning("this not csv file")
+			RespondWithError(w, "file is not csv")
+			return
+		}
+
+		if err := CheckFile(w, file, header); err != nil {
+			return
+		}
+		_, err = file.(io.Seeker).Seek(0, 0)
+		if err != nil {
+			RespondWithError(w, "Error seeking file: "+err.Error())
+			return
+		}
 
 		originalFile, err := os.Create("original.csv")
 		if err != nil {
@@ -52,13 +73,112 @@ func UploadHandler(w http.ResponseWriter, r *http.Request) {
 			logs.Logger.Error("Error copying file Contents", err)
 			return
 		}
+		http.Redirect(w, r, "/resultpage", http.StatusSeeOther)
 
 		go Readfile()
-		http.Redirect(w, r, "/resultpage", http.StatusSeeOther)
 		return
 	}
 	logs.Logger.Warning("Use POST method upload a csv file")
 	fmt.Fprintln(w, "Use POST method to upload a CSV file")
+}
+
+func RespondWithError(w http.ResponseWriter, message string) {
+
+	data := struct {
+		Error string
+	}{Error: message}
+
+	if err := uploadPage.Execute(w, data); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+}
+
+func CheckFile(w http.ResponseWriter, file io.Reader, handler *multipart.FileHeader) error {
+
+	reader := csv.NewReader(file)
+	for {
+		record, err := reader.Read()
+		if err == io.EOF {
+			break
+		} else if err != nil {
+
+			RespondWithError(w, "Error reading CSV: "+err.Error())
+			return errors.New("error reading CSVs")
+		}
+		if len(record) != 3 {
+			RespondWithError(w, "Invalid type CSV.Only support name,email and Details")
+			return errors.New("invalid type CSV.Only support name,email and Details")
+		}
+
+		// Check email format
+		if !isValidEmail(record[1]) {
+			RespondWithError(w, "Invalid Type Email Format")
+			return errors.New("invalid Type Email Format")
+		}
+
+		// Check if there is any whitespaces
+		if (record[0] == "") || (record[1] == "") || (record[2] == "") {
+			RespondWithError(w, "FIle Conatin White Spaces")
+			return errors.New("FIle Conatin White Spaces")
+		}
+
+	}
+	return nil
+
+}
+
+//check email is valid
+
+func isValidEmail(email string) bool {
+	return strings.Contains(email, "@") && strings.Contains(email, ".")
+}
+
+func Readfile() error {
+	filePath := "original.csv"
+
+	file, err := os.Open(filePath)
+	if err != nil {
+		logs.Logger.Error("unable to open the file:", err)
+		return fmt.Errorf("unable to open the file: %v", err)
+	}
+	defer file.Close()
+
+	//  process the opened CSV file directly
+	csvData, err := types.MyCSVReader{}.ReadCSV(file)
+	if err != nil {
+		logs.Logger.Error("error procesing Csv file in handler :", err)
+		return fmt.Errorf("error processing CSV file: %v", err)
+	}
+
+	if err := processCSVData(csvData); err != nil {
+		logs.Logger.Error("processCsvdata:", err)
+		return err
+	}
+
+	// Run the Kafka consumer for Contacts
+	if err := runKafkaConsumerForContacts(); err != nil {
+		logs.Logger.Error("runkafakaConsumeforCOntacts:", err)
+		return err
+	}
+
+	// Run the Kafka consumer for Activity
+	if err := runKafkaConsumerForActivity(); err != nil {
+		logs.Logger.Error("runkafakaConsumeForActivity:", err)
+		return err
+	}
+
+	return nil
+}
+
+func processCSVData(csvData []types.Contacts) error {
+	var wg sync.WaitGroup
+
+	wg.Add(1)
+	go generateActivitiesInBackground(csvData, &wg)
+
+	wg.Wait()
+	produceEofmsg()
+	return nil
 }
 
 func generateActivitiesInBackground(csvData []types.Contacts, wg *sync.WaitGroup) {
@@ -69,8 +189,6 @@ func generateActivitiesInBackground(csvData []types.Contacts, wg *sync.WaitGroup
 	var activitiesStrings []string
 
 	for _, row := range csvData {
-		// fmt.Printf("{%s,%s, %s, %s}\n", row.ID, row.Name, row.Email, row.Details)
-
 		contactStatus, activitiesString := dataprocessing.CallActivity(row.ID, row)
 		contactStatuses = append(contactStatuses, contactStatus)
 		activitiesStrings = append(activitiesStrings, activitiesString)
@@ -95,17 +213,6 @@ func produceEofmsg() {
 	}
 }
 
-func processCSVData(csvData []types.Contacts) error {
-	var wg sync.WaitGroup
-
-	wg.Add(1)
-	go generateActivitiesInBackground(csvData, &wg)
-
-	wg.Wait()
-	produceEofmsg()
-	return nil
-}
-
 func runKafkaConsumerForContacts() error {
 	if err := service.RunKafkaConsumerContacts(); err != nil {
 		logs.Logger.Error("error running Kafka consumer for Contacts", err)
@@ -123,49 +230,9 @@ func runKafkaConsumerForActivity() error {
 	return nil
 }
 
-// Modified Readfile function
-func Readfile() error {
-	filePath := "original.csv"
-
-	// Open the CSV file
-	file, err := os.Open(filePath)
-	if err != nil {
-		logs.Logger.Error("unable to open the file:", err)
-		return fmt.Errorf("unable to open the file: %v", err)
-	}
-	defer file.Close()
-
-	// You can now process the opened CSV file directly
-	csvData, err := types.MyCSVReader{}.ReadCSV(file)
-	if err != nil {
-		logs.Logger.Error("error procesing Csv file in handler :", err)
-		return fmt.Errorf("error processing CSV file: %v", err)
-	}
-
-	// Process CSV data concurrently
-	if err := processCSVData(csvData); err != nil {
-		logs.Logger.Error("processCsvdata:", err)
-		return err
-	}
-
-	// Run the Kafka consumer for Contacts
-	if err := runKafkaConsumerForContacts(); err != nil {
-		logs.Logger.Error("runkafakaConsumeforCOntacts:", err)
-		return err
-	}
-
-	// Run the Kafka consumer for Activity
-	if err := runKafkaConsumerForActivity(); err != nil {
-		logs.Logger.Error("runkafakaConsumeForActivity:", err)
-		return err
-	}
-
-	return nil // Return nil to indicate success
-}
-
 func ResultpageHandler(w http.ResponseWriter, r *http.Request) {
 	// Serve the HTML page with the button
-	tmpl, err := template.ParseFiles("templates/ResultPage.html")
+	tmpl, err := template.ParseFiles("/home/arun/test 3/go_indivdual_project/templates/ResultPage.html")
 	if err != nil {
 		logs.Logger.Error("Internal Server Error", err)
 		http.Error(w, err.Error(), http.StatusInternalServerError)

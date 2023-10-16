@@ -1,2 +1,23 @@
-[ERROR] 2023/10/14 10:14:19 log.go:82: error in get homepage: open templates/HomePage.html: no such file or directory
-[ERROR] 2023/10/14 10:14:19 log.go:82: Unable to get the file: request Content-Type isn't multipart/form-data
+[WARNING] 2023/10/14 11:23:30 log.go:68: invalid csv format
+[ERROR] 2023/10/14 11:23:30 log.go:82: error procesing Csv file in handler :: invalid CSV format
+[ERROR] 2023/10/14 11:28:25 log.go:82: Unable to get the file: multipart: NextPart: EOF
+[WARNING] 2023/10/14 12:26:12 log.go:68: invalid csv format
+[ERROR] 2023/10/14 12:26:12 log.go:82: error procesing Csv file in handler :: invalid CSV format
+[WARNING] 2023/10/14 12:27:22 log.go:68: invalid csv format
+[ERROR] 2023/10/14 12:27:22 log.go:82: error procesing Csv file in handler :: invalid CSV format
+[WARNING] 2023/10/14 12:27:38 log.go:68: invalid csv format
+[ERROR] 2023/10/14 12:27:38 log.go:82: error procesing Csv file in handler :: invalid CSV format
+[ERROR] 2023/10/14 12:27:38 log.go:82: Internal Server Error: open templates/ResultPage.html: no such file or directory
+[ERROR] 2023/10/14 13:00:23 log.go:82: Internal Server Error: open templates/ResultPage.html: no such file or directory
+[WARNING] 2023/10/14 13:00:23 log.go:68: invalid csv format
+[ERROR] 2023/10/14 13:00:23 log.go:82: error procesing Csv file in handler :: invalid CSV format
+[WARNING] 2023/10/14 15:14:01 log.go:68: invalid csv format
+[ERROR] 2023/10/14 15:14:01 log.go:82: error procesing Csv file in handler :: invalid CSV format
+[ERROR] 2023/10/14 15:14:01 log.go:82: Internal Server Error: open templates/ResultPage.html: no such file or directory
+[WARNING] 2023/10/14 15:49:44 log.go:68: invalid csv format
+[ERROR] 2023/10/14 15:49:44 log.go:82: error procesing Csv file in handler :: invalid CSV format
+[WARNING] 2023/10/14 15:54:05 log.go:68: invalid csv format
+[ERROR] 2023/10/14 15:54:05 log.go:82: error procesing Csv file in handler :: invalid CSV format
+[WARNING] 2023/10/14 16:07:32 log.go:68: invalid csv format
+[ERROR] 2023/10/14 16:07:32 log.go:82: error procesing Csv file in handler :: invalid CSV format
+[ERROR] 2023/10/14 16:07:32 log.go:82: Error loading .env file:: open .env: no such file or directory

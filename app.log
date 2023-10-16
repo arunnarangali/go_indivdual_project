@@ -1,686 +1,94 @@
-[ERROR] 2023/09/29 15:01:44 log.go:37: open templates/Home1.html: no such file or directory
-[ERROR] 2023/09/29 17:37:48 log.go:46: open templates/Home1.html: no such file or directory
-[ERROR] 2023/09/29 17:39:01 log.go:46: open templates/Home1.html: no such file or directory
-[ERROR] 2023/09/29 17:39:38 log.go:46: open templates/Home.html: no such file or directory
-[ERROR] 2023/09/29 17:39:40 log.go:46: open templates/Home.html: no such file or directory
-[ERROR] 2023/09/29 17:39:44 log.go:46: open templates/Home.html: no such file or directory
-[INFO] 2023/09/29 17:48:59 log.go:38: hai
-[INFO] 2023/09/29 17:54:05 log.go:38: hai
-[INFO] 2023/09/29 18:03:28 log.go:38: hai
-[ERROR] 2023/09/29 18:26:33 log.go:46: http: no such file
-[WARNING] 2023/09/30 10:35:09 log.go:42: invalid csv format
-[ERROR] 2023/09/30 10:35:09 log.go:46: invalid CSV format
-[WARNING] 2023/09/30 10:43:54 log.go:42: invalid csv format
-[ERROR] 2023/09/30 10:43:54 log.go:46: invalid CSV format
-[WARNING] 2023/09/30 10:44:21 log.go:42: invalid csv format
-[ERROR] 2023/09/30 10:44:21 log.go:46: invalid CSV format
-[WARNING] 2023/09/30 12:49:07 log.go:42: invalid csv format
-[ERROR] 2023/09/30 12:49:07 log.go:46: invalid CSV format
-[WARNING] 2023/09/30 18:03:20 log.go:42: invalid csv format
-[ERROR] 2023/09/30 18:03:20 log.go:46: invalid CSV format
-[WARNING] 2023/09/30 18:06:07 log.go:42: invalid csv format
-[ERROR] 2023/09/30 18:06:07 log.go:46: invalid CSV format
-[WARNING] 2023/09/30 18:11:00 log.go:42: invalid csv format
-[ERROR] 2023/09/30 18:11:00 log.go:46: invalid CSV format
-[WARNING] 2023/09/30 18:12:31 log.go:42: invalid csv format
-[ERROR] 2023/09/30 18:12:31 log.go:46: invalid CSV format
-[WARNING] 2023/10/03 11:52:03 log.go:42: invalid csv format
-[ERROR] 2023/10/03 11:52:03 log.go:46: invalid CSV format
-[ERROR] 2023/10/03 12:27:02 log.go:46: template: success.html:19:9: executing "success.html" at <.Age>: can't evaluate field Age in type types.CSVData
-[ERROR] 2023/10/03 12:29:17 log.go:46: template: success.html:19:9: executing "success.html" at <.Age>: can't evaluate field Age in type types.CSVData
-[ERROR] 2023/10/03 12:30:39 log.go:46: template: success.html:19:9: executing "success.html" at <.Age>: can't evaluate field Age in type types.CSVData
-[ERROR] 2023/10/03 12:32:02 log.go:46: template: success.html:19:9: executing "success.html" at <.Age>: can't evaluate field Age in type types.CSVData
-[ERROR] 2023/10/03 12:37:20 log.go:46: template: success.html:19:9: executing "success.html" at <.Age>: can't evaluate field Age in type types.CSVData
-[WARNING] 2023/10/03 12:41:25 log.go:42: invalid csv format
-[ERROR] 2023/10/03 12:41:25 log.go:46: invalid CSV format
-[ERROR] 2023/10/04 18:37:58 log.go:46: http: no such file
-[WARNING] 2023/10/04 18:38:02 log.go:42: invalid csv format
-[ERROR] 2023/10/04 18:38:02 log.go:46: invalid CSV format
-[ERROR] 2023/10/04 18:39:06 log.go:46: template: success.html:20:9: executing "success.html" at <.Json>: can't evaluate field Json in type types.Contacts
-[ERROR] 2023/10/04 18:40:30 log.go:46: template: success.html:20:9: executing "success.html" at <.Json>: can't evaluate field Json in type types.Contacts
-[ERROR] 2023/10/04 18:40:48 log.go:46: template: success.html:20:9: executing "success.html" at <.Json>: can't evaluate field Json in type types.Contacts
-[ERROR] 2023/10/04 18:43:47 log.go:46: template: success.html:20:9: executing "success.html" at <.Json>: can't evaluate field Json in type types.Contacts
-[ERROR] 2023/10/04 18:47:55 log.go:46: template: success.html:20:9: executing "success.html" at <.Json>: can't evaluate field Json in type types.Contacts
-[WARNING] 2023/10/10 15:41:14 log.go:44: invalid csv format
-[ERROR] 2023/10/10 15:41:14 log.go:48: invalid CSV format
-[WARNING] 2023/10/10 15:45:51 log.go:44: invalid csv format
-[ERROR] 2023/10/10 15:45:51 log.go:48: invalid CSV format
-[ERROR] 2023/10/12 11:47:56 log.go:82: error in get homepage: open templates/HomePage1.html: no such file or directory
-[ERROR] 2023/10/12 13:15:28 log.go:82: Unable to get the file: http: no such file
-[ERROR] 2023/10/12 13:15:35 log.go:82: Unable to get the file: http: no such file
-[ERROR] 2023/10/12 15:58:31 log.go:82: error:: sql: expected 5 arguments, got 4
-[ERROR] 2023/10/12 15:58:31 log.go:82: error inserting contact:: sql: expected 5 arguments, got 4
-[ERROR] 2023/10/12 15:58:31 log.go:82: error inserting contact: : error inserting contact: sql: expected 5 arguments, got 4
-[ERROR] 2023/10/12 15:58:31 log.go:82: error in handle topic:: error inserting contact: error inserting contact: sql: expected 5 arguments, got 4
-[ERROR] 2023/10/12 16:01:59 log.go:82: error:: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/12 16:01:59 log.go:82: error inserting contact:: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/12 16:01:59 log.go:82: error inserting contact: : error inserting contact: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/12 16:01:59 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/12 16:08:37 log.go:82: error:: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/12 16:08:37 log.go:82: error inserting contact:: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/12 16:08:37 log.go:82: error inserting contact: : error inserting contact: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/12 16:08:37 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/12 16:18:35 log.go:82: error:: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
-[ERROR] 2023/10/12 16:18:35 log.go:82: error inserting contact:: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
-[ERROR] 2023/10/12 16:18:35 log.go:82: error inserting contact: : error inserting contact: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
-[ERROR] 2023/10/12 16:18:35 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
-[ERROR] 2023/10/12 16:27:51 log.go:82: error:: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
-[ERROR] 2023/10/12 16:27:51 log.go:82: error inserting contact:: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
-[ERROR] 2023/10/12 16:27:51 log.go:82: error inserting contact: : error inserting contact: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
-[ERROR] 2023/10/12 16:27:51 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
-[ERROR] 2023/10/12 16:34:02 log.go:82: error:: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
-[ERROR] 2023/10/12 16:34:02 log.go:82: error inserting contact:: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
-[ERROR] 2023/10/12 16:34:02 log.go:82: error inserting contact: : error inserting contact: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
-[ERROR] 2023/10/12 16:34:02 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1062 (23000): Duplicate entry '9e62693e50e1427aa59363e889bb9054bcca71a9d6fd9529' for key 'Contacts.PRIMARY'
-[ERROR] 2023/10/12 18:16:58 log.go:82: error:: kafka: invalid configuration (Attempt to produce message larger than configured Producer.MaxMessageBytes: 1317496 > 1000000)
-[ERROR] 2023/10/12 18:16:58 log.go:82: error:: kafka: invalid configuration (Attempt to produce message larger than configured Producer.MaxMessageBytes: 1317496 > 1000000)
-[ERROR] 2023/10/12 18:19:23 log.go:82: error:: kafka: invalid configuration (Attempt to produce message larger than configured Producer.MaxMessageBytes: 1443083 > 1000000)
-[ERROR] 2023/10/12 18:19:23 log.go:82: error:: kafka: invalid configuration (Attempt to produce message larger than configured Producer.MaxMessageBytes: 1443083 > 1000000)
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'ca680eaa5d964b25acd5823e0a14d6fd4a3a267f58a53694' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'ca680eaa5d964b25acd5823e0a14d6fd4a3a267f58a53694' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'ca680eaa5d964b25acd5823e0a14d6fd4a3a267f58a53694' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'ca680eaa5d964b25acd5823e0a14d6fd4a3a267f58a53694' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'c1868d8dceea4dc3a3cdfd8e6102dcb78501380ad6b8abc2' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'c1868d8dceea4dc3a3cdfd8e6102dcb78501380ad6b8abc2' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'c1868d8dceea4dc3a3cdfd8e6102dcb78501380ad6b8abc2' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'c1868d8dceea4dc3a3cdfd8e6102dcb78501380ad6b8abc2' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'dbb9b8b937b64de08f10caaed515e48321252b97913ac2ea' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'dbb9b8b937b64de08f10caaed515e48321252b97913ac2ea' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'dbb9b8b937b64de08f10caaed515e48321252b97913ac2ea' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'dbb9b8b937b64de08f10caaed515e48321252b97913ac2ea' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'd15dfb8156744c3daa7a08f7e79f5b74df1b8bb93b0685d8' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'd15dfb8156744c3daa7a08f7e79f5b74df1b8bb93b0685d8' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'd15dfb8156744c3daa7a08f7e79f5b74df1b8bb93b0685d8' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'd15dfb8156744c3daa7a08f7e79f5b74df1b8bb93b0685d8' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'e332ab7b6ba34c69bbb1283d6d00743f08afa1f807ae4590' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'e332ab7b6ba34c69bbb1283d6d00743f08afa1f807ae4590' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'e332ab7b6ba34c69bbb1283d6d00743f08afa1f807ae4590' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'e332ab7b6ba34c69bbb1283d6d00743f08afa1f807ae4590' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'a6afee395ac84e44bea514218b99c5110a823163147ee9c4' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'a6afee395ac84e44bea514218b99c5110a823163147ee9c4' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'a6afee395ac84e44bea514218b99c5110a823163147ee9c4' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'a6afee395ac84e44bea514218b99c5110a823163147ee9c4' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'd98a24e1d67f4f4f9db00522ab2114b62937885049ac6faa' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'd98a24e1d67f4f4f9db00522ab2114b62937885049ac6faa' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'd98a24e1d67f4f4f9db00522ab2114b62937885049ac6faa' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'd98a24e1d67f4f4f9db00522ab2114b62937885049ac6faa' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:34 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:11:35 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:35 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:35 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:35 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:35 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:35 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:35 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:35 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:35 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:35 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:35 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:35 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:35 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:35 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:35 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:35 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:36 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'ca680eaa5d964b25acd5823e0a14d6fd4a3a267f58a53694' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:36 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'ca680eaa5d964b25acd5823e0a14d6fd4a3a267f58a53694' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:36 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'ca680eaa5d964b25acd5823e0a14d6fd4a3a267f58a53694' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:36 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'ca680eaa5d964b25acd5823e0a14d6fd4a3a267f58a53694' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:36 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'c1868d8dceea4dc3a3cdfd8e6102dcb78501380ad6b8abc2' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:36 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'c1868d8dceea4dc3a3cdfd8e6102dcb78501380ad6b8abc2' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:36 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'c1868d8dceea4dc3a3cdfd8e6102dcb78501380ad6b8abc2' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:36 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'c1868d8dceea4dc3a3cdfd8e6102dcb78501380ad6b8abc2' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:36 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:36 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:36 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:36 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:36 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'dbb9b8b937b64de08f10caaed515e48321252b97913ac2ea' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:36 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'dbb9b8b937b64de08f10caaed515e48321252b97913ac2ea' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:36 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'dbb9b8b937b64de08f10caaed515e48321252b97913ac2ea' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:36 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'dbb9b8b937b64de08f10caaed515e48321252b97913ac2ea' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:36 log.go:82: error:: Error 1264 (22003): Out of range value for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:36 log.go:82: error inserting contact:: Error 1264 (22003): Out of range value for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:36 log.go:82: error inserting contact activity: : error inserting contact: Error 1264 (22003): Out of range value for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:36 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1264 (22003): Out of range value for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:37 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:37 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:37 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:37 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:37 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:37 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:37 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:37 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:37 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:37 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:37 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:37 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:37 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'd15dfb8156744c3daa7a08f7e79f5b74df1b8bb93b0685d8' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:37 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'd15dfb8156744c3daa7a08f7e79f5b74df1b8bb93b0685d8' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:37 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'd15dfb8156744c3daa7a08f7e79f5b74df1b8bb93b0685d8' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:37 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'd15dfb8156744c3daa7a08f7e79f5b74df1b8bb93b0685d8' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:37 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:37 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:37 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:37 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:38 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:38 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:38 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:38 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:38 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:38 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:38 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:38 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:38 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'e332ab7b6ba34c69bbb1283d6d00743f08afa1f807ae4590' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:38 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'e332ab7b6ba34c69bbb1283d6d00743f08afa1f807ae4590' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:38 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'e332ab7b6ba34c69bbb1283d6d00743f08afa1f807ae4590' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:38 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'e332ab7b6ba34c69bbb1283d6d00743f08afa1f807ae4590' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:38 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'a6afee395ac84e44bea514218b99c5110a823163147ee9c4' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:38 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'a6afee395ac84e44bea514218b99c5110a823163147ee9c4' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:38 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'a6afee395ac84e44bea514218b99c5110a823163147ee9c4' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:38 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'a6afee395ac84e44bea514218b99c5110a823163147ee9c4' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:39 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'd98a24e1d67f4f4f9db00522ab2114b62937885049ac6faa' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:39 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'd98a24e1d67f4f4f9db00522ab2114b62937885049ac6faa' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:39 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'd98a24e1d67f4f4f9db00522ab2114b62937885049ac6faa' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:39 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'd98a24e1d67f4f4f9db00522ab2114b62937885049ac6faa' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:39 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:39 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:39 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:39 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:39 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:39 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:39 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:39 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:39 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:39 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:39 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:39 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:39 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:39 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:39 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:39 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:40 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:40 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:40 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:40 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:40 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:40 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:40 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:11:40 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'f3a0626af7e2454998fb18c699374cf573498a834b0b8b87' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'f3a0626af7e2454998fb18c699374cf573498a834b0b8b87' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'f3a0626af7e2454998fb18c699374cf573498a834b0b8b87' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'f3a0626af7e2454998fb18c699374cf573498a834b0b8b87' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'b4d32c191dd74f9ebc277a6f92011bd260252e58e481eeff' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'b4d32c191dd74f9ebc277a6f92011bd260252e58e481eeff' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'b4d32c191dd74f9ebc277a6f92011bd260252e58e481eeff' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'b4d32c191dd74f9ebc277a6f92011bd260252e58e481eeff' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'abaaad1ec21941a8b5c5b1bfe212eb88a29c470da5078847' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'abaaad1ec21941a8b5c5b1bfe212eb88a29c470da5078847' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'abaaad1ec21941a8b5c5b1bfe212eb88a29c470da5078847' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'abaaad1ec21941a8b5c5b1bfe212eb88a29c470da5078847' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'a816ed80ac6c41afac22fde686cadd9b952f40903872a580' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'a816ed80ac6c41afac22fde686cadd9b952f40903872a580' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'a816ed80ac6c41afac22fde686cadd9b952f40903872a580' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'a816ed80ac6c41afac22fde686cadd9b952f40903872a580' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'f29dc497d6fd4bde81daa6b76e5c15d7fb1c8cb33bafb5f7' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'f29dc497d6fd4bde81daa6b76e5c15d7fb1c8cb33bafb5f7' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'f29dc497d6fd4bde81daa6b76e5c15d7fb1c8cb33bafb5f7' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'f29dc497d6fd4bde81daa6b76e5c15d7fb1c8cb33bafb5f7' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'fb45162f134a4f51a7c253068e985f4966a26fe1368a1528' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'fb45162f134a4f51a7c253068e985f4966a26fe1368a1528' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'fb45162f134a4f51a7c253068e985f4966a26fe1368a1528' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'fb45162f134a4f51a7c253068e985f4966a26fe1368a1528' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'b925502ad0e14220bc04941088c2b87b4ef826ef5403206b' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'b925502ad0e14220bc04941088c2b87b4ef826ef5403206b' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'b925502ad0e14220bc04941088c2b87b4ef826ef5403206b' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'b925502ad0e14220bc04941088c2b87b4ef826ef5403206b' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'f3de1290a18e409c90529c7c106c2743cdc1516adb3d5e6c' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'f3de1290a18e409c90529c7c106c2743cdc1516adb3d5e6c' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'f3de1290a18e409c90529c7c106c2743cdc1516adb3d5e6c' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'f3de1290a18e409c90529c7c106c2743cdc1516adb3d5e6c' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'a7104b9967f64643b326313f5f44c0040ddb113f484157ee' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'a7104b9967f64643b326313f5f44c0040ddb113f484157ee' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'a7104b9967f64643b326313f5f44c0040ddb113f484157ee' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'a7104b9967f64643b326313f5f44c0040ddb113f484157ee' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'f08853e131384683ac7ab98daeadf52a0b9d023594477240' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'f08853e131384683ac7ab98daeadf52a0b9d023594477240' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'f08853e131384683ac7ab98daeadf52a0b9d023594477240' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'f08853e131384683ac7ab98daeadf52a0b9d023594477240' for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:32 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 12:26:33 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'f3a0626af7e2454998fb18c699374cf573498a834b0b8b87' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:33 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'f3a0626af7e2454998fb18c699374cf573498a834b0b8b87' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:33 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'f3a0626af7e2454998fb18c699374cf573498a834b0b8b87' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:33 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'f3a0626af7e2454998fb18c699374cf573498a834b0b8b87' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:33 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:33 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:33 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:33 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:33 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:33 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:33 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:33 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:33 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:33 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:33 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:33 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:33 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:33 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:33 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:33 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:34 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:34 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:34 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:34 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:34 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'b4d32c191dd74f9ebc277a6f92011bd260252e58e481eeff' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:34 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'b4d32c191dd74f9ebc277a6f92011bd260252e58e481eeff' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:34 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'b4d32c191dd74f9ebc277a6f92011bd260252e58e481eeff' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:34 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'b4d32c191dd74f9ebc277a6f92011bd260252e58e481eeff' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:34 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'abaaad1ec21941a8b5c5b1bfe212eb88a29c470da5078847' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:34 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'abaaad1ec21941a8b5c5b1bfe212eb88a29c470da5078847' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:34 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'abaaad1ec21941a8b5c5b1bfe212eb88a29c470da5078847' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:34 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'abaaad1ec21941a8b5c5b1bfe212eb88a29c470da5078847' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:34 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:34 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:34 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:34 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:34 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'a816ed80ac6c41afac22fde686cadd9b952f40903872a580' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:34 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'a816ed80ac6c41afac22fde686cadd9b952f40903872a580' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:34 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'a816ed80ac6c41afac22fde686cadd9b952f40903872a580' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:34 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'a816ed80ac6c41afac22fde686cadd9b952f40903872a580' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:35 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:35 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:35 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:35 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:35 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:35 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:35 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:35 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:35 log.go:82: error:: Error 1264 (22003): Out of range value for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:35 log.go:82: error inserting contact:: Error 1264 (22003): Out of range value for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:35 log.go:82: error inserting contact activity: : error inserting contact: Error 1264 (22003): Out of range value for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:35 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1264 (22003): Out of range value for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:35 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'f29dc497d6fd4bde81daa6b76e5c15d7fb1c8cb33bafb5f7' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:35 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'f29dc497d6fd4bde81daa6b76e5c15d7fb1c8cb33bafb5f7' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:35 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'f29dc497d6fd4bde81daa6b76e5c15d7fb1c8cb33bafb5f7' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:35 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'f29dc497d6fd4bde81daa6b76e5c15d7fb1c8cb33bafb5f7' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:35 log.go:82: error:: Error 1264 (22003): Out of range value for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:35 log.go:82: error inserting contact:: Error 1264 (22003): Out of range value for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:35 log.go:82: error inserting contact activity: : error inserting contact: Error 1264 (22003): Out of range value for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:35 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1264 (22003): Out of range value for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:36 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'fb45162f134a4f51a7c253068e985f4966a26fe1368a1528' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:36 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'fb45162f134a4f51a7c253068e985f4966a26fe1368a1528' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:36 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'fb45162f134a4f51a7c253068e985f4966a26fe1368a1528' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:36 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'fb45162f134a4f51a7c253068e985f4966a26fe1368a1528' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:36 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'b925502ad0e14220bc04941088c2b87b4ef826ef5403206b' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:36 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'b925502ad0e14220bc04941088c2b87b4ef826ef5403206b' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:36 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'b925502ad0e14220bc04941088c2b87b4ef826ef5403206b' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:36 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'b925502ad0e14220bc04941088c2b87b4ef826ef5403206b' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:36 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:36 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:36 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:36 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:36 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:36 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:36 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:36 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'f3de1290a18e409c90529c7c106c2743cdc1516adb3d5e6c' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'f3de1290a18e409c90529c7c106c2743cdc1516adb3d5e6c' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'f3de1290a18e409c90529c7c106c2743cdc1516adb3d5e6c' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'f3de1290a18e409c90529c7c106c2743cdc1516adb3d5e6c' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'a7104b9967f64643b326313f5f44c0040ddb113f484157ee' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'a7104b9967f64643b326313f5f44c0040ddb113f484157ee' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'a7104b9967f64643b326313f5f44c0040ddb113f484157ee' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'a7104b9967f64643b326313f5f44c0040ddb113f484157ee' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'f08853e131384683ac7ab98daeadf52a0b9d023594477240' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'f08853e131384683ac7ab98daeadf52a0b9d023594477240' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'f08853e131384683ac7ab98daeadf52a0b9d023594477240' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'f08853e131384683ac7ab98daeadf52a0b9d023594477240' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 12:26:37 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error:: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error inserting contact:: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error inserting contact: : error inserting contact: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'a9ff35a73f224f848d66588e55581138fc095232a4140cae' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'a9ff35a73f224f848d66588e55581138fc095232a4140cae' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'a9ff35a73f224f848d66588e55581138fc095232a4140cae' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'a9ff35a73f224f848d66588e55581138fc095232a4140cae' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'e8d5140f82fb4bbb94f61bce56ec50c35fbcb61d3938a8dd' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'e8d5140f82fb4bbb94f61bce56ec50c35fbcb61d3938a8dd' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'e8d5140f82fb4bbb94f61bce56ec50c35fbcb61d3938a8dd' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:50 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'e8d5140f82fb4bbb94f61bce56ec50c35fbcb61d3938a8dd' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'fa2b4aac8c434087a3d279205bd954443739b923d4100bc6' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'fa2b4aac8c434087a3d279205bd954443739b923d4100bc6' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'fa2b4aac8c434087a3d279205bd954443739b923d4100bc6' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'fa2b4aac8c434087a3d279205bd954443739b923d4100bc6' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'd0a805153c4c42bdb5ac2e9c4606f08a7317859486864729' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'd0a805153c4c42bdb5ac2e9c4606f08a7317859486864729' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'd0a805153c4c42bdb5ac2e9c4606f08a7317859486864729' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'd0a805153c4c42bdb5ac2e9c4606f08a7317859486864729' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'a269335c87a24001ad0f594738ed586f1d995ff96d30f849' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'a269335c87a24001ad0f594738ed586f1d995ff96d30f849' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'a269335c87a24001ad0f594738ed586f1d995ff96d30f849' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'a269335c87a24001ad0f594738ed586f1d995ff96d30f849' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error:: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact:: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact: : error inserting contact: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1264 (22003): Out of range value for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'bca9a9163a9e4c889bca048163f0c8d7ec1336f197da8edf' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'bca9a9163a9e4c889bca048163f0c8d7ec1336f197da8edf' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'bca9a9163a9e4c889bca048163f0c8d7ec1336f197da8edf' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'bca9a9163a9e4c889bca048163f0c8d7ec1336f197da8edf' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'f2c2fd11fcba40bd9c0ae689f8c2970e0981cdb4d4254c55' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'f2c2fd11fcba40bd9c0ae689f8c2970e0981cdb4d4254c55' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'f2c2fd11fcba40bd9c0ae689f8c2970e0981cdb4d4254c55' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'f2c2fd11fcba40bd9c0ae689f8c2970e0981cdb4d4254c55' for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact: : error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error in handle topic:: error inserting contact: error inserting contact: Error 1265 (01000): Data truncated for column 'ID' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:51 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:52 log.go:82: error:: Error 1264 (22003): Out of range value for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:52 log.go:82: error inserting contact:: Error 1264 (22003): Out of range value for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:52 log.go:82: error inserting contact activity: : error inserting contact: Error 1264 (22003): Out of range value for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:52 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1264 (22003): Out of range value for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:52 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:52 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:52 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:52 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:52 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:52 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:52 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:52 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:52 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'a9ff35a73f224f848d66588e55581138fc095232a4140cae' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:52 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'a9ff35a73f224f848d66588e55581138fc095232a4140cae' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:52 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'a9ff35a73f224f848d66588e55581138fc095232a4140cae' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:52 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'a9ff35a73f224f848d66588e55581138fc095232a4140cae' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:52 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:52 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:52 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:52 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:53 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:53 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:53 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:53 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:53 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'e8d5140f82fb4bbb94f61bce56ec50c35fbcb61d3938a8dd' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:53 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'e8d5140f82fb4bbb94f61bce56ec50c35fbcb61d3938a8dd' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:53 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'e8d5140f82fb4bbb94f61bce56ec50c35fbcb61d3938a8dd' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:53 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'e8d5140f82fb4bbb94f61bce56ec50c35fbcb61d3938a8dd' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:53 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'fa2b4aac8c434087a3d279205bd954443739b923d4100bc6' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:53 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'fa2b4aac8c434087a3d279205bd954443739b923d4100bc6' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:53 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'fa2b4aac8c434087a3d279205bd954443739b923d4100bc6' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:53 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'fa2b4aac8c434087a3d279205bd954443739b923d4100bc6' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:53 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'd0a805153c4c42bdb5ac2e9c4606f08a7317859486864729' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:53 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'd0a805153c4c42bdb5ac2e9c4606f08a7317859486864729' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:53 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'd0a805153c4c42bdb5ac2e9c4606f08a7317859486864729' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:53 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'd0a805153c4c42bdb5ac2e9c4606f08a7317859486864729' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:53 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:53 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:53 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:53 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:54 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:54 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:54 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:54 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:54 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:54 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:54 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:54 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:54 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:54 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:54 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:54 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:54 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:54 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:54 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:54 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:54 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:54 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:54 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:54 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:55 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:55 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:55 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:55 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:55 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:55 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:55 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:55 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:55 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'a269335c87a24001ad0f594738ed586f1d995ff96d30f849' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:55 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'a269335c87a24001ad0f594738ed586f1d995ff96d30f849' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:55 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'a269335c87a24001ad0f594738ed586f1d995ff96d30f849' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:55 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'a269335c87a24001ad0f594738ed586f1d995ff96d30f849' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:55 log.go:82: error:: Error 1264 (22003): Out of range value for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:55 log.go:82: error inserting contact:: Error 1264 (22003): Out of range value for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:55 log.go:82: error inserting contact activity: : error inserting contact: Error 1264 (22003): Out of range value for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:55 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1264 (22003): Out of range value for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:55 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:55 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:55 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:55 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:56 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'bca9a9163a9e4c889bca048163f0c8d7ec1336f197da8edf' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:56 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'bca9a9163a9e4c889bca048163f0c8d7ec1336f197da8edf' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:56 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'bca9a9163a9e4c889bca048163f0c8d7ec1336f197da8edf' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:56 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'bca9a9163a9e4c889bca048163f0c8d7ec1336f197da8edf' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:56 log.go:82: error:: Error 1366 (HY000): Incorrect integer value: 'f2c2fd11fcba40bd9c0ae689f8c2970e0981cdb4d4254c55' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:56 log.go:82: error inserting contact:: Error 1366 (HY000): Incorrect integer value: 'f2c2fd11fcba40bd9c0ae689f8c2970e0981cdb4d4254c55' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:56 log.go:82: error inserting contact activity: : error inserting contact: Error 1366 (HY000): Incorrect integer value: 'f2c2fd11fcba40bd9c0ae689f8c2970e0981cdb4d4254c55' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:56 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1366 (HY000): Incorrect integer value: 'f2c2fd11fcba40bd9c0ae689f8c2970e0981cdb4d4254c55' for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:56 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:56 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:56 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:56 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:56 log.go:82: error:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:56 log.go:82: error inserting contact:: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:56 log.go:82: error inserting contact activity: : error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 14:25:56 log.go:82: error in handle topic:: error inserting contact activity: error inserting contact: Error 1265 (01000): Data truncated for column 'Contactsid' at row 1
-[ERROR] 2023/10/13 15:33:35 log.go:82: error in rowscan:: sql: Scan error on column index 0, name "ContactsID": converting driver.Value type string ("130ad062940d41acbdce27150e39e576da32ceac31ce8ec7") to a int: invalid syntax
-[ERROR] 2023/10/13 15:33:35 log.go:82: Error:: error in rowscan: sql: Scan error on column index 0, name "ContactsID": converting driver.Value type string ("130ad062940d41acbdce27150e39e576da32ceac31ce8ec7") to a int: invalid syntax
-[INFO] 2023/10/13 19:02:17 log.go:90: Messages successfully produced to kafka
-[INFO] 2023/10/13 19:02:18 log.go:90: Message successfully produced to Kafka
-[INFO] 2023/10/13 19:02:18 log.go:90: generate activity func stopped
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ContactStatusTopicNew13 Message produced to partition: 0 at offset: 0 
 
-[INFO] 2023/10/13 19:02:18 log.go:90: Messages successfully produced to kafka
-[INFO] 2023/10/13 19:02:18 log.go:90: Message successfully produced to Kafka
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ContactStatusTopicNew13 Message produced to partition: 0 at offset: 1 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Messages successfully send contact to kafka
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 0 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 1 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 2 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 3 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 4 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 5 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 6 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 7 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 8 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 9 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 10 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 11 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 12 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 13 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 14 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 15 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 16 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 17 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 18 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 19 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 20 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 21 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 22 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 23 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 24 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Message successfully send activity to Kafka
+[INFO] 2023/10/16 18:58:20 log.go:90: generate activity func stopped
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ContactStatusTopicNew13 Message produced to partition: 0 at offset: 2 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Messages successfully send contact to kafka
+[INFO] 2023/10/16 18:58:20 log.go:90: Topic: ActivityContactTopicNew13 Message produced to partition: 0 at offset: 25 
+
+[INFO] 2023/10/16 18:58:20 log.go:90: Message successfully send activity to Kafka
+[INFO] 2023/10/16 18:58:20 log.go:90: Received message from topic ContactStatusTopicNew13, partition 0, offset 0: 135502
+[INFO] 2023/10/16 18:58:33 log.go:90: Contactid length: 1000
+
+[INFO] 2023/10/16 18:58:33 log.go:90: inserted Successfully
+[INFO] 2023/10/16 18:58:33 log.go:90: Received message from topic ContactStatusTopicNew13, partition 0, offset 1: 27507
+[INFO] 2023/10/16 18:58:45 log.go:90: Contactid length: 203
+
+[INFO] 2023/10/16 18:58:45 log.go:90: inserted Successfully
+[INFO] 2023/10/16 18:58:45 log.go:90: Received message from topic ContactStatusTopicNew13, partition 0, offset 2: 3
+[INFO] 2023/10/16 18:58:46 log.go:90: Received message from topic ActivityContactTopicNew13, partition 0, offset 0: 734176
+[INFO] 2023/10/16 18:59:12 log.go:90: activityid length: 10813
+
+[INFO] 2023/10/16 18:59:12 log.go:90: inserted Successfully
+[INFO] 2023/10/16 18:59:12 log.go:90: Received message from topic ActivityContactTopicNew13, partition 0, offset 1: 705884
+[INFO] 2023/10/16 18:59:38 log.go:90: activityid length: 10397
+
+[INFO] 2023/10/16 18:59:38 log.go:90: inserted Successfully
+[INFO] 2023/10/16 18:59:38 log.go:90: Received message from topic ActivityContactTopicNew13, partition 0, offset 2: 698556
+[INFO] 2023/10/16 19:00:04 log.go:90: activityid length: 10289
+
+[INFO] 2023/10/16 19:00:04 log.go:90: inserted Successfully
+[INFO] 2023/10/16 19:00:04 log.go:90: Received message from topic ActivityContactTopicNew13, partition 0, offset 3: 692214
+[INFO] 2023/10/16 19:00:30 log.go:90: activityid length: 10196
+
+[INFO] 2023/10/16 19:00:30 log.go:90: inserted Successfully
+[INFO] 2023/10/16 19:00:30 log.go:90: Received message from topic ActivityContactTopicNew13, partition 0, offset 4: 726268
+[INFO] 2023/10/16 19:00:56 log.go:90: activityid length: 10697
+
+[INFO] 2023/10/16 19:00:56 log.go:90: inserted Successfully
+[INFO] 2023/10/16 19:00:56 log.go:90: Received message from topic ActivityContactTopicNew13, partition 0, offset 5: 721409

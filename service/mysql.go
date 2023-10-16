@@ -86,7 +86,7 @@ func ConfigureMySQLDB() (*MySQLConnector, error) {
 	return &mysqlConnector, nil
 }
 
-func Getmsg(msg []string, topic string) error {
+func Insertmsg(msg []string, topic string) error {
 
 	dbConnector, err := ConfigureMySQLDB()
 	if err != nil {

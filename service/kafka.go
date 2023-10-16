@@ -55,40 +55,58 @@ func (kc *KafkaConnector) Close() error {
 	return nil
 }
 
+// // // ProduceMessage produces a message into the specified Kafka topic.
+// func (kc *KafkaConnector) ProduceMessages(topic string, messageValues []string) error {
+// 	count := 0
+// 	var msg []string
+
+// 	for _, messageValue := range messageValues {
+// 		msg = append(msg, messageValue)
+// 		count++
+// 		if count == 50 {
+// 			msgToProduce := &sarama.ProducerMessage{
+// 				Topic: topic,
+// 				Value: sarama.StringEncoder(strings.Join(msg, "\n")),
+// 			}
+// 			_, _, err := kc.Producer.SendMessage(msgToProduce)
+// 			if err != nil {
+// 				logs.Logger.Error("error:", err)
+// 				return err
+// 			}
+// 			count = 0
+// 			msg = []string{}
+// 		}
+// 	}
+// 	if count > 0 {
+// 		msgToProduce := &sarama.ProducerMessage{
+// 			Topic: topic,
+// 			Value: sarama.StringEncoder(strings.Join(msg, "\n")),
+// 		}
+
+// 		_, _, err := kc.Producer.SendMessage(msgToProduce)
+// 		if err != nil {
+// 			logs.Logger.Error("error:", err)
+// 			return err
+// 		}
+// 	}
+
+// 	return nil
+// }
+
 // // ProduceMessage produces a message into the specified Kafka topic.
 func (kc *KafkaConnector) ProduceMessages(topic string, messageValues []string) error {
-	count := 0
-	var msg []string
-
-	for _, messageValue := range messageValues {
-		msg = append(msg, messageValue)
-		count++
-		if count == 50 {
-			msgToProduce := &sarama.ProducerMessage{
-				Topic: topic,
-				Value: sarama.StringEncoder(strings.Join(msg, "\n")),
-			}
-			_, _, err := kc.Producer.SendMessage(msgToProduce)
-			if err != nil {
-				logs.Logger.Error("error:", err)
-				return err
-			}
-			count = 0
-			msg = []string{}
-		}
+	msgToProduce := &sarama.ProducerMessage{
+		Topic: topic,
+		Value: sarama.StringEncoder(strings.Join(messageValues, "\n")),
 	}
-	if count > 0 {
-		msgToProduce := &sarama.ProducerMessage{
-			Topic: topic,
-			Value: sarama.StringEncoder(strings.Join(msg, "\n")),
-		}
 
-		_, _, err := kc.Producer.SendMessage(msgToProduce)
-		if err != nil {
-			logs.Logger.Error("error:", err)
-			return err
-		}
+	partition, offset, err := kc.Producer.SendMessage(msgToProduce)
+	if err != nil {
+		logs.Logger.Error("error:", err)
+		return err
 	}
+
+	logs.Logger.Info(fmt.Sprintf("Topic: %s Message produced to partition: %d at offset: %d \n", topic, partition, offset))
 
 	return nil
 }
@@ -102,7 +120,6 @@ func (kc *KafkaConnector) ConsumeMessages(topic string) error {
 	}
 	defer partitionConsumer.Close()
 
-	// Start a goroutine to handle consumed messages.
 	for {
 		select {
 		case err := <-partitionConsumer.Errors():
@@ -110,17 +127,20 @@ func (kc *KafkaConnector) ConsumeMessages(topic string) error {
 			// Handle the error as needed.
 		case msg := <-partitionConsumer.Messages():
 
-			log.Printf("Received message from topic %s, partition %d: %s",
-				msg.Topic, msg.Partition, string(msg.Value))
+			log.Printf("Received message from topic %s, partition %d, offset %d: %s",
+				msg.Topic, msg.Partition, msg.Offset, string(msg.Value))
+			logs.Logger.Info(fmt.Sprintf("Received message from topic %s, partition %d, offset %d: %d",
+				msg.Topic, msg.Partition, msg.Offset, len(msg.Value)))
 			message := string(msg.Value)
 			msgStrings := []string{string(msg.Value)}
 
 			if !strings.Contains(message, "Eof") {
-				err := Getmsg(msgStrings, topic)
+				err := Insertmsg(msgStrings, topic)
 				if err != nil {
 					log.Printf("Error inserting contact: %v", err)
 
 				} else {
+					logs.Logger.Info("inserted Successfully")
 					log.Printf(" inserted successfully ")
 				}
 			} else {
@@ -151,23 +171,39 @@ func ConfigureKafka() (*KafkaConnector, *string, *string, error) {
 }
 
 func RunKafkaProducerContacts(messages []string) error {
-
+	var msg []string
+	count := 0
 	kafkaConnector, contactTopic, _, err := ConfigureKafka()
 	if err != nil {
 		logs.Logger.Error("Error:", err)
 		return err
 	}
 	// Produce a message to the Kafka topic.
-	if err := kafkaConnector.ProduceMessages(*contactTopic, messages); err != nil {
-		logs.Logger.Error("Error:", err)
-		return err
+	for _, messageValue := range messages {
+		msg = append(msg, messageValue)
+		count++
+		if count == 1000 {
+			if err := kafkaConnector.ProduceMessages(*contactTopic, msg); err != nil {
+				logs.Logger.Error("Error:", err)
+				return err
+			}
+			count = 0
+			msg = []string{}
+		}
+	}
+
+	if count > 0 {
+		if err := kafkaConnector.ProduceMessages(*contactTopic, msg); err != nil {
+			logs.Logger.Error("Error:", err)
+			return err
+		}
 	}
 	// Close the KafkaConnector when done.
 	if err := kafkaConnector.Close(); err != nil {
 		logs.Logger.Error("Error:", err)
 		return err
 	}
-	logs.Logger.Info("Messages successfully produced to kafka")
+	logs.Logger.Info("Messages successfully send contact to kafka")
 	fmt.Println("Messages successfully produced to Kafka.")
 	return nil
 }
@@ -193,7 +229,8 @@ func RunKafkaConsumerContacts() error {
 }
 
 func RunKafkaProducerActivity(messages []string) error {
-
+	var msg []string
+	count := 0
 	kafkaConnector, _, activityTopic, err := ConfigureKafka()
 	if err != nil {
 		logs.Logger.Error("error:", err)
@@ -201,18 +238,32 @@ func RunKafkaProducerActivity(messages []string) error {
 	}
 
 	// Produce a message to the Kafka topic.
-	if err := kafkaConnector.ProduceMessages(*activityTopic, messages); err != nil {
-		logs.Logger.Error("error:", err)
-		return err
+	for _, messageValue := range messages {
+		msg = append(msg, messageValue)
+		count++
+		if count == 50 {
+			if err := kafkaConnector.ProduceMessages(*activityTopic, msg); err != nil {
+				logs.Logger.Error("Error:", err)
+				return err
+			}
+			count = 0
+			msg = []string{}
+		}
 	}
 
+	if count > 0 {
+		if err := kafkaConnector.ProduceMessages(*activityTopic, msg); err != nil {
+			logs.Logger.Error("Error:", err)
+			return err
+		}
+	}
 	// Close the KafkaConnector when done.
 	if err := kafkaConnector.Close(); err != nil {
-		logs.Logger.Error("error:", err)
+		logs.Logger.Error("Error:", err)
 		return err
 	}
-	logs.Logger.Info("Message successfully produced to Kafka")
-	fmt.Println("Message successfully produced to Kafka.")
+	logs.Logger.Info("Message successfully send activity to Kafka")
+	fmt.Println("Message successfully produced to  activity Kafka.")
 	return nil
 }
 
