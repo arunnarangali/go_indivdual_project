@@ -212,8 +212,7 @@ func InsertContactActivity(db *sql.DB, msg []string) ([]string, error) {
 
 	// Perform the insert operation with the transaction
 	for _, activity := range contactActivity {
-		lastInsertID, err := InsertSingleContactActivityWithTx(tx,
-			activity.ContactID, activity.CampaignID, activity.ActivityType, activity.ActivityDate)
+		lastInsertID, err := InsertSingleContactActivityWithTx(tx, activity)
 		if err != nil {
 			logs.Logger.Error("error inserting contact:", err)
 			return nil, fmt.Errorf("error inserting contact: %v", err)
@@ -229,10 +228,10 @@ func InsertContactActivity(db *sql.DB, msg []string) ([]string, error) {
 
 	return contactIDs, nil
 }
-func InsertSingleContactActivityWithTx(tx *sql.Tx, contactsid string, campaignid, activitytype int, actiivtydate string) (string, error) {
+func InsertSingleContactActivityWithTx(tx *sql.Tx, activity types.ContactActivity) (string, error) {
 	// Insert a single contact using the provided transaction
 	result, err := tx.Exec("INSERT INTO ContactActivity (ContactsID, CampaignID, ActivityType, ActivityDate) VALUES (?, ?, ?, ?)",
-		contactsid, campaignid, activitytype, actiivtydate)
+		activity.ContactID, activity.CampaignID, activity.ActivityType, activity.ActivityDate)
 	if err != nil {
 		logs.Logger.Error("error:", err)
 		return "", err

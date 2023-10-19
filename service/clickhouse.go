@@ -71,7 +71,7 @@ func ConfigureClickHouseDB() (*ClickHouseConnector, error) {
 	return &clickHouseConnector, nil
 }
 
-func QueryTopContactActivity() ([]types.QueryOutput, error) {
+func QueryTopContactActivity(query string) ([]types.QueryOutput, error) {
 
 	dbConnector, err := ConfigureClickHouseDB()
 	if err != nil {
@@ -87,13 +87,7 @@ func QueryTopContactActivity() ([]types.QueryOutput, error) {
 	defer db.Close()
 	fmt.Println("Database connection is available")
 
-	query := `
-		SELECT ContactsID, clicked
-		FROM arun_campaign.contact_activity_summary_mv_last_three_month_summery  FINAL
-		ORDER BY clicked DESC
-		LIMIT 5
-	`
-
+	fmt.Println(query)
 	rows, err := db.Query(query)
 	if err != nil {
 		logs.Logger.Error("error executing query:", err)
@@ -107,6 +101,7 @@ func QueryTopContactActivity() ([]types.QueryOutput, error) {
 		var row types.QueryOutput
 
 		err := rows.Scan(&row.ContactID, &row.Click)
+		fmt.Println(row.Click)
 
 		if err != nil {
 			logs.Logger.Error("error in rowscan:", err)

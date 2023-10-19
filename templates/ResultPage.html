@@ -2,25 +2,53 @@
 <html>
 
 <head>
-	<title>Top Contact Activity</title>
+	<title>Top Contact Activity13</title>
+	<link rel="stylesheet" type="text/css" href="/static/ResultPage.css">
 </head>
 
 <body>
-	<h1>Top Contact Activity</h1>
-	<button id="loadResults">Load Results</button>
-	<div id="resultsTable" style="display: none;">
-		<table border="1">
-			<tr>
-				<th>Contact ID</th>
-				<th>Clicked</th>
-			</tr>
-			<!-- Results will be displayed here -->
-		</table>
+	<h1>Top Contact Activity12</h1>
+	<!-- <button id="query1">Load Results</button> -->
+	<button id="button" data-value="query1">Load Results1</button>
+	<table border="1">
+		<tr>
+			<th>Contact ID</th>
+			<th>Clicked</th>
+		</tr>
+		<!-- Results will be displayed here -->
+	</table>
 	</div>
 
+
+	<!-- Display error log data here
+	<div id="errorLog">
+		<h2>Error Log</h2>
+		<ul>
+			{{range .}}
+			<li>{{.}}</li>
+			{{end}}
+		</ul>
+	</div> -->
+
 	<script>
-		document.getElementById("loadResults").addEventListener("click", function () {
-			fetch("/result")
+		// document.getElementById("query1").addEventListener("click", function () {
+		// 	fetch("/result")
+		// 		.then(response => response.json())
+		// 		.then(data => {
+		// 			const resultsTable = document.getElementById("resultsTable");
+		// 			resultsTable.style.display = "block";
+		// 			const table = resultsTable.querySelector("table");
+		// 			table.innerHTML = "<tr><th>Contact ID</th><th>Clicked</th></tr>";
+
+		// 			data.forEach(row => {
+		// 				table.innerHTML += `<tr><td>${row.ContactID}</td><td>${row.Click}</td></tr>`;
+		// 			});
+		// 		});
+		// });
+
+		document.getElementById("button").addEventListener("click", function () {
+			const buttonValue = this.getAttribute("data-value"); // Get the data-value attribute
+			fetch("/result?button=" + buttonValue) // Pass the button value as a query parameter
 				.then(response => response.json())
 				.then(data => {
 					const resultsTable = document.getElementById("resultsTable");
@@ -29,7 +57,7 @@
 					table.innerHTML = "<tr><th>Contact ID</th><th>Clicked</th></tr>";
 
 					data.forEach(row => {
-						table.innerHTML += `<tr><td>${row.ContactID}</td><td>${row.Click}</td></tr>`;
+						table.innerHTML += `<tr><td>${row.ContactID}</td><td>${row.Clicked}</td></tr>`;
 					});
 				});
 		});

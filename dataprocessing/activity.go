@@ -209,8 +209,14 @@ func generateData(id string, contacts types.Contacts) types.ContactStatus {
 	return Contacts
 }
 
-func appendContactActivity(contactID string, campaignID, activityType int, activityDate string) {
-	// Create a ContactActivity instance and append it to the slice
+func appendContactActivity(contactID string, campaignID, activityType int, activityDateStr string) {
+	// Create a ContactActivity instance and append it to the
+	activityDate, err := time.Parse("2006-01-02", activityDateStr)
+	if err != nil {
+		//
+		fmt.Printf("Error parsing date: %s\n", err)
+		return
+	}
 	activity := types.DefaultContactFactory{}.CreateContactActivity(
 		len(ContactActivities)+1, contactID, campaignID, activityType, activityDate)
 	ContactActivities = append(ContactActivities, activity)

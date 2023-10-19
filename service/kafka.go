@@ -55,45 +55,6 @@ func (kc *KafkaConnector) Close() error {
 	return nil
 }
 
-// // // ProduceMessage produces a message into the specified Kafka topic.
-// func (kc *KafkaConnector) ProduceMessages(topic string, messageValues []string) error {
-// 	count := 0
-// 	var msg []string
-
-// 	for _, messageValue := range messageValues {
-// 		msg = append(msg, messageValue)
-// 		count++
-// 		if count == 50 {
-// 			msgToProduce := &sarama.ProducerMessage{
-// 				Topic: topic,
-// 				Value: sarama.StringEncoder(strings.Join(msg, "\n")),
-// 			}
-// 			_, _, err := kc.Producer.SendMessage(msgToProduce)
-// 			if err != nil {
-// 				logs.Logger.Error("error:", err)
-// 				return err
-// 			}
-// 			count = 0
-// 			msg = []string{}
-// 		}
-// 	}
-// 	if count > 0 {
-// 		msgToProduce := &sarama.ProducerMessage{
-// 			Topic: topic,
-// 			Value: sarama.StringEncoder(strings.Join(msg, "\n")),
-// 		}
-
-// 		_, _, err := kc.Producer.SendMessage(msgToProduce)
-// 		if err != nil {
-// 			logs.Logger.Error("error:", err)
-// 			return err
-// 		}
-// 	}
-
-// 	return nil
-// }
-
-// // ProduceMessage produces a message into the specified Kafka topic.
 func (kc *KafkaConnector) ProduceMessages(topic string, messageValues []string) error {
 	msgToProduce := &sarama.ProducerMessage{
 		Topic: topic,
@@ -106,14 +67,15 @@ func (kc *KafkaConnector) ProduceMessages(topic string, messageValues []string) 
 		return err
 	}
 
-	logs.Logger.Info(fmt.Sprintf("Topic: %s Message produced to partition: %d at offset: %d \n", topic, partition, offset))
+	logs.Logger.Info(fmt.Sprintf("Producer Topic: %s Message produced to partition: %d at offset: %d \n",
+		topic, partition, offset))
 
 	return nil
 }
 
 func (kc *KafkaConnector) ConsumeMessages(topic string) error {
 	// Create a new consumer for the specified topic and partition.
-	partitionConsumer, err := kc.Consumer.ConsumePartition(topic, 0, sarama.OffsetOldest)
+	partitionConsumer, err := kc.Consumer.ConsumePartition(topic, 0, sarama.OffsetNewest)
 	if err != nil {
 		logs.Logger.Error("error:", err)
 		return err
@@ -132,19 +94,15 @@ func (kc *KafkaConnector) ConsumeMessages(topic string) error {
 			logs.Logger.Info(fmt.Sprintf("Received message from topic %s, partition %d, offset %d: %d",
 				msg.Topic, msg.Partition, msg.Offset, len(msg.Value)))
 			message := string(msg.Value)
-			msgStrings := []string{string(msg.Value)}
+			msgStrings := []string{message}
 
-			if !strings.Contains(message, "Eof") {
-				err := Insertmsg(msgStrings, topic)
-				if err != nil {
-					log.Printf("Error inserting contact: %v", err)
+			err := Insertmsg(msgStrings, topic) //send message into insert sql func
+			if err != nil {
+				log.Printf("Error inserting contact: %v", err)
 
-				} else {
-					logs.Logger.Info("inserted Successfully")
-					log.Printf(" inserted successfully ")
-				}
 			} else {
-				return nil
+				logs.Logger.Info("inserted Successfully")
+				log.Printf(" inserted successfully ")
 			}
 		}
 	}
@@ -182,7 +140,7 @@ func RunKafkaProducerContacts(messages []string) error {
 	for _, messageValue := range messages {
 		msg = append(msg, messageValue)
 		count++
-		if count == 1000 {
+		if count == 100 {
 			if err := kafkaConnector.ProduceMessages(*contactTopic, msg); err != nil {
 				logs.Logger.Error("Error:", err)
 				return err
@@ -257,7 +215,6 @@ func RunKafkaProducerActivity(messages []string) error {
 			return err
 		}
 	}
-	// Close the KafkaConnector when done.
 	if err := kafkaConnector.Close(); err != nil {
 		logs.Logger.Error("Error:", err)
 		return err

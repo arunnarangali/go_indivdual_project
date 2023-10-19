@@ -1,0 +1,3 @@
+[WARNING] 2023/10/18 15:31:09 log.go:66: invalid csv record name:Dona email:dona47@example.com Details:{"dob": "1941-09-04", "city": "City47", country: "Country47"}
+[WARNING] 2023/10/18 15:31:09 log.go:66: invalid csv record name:Dona email:abc Details:{"dob": "1993-05-27", "city": "City49", "country": "Country49"}
+[WARNING] 2023/10/18 15:31:09 log.go:66: invalid csv record name:Dona123 email:dona50@example.com Details:{"dob": "2019-03-11", "city": "City50", "country": "Country50"}

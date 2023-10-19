@@ -21,3 +21,21 @@
 [WARNING] 2023/10/14 16:07:32 log.go:68: invalid csv format
 [ERROR] 2023/10/14 16:07:32 log.go:82: error procesing Csv file in handler :: invalid CSV format
 [ERROR] 2023/10/14 16:07:32 log.go:82: Error loading .env file:: open .env: no such file or directory
+[WARNING] 2023/10/18 17:15:00 log.go:66: this not csv file
+[ERROR] 2023/10/18 17:15:00 log.go:80: Error loading .env file:: open .env: no such file or directory
+[WARNING] 2023/10/18 17:16:05 log.go:66: this not csv file
+[ERROR] 2023/10/18 17:16:05 log.go:80: Error loading .env file:: open .env: no such file or directory
+[WARNING] 2023/10/18 17:17:50 log.go:66: this not csv file
+[WARNING] 2023/10/18 17:18:18 log.go:66: this not csv file
+[WARNING] 2023/10/18 17:56:24 log.go:66: this not csv file
+[WARNING] 2023/10/18 17:59:02 log.go:66: this not csv file
+[WARNING] 2023/10/18 17:59:09 log.go:66: this not csv file
+[ERROR] 2023/10/18 18:02:40 log.go:80: Error: request Content-Type isn't multipart/form-data
+[WARNING] 2023/10/18 18:05:51 log.go:66: this not csv file
+[WARNING] 2023/10/18 18:06:45 log.go:66: this not csv file
+[WARNING] 2023/10/18 18:07:30 log.go:66: this not csv file
+[WARNING] 2023/10/18 18:07:43 log.go:66: this not csv file
+[WARNING] 2023/10/18 18:14:21 log.go:66: this not csv file
+[WARNING] 2023/10/18 18:15:10 log.go:66: this not csv file
+[WARNING] 2023/10/18 18:19:05 log.go:66: this not csv file
+[WARNING] 2023/10/18 18:22:48 log.go:66: this not csv file

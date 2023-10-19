@@ -5,8 +5,6 @@ import (
 
 	"io"
 
-	"net/http"
-
 	"log"
 
 	"os"
@@ -28,13 +26,13 @@ type SimpleLogger struct {
 	errorLogger *log.Logger
 }
 
-func Createlogfile(w http.ResponseWriter) *SimpleLogger {
+func Createlogfile() *SimpleLogger {
 
 	Logger, err := NewSimpleLogger("error.log")
 
 	if err != nil {
 
-		http.Error(w, "Failed to initialize logger", http.StatusInternalServerError)
+		Logger.Error("failed to initilizw logger Error:", err)
 
 	}
 

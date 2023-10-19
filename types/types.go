@@ -20,7 +20,7 @@ type ContactActivity struct {
 	ContactID    string
 	CampaignID   int
 	ActivityType int
-	ActivityDate string
+	ActivityDate time.Time
 	// Add any other fields you need here
 }
 
@@ -31,7 +31,7 @@ type ContactStatus struct {
 
 // ContactFactory interface
 type ContactFactory interface {
-	CreateContactActivity(id int, contactid int, campaignid int, activitytytype int, activitydate string) ContactActivity
+	CreateContactActivity(id int, contactid int, campaignid int, activitytytype int, activitydate time.Time) ContactActivity
 	CreateContactStatus(id int, name string, email string, details string, status int) ContactStatus
 }
 
@@ -39,7 +39,7 @@ type ContactFactory interface {
 type DefaultContactFactory struct{}
 
 func (f DefaultContactFactory) CreateContactActivity(id int, contactid string, campaignid int,
-	activitytytype int, activitydate string) ContactActivity {
+	activitytytype int, activitydate time.Time) ContactActivity {
 	return ContactActivity{
 		ID:           id,
 		ContactID:    contactid,
@@ -126,9 +126,10 @@ func ExtractmsgActivity(msg []string) ([]ContactActivity, error) {
 
 				// Remove double quotes from activitydateStr.
 				activitydateStr = strings.Trim(activitydateStr, `"`)
-
+				fmt.Printf("activitydatestr=%s\n", activitydateStr)
+				layout := "2006-01-02 15:04:05 -0700 MST"
 				// Parse 'activitydate' string to a time.Time object.
-				activitydate, _ := time.Parse("2006-01-02", activitydateStr)
+				activitydate, _ := time.Parse(layout, activitydateStr)
 
 				fmt.Printf("Processing message:contactid=%s, campaindid=%d, activitytype=%d, activitydate=%s\n",
 					contactsid, campaignid, activitytype, activitydate)
@@ -137,7 +138,7 @@ func ExtractmsgActivity(msg []string) ([]ContactActivity, error) {
 					ContactID:    contactsid,
 					CampaignID:   campaignid,
 					ActivityType: activitytype,
-					ActivityDate: activitydateStr,
+					ActivityDate: activitydate,
 				}
 				contactStatuses = append(contactStatuses, contactactivity)
 			}

@@ -1,0 +1,64 @@
+/* Style for the body element */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f2f2f2;
+  }
+  
+  /* Style for the h1 element */
+  h1 {
+	text-align: center;
+	background-color: #0077b6;
+	color: #fff;
+	padding: 20px 0;
+	margin: 0;
+  }
+  
+  /* Style for the button element */
+  #loadResults {
+	display: block;
+	margin: 20px auto;
+	padding: 10px 20px;
+	background-color: #0077b6;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+  }
+  
+  /* Style for the table element */
+  table {
+	width: 80%;
+	margin: 20px auto;
+	border-collapse: collapse;
+	background-color: #fff;
+  }
+  
+  /* Style for table headers */
+  th {
+	background-color: #0077b6;
+	color: #fff;
+	padding: 10px;
+  }
+  
+  /* Style for table cells */
+  td {
+	padding: 10px;
+	text-align: center;
+  }
+  
+  /* Style for the hidden results table */
+  #resultsTable {
+	display: none;
+  }
+  
+  /* Style for odd rows */
+  tr:nth-child(odd) {
+	background-color: #f2f2f2;
+  }
+  
+  /* Hover effect for table rows */
+  tr:hover {
+	background-color: #d9d9d9;
+  }
+  
