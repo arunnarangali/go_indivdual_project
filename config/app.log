@@ -1,0 +1,7 @@
+[ERROR] 2023/10/23 16:12:28 log.go:80: Error loading .env file:: open .env: no such file or directory
+[ERROR] 2023/10/23 16:14:49 log.go:80: Error loading .env file:: open .env: no such file or directory
+[WARNING] 2023/10/23 16:15:36 log.go:66: unsupported DB_TYPE:
+[WARNING] 2023/10/23 16:33:09 log.go:66: unsupported DB_TYPE:
+[WARNING] 2023/10/23 16:37:03 log.go:66: unsupported DB_TYPE:
+[WARNING] 2023/10/23 17:43:36 log.go:66: unsupported DB_TYPE:
+[WARNING] 2023/10/23 17:51:16 log.go:66: unsupported DB_TYPE:

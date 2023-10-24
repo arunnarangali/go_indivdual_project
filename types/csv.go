@@ -24,7 +24,6 @@ type CSVReader interface {
 type MyCSVReader struct{}
 
 func (r MyCSVReader) ReadCSV(reader io.Reader, batchSize int, resultCh chan []Contacts) {
-	errlog := logs.Createlogfile()
 	csvReader := csv.NewReader(reader)
 	var data []Contacts
 
@@ -52,7 +51,7 @@ func (r MyCSVReader) ReadCSV(reader io.Reader, batchSize int, resultCh chan []Co
 		email := record[1]
 		json := record[2]
 		if (record[0] == "") || (record[1] == "") || (record[2] == "") {
-			errlog.Warning("FIle Conatin White Spaces")
+			logs.Logger.Warning("File Conatin White Spaces")
 			continue
 		}
 
@@ -65,7 +64,6 @@ func (r MyCSVReader) ReadCSV(reader io.Reader, batchSize int, resultCh chan []Co
 				data = nil
 			}
 		} else {
-			errlog.Warning(fmt.Sprintf("invalid csv record name:%s email:%s Details:%s", name, email, json))
 			logs.Logger.Warning(fmt.Sprintf("invalid csv record name:%s email:%s Details:%s", name, email, json))
 		}
 	}

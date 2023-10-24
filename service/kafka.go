@@ -75,7 +75,7 @@ func (kc *KafkaConnector) ProduceMessages(topic string, messageValues []string) 
 
 func (kc *KafkaConnector) ConsumeMessages(topic string) error {
 	// Create a new consumer for the specified topic and partition.
-	partitionConsumer, err := kc.Consumer.ConsumePartition(topic, 0, sarama.OffsetNewest)
+	partitionConsumer, err := kc.Consumer.ConsumePartition(topic, 0, sarama.ReceiveTime)
 	if err != nil {
 		logs.Logger.Error("error:", err)
 		return err
@@ -91,8 +91,10 @@ func (kc *KafkaConnector) ConsumeMessages(topic string) error {
 
 			log.Printf("Received message from topic %s, partition %d, offset %d: %s",
 				msg.Topic, msg.Partition, msg.Offset, string(msg.Value))
+
 			logs.Logger.Info(fmt.Sprintf("Received message from topic %s, partition %d, offset %d: %d",
 				msg.Topic, msg.Partition, msg.Offset, len(msg.Value)))
+
 			message := string(msg.Value)
 			msgStrings := []string{message}
 
@@ -199,7 +201,7 @@ func RunKafkaProducerActivity(messages []string) error {
 	for _, messageValue := range messages {
 		msg = append(msg, messageValue)
 		count++
-		if count == 50 {
+		if count == 25 {
 			if err := kafkaConnector.ProduceMessages(*activityTopic, msg); err != nil {
 				logs.Logger.Error("Error:", err)
 				return err

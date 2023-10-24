@@ -1,0 +1,18 @@
+[ERROR] 2023/10/23 17:38:08 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/10/23 17:38:08 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/10/23 17:38:08 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/10/23 17:43:36 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/10/23 17:43:36 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/10/23 17:43:36 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/10/23 17:51:16 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/10/23 17:51:16 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/10/23 17:51:16 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/10/23 17:55:53 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/10/23 17:55:53 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/10/23 17:55:53 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/10/23 19:09:08 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: no route to host
+[ERROR] 2023/10/23 19:09:11 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: no route to host
+[ERROR] 2023/10/23 19:09:11 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/10/24 12:14:40 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/10/24 12:17:43 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/10/24 15:05:02 log.go:80: error:: dial tcp :0: connect: connection refused

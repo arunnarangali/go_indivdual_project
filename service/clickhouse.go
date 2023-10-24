@@ -59,13 +59,12 @@ func ConfigureClickHouseDB() (*ClickHouseConnector, error) {
 		logs.Logger.Error("failed to load database config", err)
 		return nil, fmt.Errorf("failed to load database config: %v", err)
 	}
-	// Ensure the database type is ClickHouse.
 	clickHouseConfig, ok := configData.(config.ClickHouseConfig)
 	if !ok {
 		logs.Logger.Error("expected ClickHouseConfig, but got", err)
 		return nil, fmt.Errorf("expected ClickHouseConfig, but got %T", configData)
 	}
-	// Create a ClickHouseConnector instance.
+
 	clickHouseConnector := ClickHouseConnector{config: clickHouseConfig}
 
 	return &clickHouseConnector, nil
@@ -85,9 +84,7 @@ func QueryTopContactActivity(query string) ([]types.QueryOutput, error) {
 		return nil, fmt.Errorf("error connecting to the database: %v", err)
 	}
 	defer db.Close()
-	fmt.Println("Database connection is available")
-
-	fmt.Println(query)
+	logs.Logger.Info("Database connection is available")
 	rows, err := db.Query(query)
 	if err != nil {
 		logs.Logger.Error("error executing query:", err)
@@ -101,7 +98,6 @@ func QueryTopContactActivity(query string) ([]types.QueryOutput, error) {
 		var row types.QueryOutput
 
 		err := rows.Scan(&row.ContactID, &row.Click)
-		fmt.Println(row.Click)
 
 		if err != nil {
 			logs.Logger.Error("error in rowscan:", err)

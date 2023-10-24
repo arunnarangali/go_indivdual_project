@@ -23,8 +23,9 @@ type DBConnector interface {
 
 // MySQLConnector implements the DBConnector interface for MySQL.
 type MySQLConnector struct {
-	Config config.MySQLConfig // Use the MySQLConfig from the config package
-	Db     *sql.DB
+	Config    config.MySQLConfig // Use the MySQLConfig from the config package
+	Db        *sql.DB
+	Connected bool
 }
 
 // Implement the Connect method for MySQLConnector.
@@ -40,6 +41,7 @@ func (m *MySQLConnector) Connect() (*sql.DB, error) {
 		m.Config.Hostname,
 		m.Config.Port,
 		m.Config.DBName)
+	fmt.Println(dataSourceName)
 
 	db, err := sql.Open("mysql", dataSourceName)
 	if err != nil {
@@ -77,6 +79,7 @@ func ConfigureMySQLDB() (*MySQLConnector, error) {
 	}
 	// Ensure the database type is MySQL.
 	mysqlConfig, ok := configData.(config.MySQLConfig)
+
 	if !ok {
 		return nil, fmt.Errorf("expected MySQLConfig, but got %T", configData)
 	}

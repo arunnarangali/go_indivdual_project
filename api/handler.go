@@ -6,6 +6,7 @@ import (
 	"datastream/service"
 	"datastream/types"
 	"encoding/json"
+	"fmt"
 	"html/template"
 	"io"
 	"sync"
@@ -32,10 +33,21 @@ func HomePageHandler(w http.ResponseWriter, r *http.Request) {
 
 func UploadHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodPost {
+		err := r.ParseMultipartForm(10 << 20) // Set a reasonable form size limit.
+		if err != nil {
+			http.Error(w, "Unable to parse form", http.StatusBadRequest)
+			return
+		}
+
+		currentDir, err := os.Getwd() // Add this line to get the current working directory
+		if err != nil {
+			logs.Logger.Error("Error getting current directory", err)
+		}
+		logs.Logger.Info(fmt.Sprintln("Current Directory:", currentDir))
 
 		file, header, err := r.FormFile("csvfile")
 		if err != nil {
-			logs.Logger.Error("Error", err)
+			logs.Logger.Error("Error in get", err)
 			RespondWithError(w, "please choose csv file")
 			return
 		}
@@ -46,7 +58,9 @@ func UploadHandler(w http.ResponseWriter, r *http.Request) {
 			RespondWithError(w, "file is not csv")
 			return
 		}
-		originalFile, err := os.Create("original.csv")
+		filePath := "/home/arun/test 5/go_indivdual_project/api/original.csv"
+		// filename := filepath.Join("/home/arun/Documents/DatastreamFiles/", header.Filename)
+		originalFile, err := os.Create(filePath)
 		if err != nil {
 			logs.Logger.Error("unable to open the original file", err)
 			return
@@ -132,10 +146,10 @@ func generateActivitiesInBackground(csvData []types.Contacts, wg *sync.WaitGroup
 	if err := service.RunKafkaProducerContacts(contactStatuses); err != nil {
 		logs.Logger.Error("Error running Kafka producer for contacts:", err)
 	}
-
 	if err := service.RunKafkaProducerActivity(activitiesStrings); err != nil {
 		logs.Logger.Error("Error running Kafka producer for activities:", err)
 	}
+
 }
 
 func ResultpageHandler(w http.ResponseWriter, r *http.Request) {
@@ -150,28 +164,7 @@ func ResultpageHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl.Execute(w, nil)
 }
 
-// func ResultHandler(w http.ResponseWriter, r *http.Request) {
-// 	results, err := service.QueryTopContactActivity()
-// 	if err != nil {
-// 		logs.Logger.Error("Error:", err)
-// 		http.Error(w, err.Error(), http.StatusInternalServerError)
-// 		return
-// 	}
-
-// 	// Convert results to JSON
-// 	jsonResponse, err := json.Marshal(results)
-// 	if err != nil {
-// 		logs.Logger.Error("Error:", err)
-// 		http.Error(w, err.Error(), http.StatusInternalServerError)
-// 		return
-// 	}
-
-// 	w.Header().Set("Content-Type", "application/json")
-// 	w.Write(jsonResponse)
-// }
-
 func ResultHandler(w http.ResponseWriter, r *http.Request) {
-	// Check the value of the "button" parameter in the request
 	buttonValue := r.FormValue("button")
 
 	var query string
@@ -205,14 +198,13 @@ func ResultHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Convert results to JSON
-	jsonResponse, err := json.Marshal(results)
+	jsonData, err := json.Marshal(results)
 	if err != nil {
-		logs.Logger.Error("Error:", err)
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		fmt.Println("Error:", err)
 		return
 	}
 
 	w.Header().Set("Content-Type", "application/json")
-	w.Write(jsonResponse)
+	w.Write(jsonData)
+
 }

@@ -1,215 +1,803 @@
-[INFO] 2023/10/19 12:37:32 log.go:88: Producer Topic: ContactStatusTopicNew53 Message produced to partition: 0 at offset: 0 
+[INFO] 2023/10/23 16:17:01 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 55 
 
-[INFO] 2023/10/19 12:37:32 log.go:88: Messages successfully send contact to kafka
-[INFO] 2023/10/19 12:37:32 log.go:88: Received message from topic ContactStatusTopicNew53, partition 0, offset 0: 7166
-[INFO] 2023/10/19 12:37:32 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 0 
+[INFO] 2023/10/23 16:17:01 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/23 16:17:01 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 55: 7166
+[INFO] 2023/10/23 16:17:01 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 111 
 
-[INFO] 2023/10/19 12:37:32 log.go:88: Message successfully send activity to Kafka
-[INFO] 2023/10/19 12:37:32 log.go:88: generate activity func stopped
+[INFO] 2023/10/23 16:17:01 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 112 
 
-[INFO] 2023/10/19 12:37:32 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 0: 816604
-[INFO] 2023/10/19 12:37:44 log.go:88: Contactid length: 50
+[INFO] 2023/10/23 16:17:01 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 111: 486106
+[INFO] 2023/10/23 16:17:01 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/23 16:17:01 log.go:88: generate activity func stopped
 
-[INFO] 2023/10/19 12:37:44 log.go:88: inserted Successfully
-[ERROR] 2023/10/19 12:37:45 log.go:80: error:: Error 1292 (22007): Incorrect datetime value: '0000-00-00' for column 'ActivityDate' at row 1
-[ERROR] 2023/10/19 12:37:45 log.go:80: error inserting contact:: Error 1292 (22007): Incorrect datetime value: '0000-00-00' for column 'ActivityDate' at row 1
-[ERROR] 2023/10/19 12:37:45 log.go:80: error inserting contact activity: : error inserting contact: Error 1292 (22007): Incorrect datetime value: '0000-00-00' for column 'ActivityDate' at row 1
-[ERROR] 2023/10/19 12:37:45 log.go:80: error in handle topic:: error inserting contact activity: error inserting contact: Error 1292 (22007): Incorrect datetime value: '0000-00-00' for column 'ActivityDate' at row 1
-[INFO] 2023/10/19 12:40:20 log.go:88: Producer Topic: ContactStatusTopicNew53 Message produced to partition: 0 at offset: 1 
+[INFO] 2023/10/23 16:17:13 log.go:88: Contactid length: 50
 
-[INFO] 2023/10/19 12:40:20 log.go:88: Messages successfully send contact to kafka
-[INFO] 2023/10/19 12:40:20 log.go:88: Received message from topic ContactStatusTopicNew53, partition 0, offset 1: 7166
-[INFO] 2023/10/19 12:40:20 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 1 
+[INFO] 2023/10/23 16:17:13 log.go:88: inserted Successfully
+[INFO] 2023/10/23 16:17:20 log.go:88: activityid length: 5594
 
-[INFO] 2023/10/19 12:40:20 log.go:88: Message successfully send activity to Kafka
-[INFO] 2023/10/19 12:40:20 log.go:88: generate activity func stopped
+[INFO] 2023/10/23 16:17:20 log.go:88: inserted Successfully
+[INFO] 2023/10/23 16:17:20 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 112: 453487
+[INFO] 2023/10/23 16:17:39 log.go:88: activityid length: 5219
 
-[INFO] 2023/10/19 12:40:20 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 1: 819327
-[INFO] 2023/10/19 12:40:32 log.go:88: Contactid length: 50
+[INFO] 2023/10/23 16:17:39 log.go:88: inserted Successfully
+[INFO] 2023/10/23 17:41:21 log.go:88: generate activity func stopped
 
-[INFO] 2023/10/19 12:40:32 log.go:88: inserted Successfully
-[ERROR] 2023/10/19 12:40:33 log.go:80: error:: Error 1292 (22007): Incorrect datetime value: '0000-00-00' for column 'ActivityDate' at row 1
-[ERROR] 2023/10/19 12:40:33 log.go:80: error inserting contact:: Error 1292 (22007): Incorrect datetime value: '0000-00-00' for column 'ActivityDate' at row 1
-[ERROR] 2023/10/19 12:40:33 log.go:80: error inserting contact activity: : error inserting contact: Error 1292 (22007): Incorrect datetime value: '0000-00-00' for column 'ActivityDate' at row 1
-[ERROR] 2023/10/19 12:40:33 log.go:80: error in handle topic:: error inserting contact activity: error inserting contact: Error 1292 (22007): Incorrect datetime value: '0000-00-00' for column 'ActivityDate' at row 1
-[INFO] 2023/10/19 12:43:51 log.go:88: Producer Topic: ContactStatusTopicNew53 Message produced to partition: 0 at offset: 2 
+[INFO] 2023/10/23 17:42:58 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 56 
 
-[INFO] 2023/10/19 12:43:51 log.go:88: Messages successfully send contact to kafka
-[INFO] 2023/10/19 12:43:51 log.go:88: Received message from topic ContactStatusTopicNew53, partition 0, offset 2: 7166
-[INFO] 2023/10/19 12:43:51 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 2 
+[INFO] 2023/10/23 17:42:58 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/23 17:42:58 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 56: 7166
+[INFO] 2023/10/23 17:42:58 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 113 
 
-[INFO] 2023/10/19 12:43:51 log.go:88: Message successfully send activity to Kafka
-[INFO] 2023/10/19 12:43:51 log.go:88: generate activity func stopped
+[INFO] 2023/10/23 17:42:58 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 114 
 
-[INFO] 2023/10/19 12:43:51 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 2: 915984
-[INFO] 2023/10/19 12:44:03 log.go:88: Contactid length: 50
+[INFO] 2023/10/23 17:42:58 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 113: 406947
+[INFO] 2023/10/23 17:42:58 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/23 17:42:58 log.go:88: generate activity func stopped
 
-[INFO] 2023/10/19 12:44:03 log.go:88: inserted Successfully
-[ERROR] 2023/10/19 12:44:04 log.go:80: error:: Error 1292 (22007): Incorrect datetime value: '0000-00-00' for column 'ActivityDate' at row 1
-[ERROR] 2023/10/19 12:44:04 log.go:80: error inserting contact:: Error 1292 (22007): Incorrect datetime value: '0000-00-00' for column 'ActivityDate' at row 1
-[ERROR] 2023/10/19 12:44:04 log.go:80: error inserting contact activity: : error inserting contact: Error 1292 (22007): Incorrect datetime value: '0000-00-00' for column 'ActivityDate' at row 1
-[ERROR] 2023/10/19 12:44:04 log.go:80: error in handle topic:: error inserting contact activity: error inserting contact: Error 1292 (22007): Incorrect datetime value: '0000-00-00' for column 'ActivityDate' at row 1
-[INFO] 2023/10/19 12:46:14 log.go:88: Producer Topic: ContactStatusTopicNew53 Message produced to partition: 0 at offset: 3 
+[INFO] 2023/10/23 17:43:10 log.go:88: Contactid length: 50
 
-[INFO] 2023/10/19 12:46:14 log.go:88: Messages successfully send contact to kafka
-[INFO] 2023/10/19 12:46:14 log.go:88: Received message from topic ContactStatusTopicNew53, partition 0, offset 3: 7166
-[INFO] 2023/10/19 12:46:14 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 3 
+[INFO] 2023/10/23 17:43:10 log.go:88: inserted Successfully
+[INFO] 2023/10/23 17:43:17 log.go:88: activityid length: 4684
 
-[INFO] 2023/10/19 12:46:14 log.go:88: Message successfully send activity to Kafka
-[INFO] 2023/10/19 12:46:14 log.go:88: generate activity func stopped
+[INFO] 2023/10/23 17:43:17 log.go:88: inserted Successfully
+[INFO] 2023/10/23 17:43:17 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 114: 443840
+[INFO] 2023/10/23 17:43:35 log.go:88: activityid length: 5108
 
-[INFO] 2023/10/19 12:46:14 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 3: 890905
-[INFO] 2023/10/19 12:46:26 log.go:88: Contactid length: 50
+[INFO] 2023/10/23 17:43:35 log.go:88: inserted Successfully
+[INFO] 2023/10/24 12:52:22 log.go:88: Database connection is available
+[INFO] 2023/10/24 12:52:23 log.go:88: Database connection is available
+[INFO] 2023/10/24 12:52:24 log.go:88: Database connection is available
+[ERROR] 2023/10/24 16:42:36 log.go:80: Error: http: no such file
+[ERROR] 2023/10/24 16:42:36 log.go:80: Error: http: no such file
+[INFO] 2023/10/24 16:42:41 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 57 
 
-[INFO] 2023/10/19 12:46:26 log.go:88: inserted Successfully
-[INFO] 2023/10/19 12:46:40 log.go:88: activityid length: 10253
+[INFO] 2023/10/24 16:42:41 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 16:42:41 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 57: 13549
+[INFO] 2023/10/24 16:42:41 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 115 
 
-[INFO] 2023/10/19 12:46:40 log.go:88: inserted Successfully
-[INFO] 2023/10/19 12:48:47 log.go:88: Producer Topic: ContactStatusTopicNew53 Message produced to partition: 0 at offset: 4 
+[INFO] 2023/10/24 16:42:41 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 116 
 
-[INFO] 2023/10/19 12:48:47 log.go:88: Messages successfully send contact to kafka
-[INFO] 2023/10/19 12:48:47 log.go:88: Received message from topic ContactStatusTopicNew53, partition 0, offset 4: 7166
-[INFO] 2023/10/19 12:48:47 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 4 
+[INFO] 2023/10/24 16:42:41 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 115: 410530
+[INFO] 2023/10/24 16:42:41 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 117 
 
-[INFO] 2023/10/19 12:48:47 log.go:88: Message successfully send activity to Kafka
-[INFO] 2023/10/19 12:48:47 log.go:88: generate activity func stopped
+[INFO] 2023/10/24 16:42:41 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 118 
 
-[INFO] 2023/10/19 12:48:47 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 4: 954848
-[INFO] 2023/10/19 12:48:59 log.go:88: Contactid length: 50
+[INFO] 2023/10/24 16:42:41 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 16:42:41 log.go:88: generate activity func stopped
 
-[INFO] 2023/10/19 12:48:59 log.go:88: inserted Successfully
-[INFO] 2023/10/19 12:49:15 log.go:88: activityid length: 10988
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 58 
 
-[INFO] 2023/10/19 12:49:15 log.go:88: inserted Successfully
-[INFO] 2023/10/19 13:12:45 log.go:88: Producer Topic: ContactStatusTopicNew53 Message produced to partition: 0 at offset: 5 
+[INFO] 2023/10/24 16:42:42 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 119 
 
-[INFO] 2023/10/19 13:12:45 log.go:88: Messages successfully send contact to kafka
-[INFO] 2023/10/19 13:12:45 log.go:88: Received message from topic ContactStatusTopicNew53, partition 0, offset 5: 7166
-[INFO] 2023/10/19 13:12:45 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 5 
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 120 
 
-[INFO] 2023/10/19 13:12:45 log.go:88: Message successfully send activity to Kafka
-[INFO] 2023/10/19 13:12:45 log.go:88: generate activity func stopped
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 121 
 
-[INFO] 2023/10/19 13:12:45 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 5: 928299
-[INFO] 2023/10/19 13:12:57 log.go:88: Contactid length: 50
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 122 
 
-[INFO] 2023/10/19 13:12:57 log.go:88: inserted Successfully
-[INFO] 2023/10/19 13:13:12 log.go:88: activityid length: 10683
+[INFO] 2023/10/24 16:42:42 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 16:42:42 log.go:88: generate activity func stopped
 
-[INFO] 2023/10/19 13:13:12 log.go:88: inserted Successfully
-[INFO] 2023/10/19 13:39:28 log.go:88: Producer Topic: ContactStatusTopicNew53 Message produced to partition: 0 at offset: 6 
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 59 
 
-[INFO] 2023/10/19 13:39:28 log.go:88: Messages successfully send contact to kafka
-[INFO] 2023/10/19 13:39:28 log.go:88: Received message from topic ContactStatusTopicNew53, partition 0, offset 6: 7166
-[INFO] 2023/10/19 13:39:28 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 6 
+[INFO] 2023/10/24 16:42:42 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 123 
 
-[INFO] 2023/10/19 13:39:28 log.go:88: Message successfully send activity to Kafka
-[INFO] 2023/10/19 13:39:28 log.go:88: generate activity func stopped
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 124 
 
-[INFO] 2023/10/19 13:39:28 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 6: 911930
-[INFO] 2023/10/19 13:39:40 log.go:88: Contactid length: 50
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 125 
 
-[INFO] 2023/10/19 13:39:40 log.go:88: inserted Successfully
-[INFO] 2023/10/19 13:39:55 log.go:88: activityid length: 10494
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 126 
 
-[INFO] 2023/10/19 13:39:55 log.go:88: inserted Successfully
-[INFO] 2023/10/19 13:54:30 log.go:88: Producer Topic: ContactStatusTopicNew53 Message produced to partition: 0 at offset: 7 
+[INFO] 2023/10/24 16:42:42 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 16:42:42 log.go:88: generate activity func stopped
 
-[INFO] 2023/10/19 13:54:30 log.go:88: Messages successfully send contact to kafka
-[INFO] 2023/10/19 13:54:30 log.go:88: Received message from topic ContactStatusTopicNew53, partition 0, offset 7: 7166
-[INFO] 2023/10/19 13:54:30 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 7 
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 60 
 
-[INFO] 2023/10/19 13:54:30 log.go:88: Message successfully send activity to Kafka
-[INFO] 2023/10/19 13:54:30 log.go:88: generate activity func stopped
+[INFO] 2023/10/24 16:42:42 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 127 
 
-[INFO] 2023/10/19 13:54:30 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 7: 945359
-[INFO] 2023/10/19 13:54:42 log.go:88: Contactid length: 50
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 128 
 
-[INFO] 2023/10/19 13:54:42 log.go:88: inserted Successfully
-[INFO] 2023/10/19 13:54:57 log.go:88: activityid length: 10879
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 129 
 
-[INFO] 2023/10/19 13:54:57 log.go:88: inserted Successfully
-[INFO] 2023/10/19 15:29:17 log.go:88: Producer Topic: ContactStatusTopicNew53 Message produced to partition: 0 at offset: 8 
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 130 
 
-[INFO] 2023/10/19 15:29:17 log.go:88: Messages successfully send contact to kafka
-[INFO] 2023/10/19 15:29:17 log.go:88: Received message from topic ContactStatusTopicNew53, partition 0, offset 8: 7166
-[INFO] 2023/10/19 15:29:17 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 8 
+[INFO] 2023/10/24 16:42:42 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 16:42:42 log.go:88: generate activity func stopped
 
-[INFO] 2023/10/19 15:29:17 log.go:88: Message successfully send activity to Kafka
-[INFO] 2023/10/19 15:29:17 log.go:88: generate activity func stopped
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 61 
 
-[INFO] 2023/10/19 15:29:17 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 8: 878189
-[INFO] 2023/10/19 15:29:29 log.go:88: Contactid length: 50
+[INFO] 2023/10/24 16:42:42 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 131 
 
-[INFO] 2023/10/19 15:29:29 log.go:88: inserted Successfully
-[INFO] 2023/10/19 15:29:45 log.go:88: activityid length: 10107
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 132 
 
-[INFO] 2023/10/19 15:29:45 log.go:88: inserted Successfully
-[INFO] 2023/10/19 16:02:03 log.go:88: Producer Topic: ContactStatusTopicNew53 Message produced to partition: 0 at offset: 9 
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 133 
 
-[INFO] 2023/10/19 16:02:03 log.go:88: Messages successfully send contact to kafka
-[INFO] 2023/10/19 16:02:03 log.go:88: Received message from topic ContactStatusTopicNew53, partition 0, offset 9: 7166
-[INFO] 2023/10/19 16:02:03 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 9 
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 134 
 
-[INFO] 2023/10/19 16:02:03 log.go:88: Message successfully send activity to Kafka
-[INFO] 2023/10/19 16:02:03 log.go:88: generate activity func stopped
+[INFO] 2023/10/24 16:42:42 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 16:42:42 log.go:88: generate activity func stopped
 
-[INFO] 2023/10/19 16:02:03 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 9: 813103
-[INFO] 2023/10/19 16:02:15 log.go:88: Contactid length: 50
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 62 
 
-[INFO] 2023/10/19 16:02:15 log.go:88: inserted Successfully
-[INFO] 2023/10/19 16:02:28 log.go:88: activityid length: 9359
+[INFO] 2023/10/24 16:42:42 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 135 
 
-[INFO] 2023/10/19 16:02:28 log.go:88: inserted Successfully
-[INFO] 2023/10/19 16:27:11 log.go:88: Producer Topic: ContactStatusTopicNew53 Message produced to partition: 0 at offset: 10 
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 136 
 
-[INFO] 2023/10/19 16:27:11 log.go:88: Messages successfully send contact to kafka
-[INFO] 2023/10/19 16:27:11 log.go:88: Received message from topic ContactStatusTopicNew53, partition 0, offset 10: 7166
-[INFO] 2023/10/19 16:27:11 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 10 
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 137 
 
-[INFO] 2023/10/19 16:27:11 log.go:88: Message successfully send activity to Kafka
-[INFO] 2023/10/19 16:27:11 log.go:88: generate activity func stopped
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 138 
 
-[INFO] 2023/10/19 16:27:11 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 10: 860346
-[INFO] 2023/10/19 16:27:23 log.go:88: Contactid length: 50
+[INFO] 2023/10/24 16:42:42 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 16:42:42 log.go:88: generate activity func stopped
 
-[INFO] 2023/10/19 16:27:23 log.go:88: inserted Successfully
-[INFO] 2023/10/19 16:27:37 log.go:88: activityid length: 9901
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 63 
 
-[INFO] 2023/10/19 16:27:37 log.go:88: inserted Successfully
-[INFO] 2023/10/19 17:00:51 log.go:88: Producer Topic: ContactStatusTopicNew53 Message produced to partition: 0 at offset: 11 
+[INFO] 2023/10/24 16:42:42 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 139 
 
-[INFO] 2023/10/19 17:00:51 log.go:88: Messages successfully send contact to kafka
-[INFO] 2023/10/19 17:00:51 log.go:88: Received message from topic ContactStatusTopicNew53, partition 0, offset 11: 7166
-[INFO] 2023/10/19 17:00:51 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 11 
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 140 
 
-[INFO] 2023/10/19 17:00:51 log.go:88: Message successfully send activity to Kafka
-[INFO] 2023/10/19 17:00:51 log.go:88: generate activity func stopped
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 141 
 
-[INFO] 2023/10/19 17:00:52 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 11: 974076
-[INFO] 2023/10/19 17:01:03 log.go:88: Contactid length: 50
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 142 
 
-[INFO] 2023/10/19 17:01:03 log.go:88: inserted Successfully
-[INFO] 2023/10/19 17:01:19 log.go:88: activityid length: 11209
+[INFO] 2023/10/24 16:42:42 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 16:42:42 log.go:88: generate activity func stopped
 
-[INFO] 2023/10/19 17:01:19 log.go:88: inserted Successfully
-[INFO] 2023/10/19 17:48:19 log.go:88: Producer Topic: ContactStatusTopicNew53 Message produced to partition: 0 at offset: 12 
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 64 
 
-[INFO] 2023/10/19 17:48:19 log.go:88: Received message from topic ContactStatusTopicNew53, partition 0, offset 12: 7166
-[INFO] 2023/10/19 17:48:19 log.go:88: Messages successfully send contact to kafka
-[INFO] 2023/10/19 17:48:19 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 12 
+[INFO] 2023/10/24 16:42:42 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 143 
 
-[INFO] 2023/10/19 17:48:19 log.go:88: Message successfully send activity to Kafka
-[INFO] 2023/10/19 17:48:19 log.go:88: generate activity func stopped
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 144 
 
-[INFO] 2023/10/19 17:48:19 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 12: 833066
-[INFO] 2023/10/19 17:48:31 log.go:88: Contactid length: 50
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 145 
 
-[INFO] 2023/10/19 17:48:31 log.go:88: inserted Successfully
-[INFO] 2023/10/19 17:48:44 log.go:88: activityid length: 9588
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 146 
 
-[INFO] 2023/10/19 17:48:44 log.go:88: inserted Successfully
-[ERROR] 2023/10/19 19:07:00 log.go:80: error executing query:: code: 62, message: Syntax error: failed at position 1 ('query'): query. Expected one of: Query, Query with output, EXPLAIN, SELECT query, possibly with UNION, list of union elements, SELECT query, subquery, possibly with UNION, SELECT subquery, SELECT query, WITH, FROM, SELECT, SHOW CREATE QUOTA query, SHOW CREATE, SHOW [FULL] [TEMPORARY] TABLES|DATABASES|CLUSTERS|CLUSTER 'name' [[NOT] [I]LIKE 'str'] [LIMIT expr], SHOW, SHOW COLUMNS query, SHOW ENGINES query, SHOW ENGINES, SHOW INDEXES query, EXISTS or SHOW CREATE query, EXISTS, DESCRIBE FILESYSTEM CACHE query, DESCRIBE, DESC, DESCRIBE query, SHOW PROCESSLIST query, SHOW PROCESSLIST, CREATE TABLE or ATTACH TABLE query, CREATE, ATTACH, REPLACE, CREATE DATABASE query, CREATE VIEW query, CREATE DICTIONARY, CREATE LIVE VIEW query, CREATE WINDOW VIEW query, ALTER query, ALTER TABLE, ALTER LIVE VIEW, ALTER DATABASE, RENAME query, RENAME TABLE, EXCHANGE TABLES, RENAME DICTIONARY, EXCHANGE DICTIONARIES, RENAME DATABASE, DROP query, DROP, DETACH, TRUNCATE, UNDROP query, UNDROP, CHECK TABLE, KILL QUERY query, KILL, OPTIMIZE query, OPTIMIZE TABLE, WATCH query, WATCH, SHOW ACCESS query, SHOW ACCESS, ShowAccessEntitiesQuery, SHOW GRANTS query, SHOW GRANTS, SHOW PRIVILEGES query, SHOW PRIVILEGES, INSERT query, INSERT INTO, USE query, USE, SET ROLE or SET DEFAULT ROLE query, SET ROLE DEFAULT, SET ROLE, SET DEFAULT ROLE, SET query, SET, SYSTEM query, SYSTEM, CREATE USER or ALTER USER query, ALTER USER, CREATE USER, CREATE ROLE or ALTER ROLE query, ALTER ROLE, CREATE ROLE, CREATE QUOTA or ALTER QUOTA query, ALTER QUOTA, CREATE QUOTA, CREATE ROW POLICY or ALTER ROW POLICY query, ALTER POLICY, ALTER ROW POLICY, CREATE POLICY, CREATE ROW POLICY, CREATE SETTINGS PROFILE or ALTER SETTINGS PROFILE query, ALTER SETTINGS PROFILE, ALTER PROFILE, CREATE SETTINGS PROFILE, CREATE PROFILE, CREATE FUNCTION query, DROP FUNCTION query, CREATE NAMED COLLECTION, DROP NAMED COLLECTION query, Alter NAMED COLLECTION query, ALTER, CREATE INDEX query, DROP INDEX query, DROP access entity query, MOVE access entity query, MOVE, GRANT or REVOKE query, REVOKE, GRANT, EXTERNAL DDL query, EXTERNAL DDL FROM, TCL query, BEGIN TRANSACTION, COMMIT, ROLLBACK, SET TRANSACTION SNAPSHOT, Delete query, DELETE, BACKUP or RESTORE query, BACKUP, RESTORE
-[ERROR] 2023/10/19 19:07:00 log.go:80: Error:: error executing query: code: 62, message: Syntax error: failed at position 1 ('query'): query. Expected one of: Query, Query with output, EXPLAIN, SELECT query, possibly with UNION, list of union elements, SELECT query, subquery, possibly with UNION, SELECT subquery, SELECT query, WITH, FROM, SELECT, SHOW CREATE QUOTA query, SHOW CREATE, SHOW [FULL] [TEMPORARY] TABLES|DATABASES|CLUSTERS|CLUSTER 'name' [[NOT] [I]LIKE 'str'] [LIMIT expr], SHOW, SHOW COLUMNS query, SHOW ENGINES query, SHOW ENGINES, SHOW INDEXES query, EXISTS or SHOW CREATE query, EXISTS, DESCRIBE FILESYSTEM CACHE query, DESCRIBE, DESC, DESCRIBE query, SHOW PROCESSLIST query, SHOW PROCESSLIST, CREATE TABLE or ATTACH TABLE query, CREATE, ATTACH, REPLACE, CREATE DATABASE query, CREATE VIEW query, CREATE DICTIONARY, CREATE LIVE VIEW query, CREATE WINDOW VIEW query, ALTER query, ALTER TABLE, ALTER LIVE VIEW, ALTER DATABASE, RENAME query, RENAME TABLE, EXCHANGE TABLES, RENAME DICTIONARY, EXCHANGE DICTIONARIES, RENAME DATABASE, DROP query, DROP, DETACH, TRUNCATE, UNDROP query, UNDROP, CHECK TABLE, KILL QUERY query, KILL, OPTIMIZE query, OPTIMIZE TABLE, WATCH query, WATCH, SHOW ACCESS query, SHOW ACCESS, ShowAccessEntitiesQuery, SHOW GRANTS query, SHOW GRANTS, SHOW PRIVILEGES query, SHOW PRIVILEGES, INSERT query, INSERT INTO, USE query, USE, SET ROLE or SET DEFAULT ROLE query, SET ROLE DEFAULT, SET ROLE, SET DEFAULT ROLE, SET query, SET, SYSTEM query, SYSTEM, CREATE USER or ALTER USER query, ALTER USER, CREATE USER, CREATE ROLE or ALTER ROLE query, ALTER ROLE, CREATE ROLE, CREATE QUOTA or ALTER QUOTA query, ALTER QUOTA, CREATE QUOTA, CREATE ROW POLICY or ALTER ROW POLICY query, ALTER POLICY, ALTER ROW POLICY, CREATE POLICY, CREATE ROW POLICY, CREATE SETTINGS PROFILE or ALTER SETTINGS PROFILE query, ALTER SETTINGS PROFILE, ALTER PROFILE, CREATE SETTINGS PROFILE, CREATE PROFILE, CREATE FUNCTION query, DROP FUNCTION query, CREATE NAMED COLLECTION, DROP NAMED COLLECTION query, Alter NAMED COLLECTION query, ALTER, CREATE INDEX query, DROP INDEX query, DROP access entity query, MOVE access entity query, MOVE, GRANT or REVOKE query, REVOKE, GRANT, EXTERNAL DDL query, EXTERNAL DDL FROM, TCL query, BEGIN TRANSACTION, COMMIT, ROLLBACK, SET TRANSACTION SNAPSHOT, Delete query, DELETE, BACKUP or RESTORE query, BACKUP, RESTORE
-[ERROR] 2023/10/19 19:07:00 log.go:80: error executing query:: code: 62, message: Syntax error: failed at position 1 ('query'): query. Expected one of: Query, Query with output, EXPLAIN, SELECT query, possibly with UNION, list of union elements, SELECT query, subquery, possibly with UNION, SELECT subquery, SELECT query, WITH, FROM, SELECT, SHOW CREATE QUOTA query, SHOW CREATE, SHOW [FULL] [TEMPORARY] TABLES|DATABASES|CLUSTERS|CLUSTER 'name' [[NOT] [I]LIKE 'str'] [LIMIT expr], SHOW, SHOW COLUMNS query, SHOW ENGINES query, SHOW ENGINES, SHOW INDEXES query, EXISTS or SHOW CREATE query, EXISTS, DESCRIBE FILESYSTEM CACHE query, DESCRIBE, DESC, DESCRIBE query, SHOW PROCESSLIST query, SHOW PROCESSLIST, CREATE TABLE or ATTACH TABLE query, CREATE, ATTACH, REPLACE, CREATE DATABASE query, CREATE VIEW query, CREATE DICTIONARY, CREATE LIVE VIEW query, CREATE WINDOW VIEW query, ALTER query, ALTER TABLE, ALTER LIVE VIEW, ALTER DATABASE, RENAME query, RENAME TABLE, EXCHANGE TABLES, RENAME DICTIONARY, EXCHANGE DICTIONARIES, RENAME DATABASE, DROP query, DROP, DETACH, TRUNCATE, UNDROP query, UNDROP, CHECK TABLE, KILL QUERY query, KILL, OPTIMIZE query, OPTIMIZE TABLE, WATCH query, WATCH, SHOW ACCESS query, SHOW ACCESS, ShowAccessEntitiesQuery, SHOW GRANTS query, SHOW GRANTS, SHOW PRIVILEGES query, SHOW PRIVILEGES, INSERT query, INSERT INTO, USE query, USE, SET ROLE or SET DEFAULT ROLE query, SET ROLE DEFAULT, SET ROLE, SET DEFAULT ROLE, SET query, SET, SYSTEM query, SYSTEM, CREATE USER or ALTER USER query, ALTER USER, CREATE USER, CREATE ROLE or ALTER ROLE query, ALTER ROLE, CREATE ROLE, CREATE QUOTA or ALTER QUOTA query, ALTER QUOTA, CREATE QUOTA, CREATE ROW POLICY or ALTER ROW POLICY query, ALTER POLICY, ALTER ROW POLICY, CREATE POLICY, CREATE ROW POLICY, CREATE SETTINGS PROFILE or ALTER SETTINGS PROFILE query, ALTER SETTINGS PROFILE, ALTER PROFILE, CREATE SETTINGS PROFILE, CREATE PROFILE, CREATE FUNCTION query, DROP FUNCTION query, CREATE NAMED COLLECTION, DROP NAMED COLLECTION query, Alter NAMED COLLECTION query, ALTER, CREATE INDEX query, DROP INDEX query, DROP access entity query, MOVE access entity query, MOVE, GRANT or REVOKE query, REVOKE, GRANT, EXTERNAL DDL query, EXTERNAL DDL FROM, TCL query, BEGIN TRANSACTION, COMMIT, ROLLBACK, SET TRANSACTION SNAPSHOT, Delete query, DELETE, BACKUP or RESTORE query, BACKUP, RESTORE
-[ERROR] 2023/10/19 19:07:00 log.go:80: Error:: error executing query: code: 62, message: Syntax error: failed at position 1 ('query'): query. Expected one of: Query, Query with output, EXPLAIN, SELECT query, possibly with UNION, list of union elements, SELECT query, subquery, possibly with UNION, SELECT subquery, SELECT query, WITH, FROM, SELECT, SHOW CREATE QUOTA query, SHOW CREATE, SHOW [FULL] [TEMPORARY] TABLES|DATABASES|CLUSTERS|CLUSTER 'name' [[NOT] [I]LIKE 'str'] [LIMIT expr], SHOW, SHOW COLUMNS query, SHOW ENGINES query, SHOW ENGINES, SHOW INDEXES query, EXISTS or SHOW CREATE query, EXISTS, DESCRIBE FILESYSTEM CACHE query, DESCRIBE, DESC, DESCRIBE query, SHOW PROCESSLIST query, SHOW PROCESSLIST, CREATE TABLE or ATTACH TABLE query, CREATE, ATTACH, REPLACE, CREATE DATABASE query, CREATE VIEW query, CREATE DICTIONARY, CREATE LIVE VIEW query, CREATE WINDOW VIEW query, ALTER query, ALTER TABLE, ALTER LIVE VIEW, ALTER DATABASE, RENAME query, RENAME TABLE, EXCHANGE TABLES, RENAME DICTIONARY, EXCHANGE DICTIONARIES, RENAME DATABASE, DROP query, DROP, DETACH, TRUNCATE, UNDROP query, UNDROP, CHECK TABLE, KILL QUERY query, KILL, OPTIMIZE query, OPTIMIZE TABLE, WATCH query, WATCH, SHOW ACCESS query, SHOW ACCESS, ShowAccessEntitiesQuery, SHOW GRANTS query, SHOW GRANTS, SHOW PRIVILEGES query, SHOW PRIVILEGES, INSERT query, INSERT INTO, USE query, USE, SET ROLE or SET DEFAULT ROLE query, SET ROLE DEFAULT, SET ROLE, SET DEFAULT ROLE, SET query, SET, SYSTEM query, SYSTEM, CREATE USER or ALTER USER query, ALTER USER, CREATE USER, CREATE ROLE or ALTER ROLE query, ALTER ROLE, CREATE ROLE, CREATE QUOTA or ALTER QUOTA query, ALTER QUOTA, CREATE QUOTA, CREATE ROW POLICY or ALTER ROW POLICY query, ALTER POLICY, ALTER ROW POLICY, CREATE POLICY, CREATE ROW POLICY, CREATE SETTINGS PROFILE or ALTER SETTINGS PROFILE query, ALTER SETTINGS PROFILE, ALTER PROFILE, CREATE SETTINGS PROFILE, CREATE PROFILE, CREATE FUNCTION query, DROP FUNCTION query, CREATE NAMED COLLECTION, DROP NAMED COLLECTION query, Alter NAMED COLLECTION query, ALTER, CREATE INDEX query, DROP INDEX query, DROP access entity query, MOVE access entity query, MOVE, GRANT or REVOKE query, REVOKE, GRANT, EXTERNAL DDL query, EXTERNAL DDL FROM, TCL query, BEGIN TRANSACTION, COMMIT, ROLLBACK, SET TRANSACTION SNAPSHOT, Delete query, DELETE, BACKUP or RESTORE query, BACKUP, RESTORE
+[INFO] 2023/10/24 16:42:42 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 16:42:42 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 65 
+
+[INFO] 2023/10/24 16:42:42 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 147 
+
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 148 
+
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 149 
+
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 150 
+
+[INFO] 2023/10/24 16:42:42 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 16:42:42 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 66 
+
+[INFO] 2023/10/24 16:42:42 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 151 
+
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 152 
+
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 153 
+
+[INFO] 2023/10/24 16:42:42 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 154 
+
+[INFO] 2023/10/24 16:42:42 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 16:42:42 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 16:42:43 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 67 
+
+[INFO] 2023/10/24 16:42:43 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 16:42:43 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 155 
+
+[INFO] 2023/10/24 16:42:43 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 156 
+
+[INFO] 2023/10/24 16:42:43 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 157 
+
+[INFO] 2023/10/24 16:42:43 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 158 
+
+[INFO] 2023/10/24 16:42:43 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 16:42:43 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 16:42:43 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 68 
+
+[INFO] 2023/10/24 16:42:43 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 16:42:43 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 159 
+
+[INFO] 2023/10/24 16:42:43 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 160 
+
+[INFO] 2023/10/24 16:42:43 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 161 
+
+[INFO] 2023/10/24 16:42:43 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 162 
+
+[INFO] 2023/10/24 16:42:43 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 16:42:43 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 16:42:43 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 69 
+
+[INFO] 2023/10/24 16:42:43 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 16:42:43 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 163 
+
+[INFO] 2023/10/24 16:42:43 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 16:42:43 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 16:42:54 log.go:88: Contactid length: 100
+
+[INFO] 2023/10/24 16:42:54 log.go:88: inserted Successfully
+[INFO] 2023/10/24 16:42:54 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 58: 13549
+[INFO] 2023/10/24 16:43:17 log.go:88: Database connection is available
+[INFO] 2023/10/24 16:43:19 log.go:88: Database connection is available
+[INFO] 2023/10/24 16:43:19 log.go:88: Database connection is available
+[INFO] 2023/10/24 16:43:21 log.go:88: Database connection is available
+[INFO] 2023/10/24 16:43:24 log.go:88: Database connection is available
+[INFO] 2023/10/24 16:43:25 log.go:88: Database connection is available
+[INFO] 2023/10/24 16:43:26 log.go:88: Database connection is available
+[INFO] 2023/10/24 16:43:27 log.go:88: Database connection is available
+[INFO] 2023/10/24 16:43:28 log.go:88: Database connection is available
+[INFO] 2023/10/24 16:43:28 log.go:88: Database connection is available
+[INFO] 2023/10/24 16:43:32 log.go:88: Database connection is available
+[INFO] 2023/10/24 17:26:25 log.go:88: Current Directory: /home/arun/test 5/go_indivdual_project
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 70 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:26:25 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 70: 13549
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 164 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 165 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 164: 411727
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 166 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 167 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:26:25 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 71 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 168 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 169 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 170 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 171 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:26:25 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 72 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 172 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 173 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 174 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 175 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:26:25 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 73 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 176 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 177 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 178 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 179 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:26:25 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 74 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 180 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 181 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 182 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 183 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:26:25 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 75 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 184 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 185 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 186 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 187 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:26:25 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 76 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 188 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 189 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 190 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 191 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:26:25 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 77 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 192 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 193 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 194 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 195 
+
+[INFO] 2023/10/24 17:26:25 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:26:25 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 78 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 196 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 197 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 198 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 199 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:26:26 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 79 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 200 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 201 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 202 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 203 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:26:26 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 80 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 204 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 205 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 206 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 207 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:26:26 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 81 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 208 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 209 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 210 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 211 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:26:26 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 82 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:26:26 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 212 
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:26:26 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:26:26 log.go:88: Contactid length: 100
+
+[INFO] 2023/10/24 17:26:26 log.go:88: inserted Successfully
+[INFO] 2023/10/24 17:26:26 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 71: 13549
+[ERROR] 2023/10/24 17:26:29 log.go:80: error:: Error 1053 (08S01): Server shutdown in progress
+[ERROR] 2023/10/24 17:26:29 log.go:80: error inserting contact:: Error 1053 (08S01): Server shutdown in progress
+[ERROR] 2023/10/24 17:26:29 log.go:80: error inserting contact activity: : error inserting contact: Error 1053 (08S01): Server shutdown in progress
+[ERROR] 2023/10/24 17:26:29 log.go:80: error in handle topic:: error inserting contact activity: error inserting contact: Error 1053 (08S01): Server shutdown in progress
+[INFO] 2023/10/24 17:26:29 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 165: 426883
+[ERROR] 2023/10/24 17:26:29 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:29 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:29 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 166: 421405
+[ERROR] 2023/10/24 17:26:29 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:29 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:29 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 167: 499787
+[ERROR] 2023/10/24 17:26:29 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:29 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:29 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 168: 513364
+[ERROR] 2023/10/24 17:26:29 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:29 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:29 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 169: 552338
+[ERROR] 2023/10/24 17:26:29 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:29 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:29 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 170: 394120
+[ERROR] 2023/10/24 17:26:29 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:29 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 171: 483752
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 172: 387126
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 173: 327482
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 174: 438449
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 175: 431245
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 176: 494725
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 177: 469341
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 178: 429860
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 179: 517354
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 180: 443234
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 181: 458200
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 182: 442776
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 183: 476307
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 184: 518388
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 185: 477356
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 186: 444978
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 187: 502291
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 188: 433121
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 189: 461066
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 190: 542307
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 191: 478622
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 192: 461871
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 193: 384672
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 194: 465570
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 195: 556062
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 196: 447316
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 197: 404417
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 198: 385408
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 199: 431530
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 200: 502304
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 201: 494559
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 202: 470964
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 203: 449580
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 204: 494672
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 205: 446539
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:30 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 206: 492400
+[ERROR] 2023/10/24 17:26:30 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:30 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:31 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 207: 450910
+[ERROR] 2023/10/24 17:26:31 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:31 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:31 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 208: 537198
+[ERROR] 2023/10/24 17:26:31 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:31 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:31 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 209: 469588
+[ERROR] 2023/10/24 17:26:31 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:31 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:31 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 210: 385864
+[ERROR] 2023/10/24 17:26:31 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:31 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:31 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 211: 443916
+[ERROR] 2023/10/24 17:26:31 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:31 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:31 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 212: 73007
+[ERROR] 2023/10/24 17:26:31 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:31 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:31 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:31 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:31 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 72: 13549
+[ERROR] 2023/10/24 17:26:31 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:31 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:31 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 73: 13549
+[ERROR] 2023/10/24 17:26:31 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:31 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:31 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 74: 13549
+[ERROR] 2023/10/24 17:26:31 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:31 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:31 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 75: 13549
+[ERROR] 2023/10/24 17:26:31 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:31 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:31 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 76: 13549
+[ERROR] 2023/10/24 17:26:31 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:31 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:31 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 77: 13552
+[ERROR] 2023/10/24 17:26:31 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:31 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:31 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 78: 13549
+[ERROR] 2023/10/24 17:26:31 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:31 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:31 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 79: 13549
+[ERROR] 2023/10/24 17:26:31 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:31 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:31 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 80: 13549
+[ERROR] 2023/10/24 17:26:31 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:31 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:31 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 81: 13549
+[ERROR] 2023/10/24 17:26:31 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:31 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:26:31 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 82: 407
+[ERROR] 2023/10/24 17:26:31 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:26:31 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:28:53 log.go:88: Current Directory: /home/arun/test 5/go_indivdual_project
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 83 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:28:54 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 83: 13549
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 213 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 214 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 213: 497451
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 215 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 216 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:28:54 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 84 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 217 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 218 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 219 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 220 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:28:54 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 85 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 221 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 222 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 223 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 224 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:28:54 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 86 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 225 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 226 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 227 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 228 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:28:54 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 87 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 229 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 230 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 231 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 232 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:28:54 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 88 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 233 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 234 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 235 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 236 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:28:54 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 89 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 237 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 238 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 239 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 240 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:28:54 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 90 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 241 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 242 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 243 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 244 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:28:54 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 91 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 245 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 246 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 247 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 248 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:28:54 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 92 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 249 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 250 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 251 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 252 
+
+[INFO] 2023/10/24 17:28:54 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:28:54 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:28:55 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 93 
+
+[INFO] 2023/10/24 17:28:55 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:28:55 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 253 
+
+[INFO] 2023/10/24 17:28:55 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 254 
+
+[INFO] 2023/10/24 17:28:55 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 255 
+
+[INFO] 2023/10/24 17:28:55 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 256 
+
+[INFO] 2023/10/24 17:28:55 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:28:55 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:28:55 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 94 
+
+[INFO] 2023/10/24 17:28:55 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:28:55 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 257 
+
+[INFO] 2023/10/24 17:28:55 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 258 
+
+[INFO] 2023/10/24 17:28:55 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 259 
+
+[INFO] 2023/10/24 17:28:55 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 260 
+
+[INFO] 2023/10/24 17:28:55 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:28:55 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:28:55 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 95 
+
+[INFO] 2023/10/24 17:28:55 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/24 17:28:55 log.go:88: Producer Topic: ActivityContactTopicNew54 Message produced to partition: 0 at offset: 261 
+
+[INFO] 2023/10/24 17:28:55 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/24 17:28:55 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/24 17:29:06 log.go:88: Contactid length: 100
+
+[INFO] 2023/10/24 17:29:06 log.go:88: inserted Successfully
+[INFO] 2023/10/24 17:29:06 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 84: 13549
+[INFO] 2023/10/24 17:29:13 log.go:88: activityid length: 5724
+
+[INFO] 2023/10/24 17:29:13 log.go:88: inserted Successfully
+[INFO] 2023/10/24 17:29:13 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 214: 400917
+[INFO] 2023/10/24 17:29:18 log.go:88: Contactid length: 100
+
+[INFO] 2023/10/24 17:29:18 log.go:88: inserted Successfully
+[INFO] 2023/10/24 17:29:18 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 85: 13549

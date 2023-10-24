@@ -3,52 +3,44 @@
 
 <head>
 	<title>Top Contact Activity13</title>
-	<link rel="stylesheet" type="text/css" href="/static/ResultPage.css">
+	<link rel="stylesheet" type="text/css" href="static/ResultPage.css">
 </head>
 
 <body>
 	<h1>Top Contact Activity12</h1>
-	<!-- <button id="query1">Load Results</button> -->
-	<button id="button" data-value="query1">Load Results1</button>
-	<table border="1">
-		<tr>
-			<th>Contact ID</th>
-			<th>Clicked</th>
-		</tr>
-		<!-- Results will be displayed here -->
-	</table>
+	<button id="button1" data-value="query1">Load Results1</button>
+	<button id="button2" data-value="query2" style="display: none;">show more</button>
+
+	<div id="resultsTable">
+		<table border="1">
+			<tr>
+				<th>Contact ID</th>
+				<th>Clicked</th>
+			</tr>
+			<!-- Results will be displayed here -->
+		</table>
 	</div>
 
-
-	<!-- Display error log data here
-	<div id="errorLog">
-		<h2>Error Log</h2>
-		<ul>
-			{{range .}}
-			<li>{{.}}</li>
-			{{end}}
-		</ul>
-	</div> -->
+	</div>
 
 	<script>
-		// document.getElementById("query1").addEventListener("click", function () {
-		// 	fetch("/result")
-		// 		.then(response => response.json())
-		// 		.then(data => {
-		// 			const resultsTable = document.getElementById("resultsTable");
-		// 			resultsTable.style.display = "block";
-		// 			const table = resultsTable.querySelector("table");
-		// 			table.innerHTML = "<tr><th>Contact ID</th><th>Clicked</th></tr>";
 
-		// 			data.forEach(row => {
-		// 				table.innerHTML += `<tr><td>${row.ContactID}</td><td>${row.Click}</td></tr>`;
-		// 			});
-		// 		});
-		// });
+		document.getElementById("button1").addEventListener("click", function () {
+			// Fetch data for Button1
+			fetchResults("query1");
 
-		document.getElementById("button").addEventListener("click", function () {
-			const buttonValue = this.getAttribute("data-value"); // Get the data-value attribute
-			fetch("/result?button=" + buttonValue) // Pass the button value as a query parameter
+			// Show Button2
+			const button2 = document.getElementById("button2");
+			button2.style.display = "inline-block"; // Or set it to "block" as needed
+		});
+
+		document.getElementById("button2").addEventListener("click", function () {
+			// Fetch data for Button2
+			fetchResults("query2");
+		});
+
+		function fetchResults(buttonValue) {
+			fetch("/result?button=" + buttonValue)
 				.then(response => response.json())
 				.then(data => {
 					const resultsTable = document.getElementById("resultsTable");
@@ -57,10 +49,11 @@
 					table.innerHTML = "<tr><th>Contact ID</th><th>Clicked</th></tr>";
 
 					data.forEach(row => {
-						table.innerHTML += `<tr><td>${row.ContactID}</td><td>${row.Clicked}</td></tr>`;
+						table.innerHTML += `<tr><td>${row.ContactID}</td><td>${row.Click}</td></tr>`;
 					});
 				});
-		});
+		}
+
 	</script>
 </body>
 
