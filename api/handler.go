@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"html/template"
 	"io"
+	"strings"
 	"sync"
 	"time"
 
@@ -33,34 +34,22 @@ func HomePageHandler(w http.ResponseWriter, r *http.Request) {
 
 func UploadHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodPost {
-		err := r.ParseMultipartForm(10 << 20) // Set a reasonable form size limit.
-		if err != nil {
-			http.Error(w, "Unable to parse form", http.StatusBadRequest)
-			return
-		}
-
-		currentDir, err := os.Getwd() // Add this line to get the current working directory
-		if err != nil {
-			logs.Logger.Error("Error getting current directory", err)
-		}
-		logs.Logger.Info(fmt.Sprintln("Current Directory:", currentDir))
-
 		file, header, err := r.FormFile("csvfile")
 		if err != nil {
 			logs.Logger.Error("Error in get", err)
 			RespondWithError(w, "please choose csv file")
 			return
 		}
+
 		defer file.Close()
 
-		if header.Header.Get("Content-Type") != "text/csv" {
-			logs.Logger.Warning("this not csv file")
-			RespondWithError(w, "file is not csv")
+		if !strings.HasSuffix(header.Filename, ".csv") {
+			logs.Logger.Warning("this is not a CSV file")
+			RespondWithError(w, "file is not a CSV")
 			return
 		}
-		filePath := "/home/arun/test 5/go_indivdual_project/api/original.csv"
-		// filename := filepath.Join("/home/arun/Documents/DatastreamFiles/", header.Filename)
-		originalFile, err := os.Create(filePath)
+		filePath := "original.csv"
+		originalFile, err := os.Create("original.csv")
 		if err != nil {
 			logs.Logger.Error("unable to open the original file", err)
 			return
@@ -72,7 +61,7 @@ func UploadHandler(w http.ResponseWriter, r *http.Request) {
 			logs.Logger.Error("Error copying file Contents", err)
 			return
 		}
-		go Readfile()
+		go Readfile(filePath)
 
 		time.Sleep(15 * time.Second)
 		http.Redirect(w, r, "/resultpage", http.StatusSeeOther)
@@ -90,8 +79,7 @@ func RespondWithError(w http.ResponseWriter, message string) {
 	}
 }
 
-func Readfile() error {
-	filePath := "original.csv"
+func Readfile(filePath string) error {
 	file, err := os.Open(filePath)
 	if err != nil {
 		logs.Logger.Error("unable to open the file:", err)
@@ -111,7 +99,7 @@ func Readfile() error {
 	go func() {
 		defer wg.Done()
 		for batch := range resultCh {
-			if err := processCSVData(batch); err != nil {
+			if err := ProcessCSVData(batch); err != nil {
 				logs.Logger.Error("processCsvdata:", err)
 			}
 		}
@@ -120,7 +108,7 @@ func Readfile() error {
 	return nil
 }
 
-func processCSVData(csvData []types.Contacts) error {
+func ProcessCSVData(csvData []types.Contacts) error {
 	var wg sync.WaitGroup
 
 	wg.Add(1)
@@ -142,6 +130,10 @@ func generateActivitiesInBackground(csvData []types.Contacts, wg *sync.WaitGroup
 		contactStatuses = append(contactStatuses, contactStatus)
 		activitiesStrings = append(activitiesStrings, activitiesString)
 	}
+
+	go service.RunKafkaConsumerContacts()
+
+	go service.RunKafkaConsumerActivity()
 
 	if err := service.RunKafkaProducerContacts(contactStatuses); err != nil {
 		logs.Logger.Error("Error running Kafka producer for contacts:", err)

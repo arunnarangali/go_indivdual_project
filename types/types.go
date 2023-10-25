@@ -65,7 +65,6 @@ func (f DefaultContactFactory) CreateContactStatus(id string, name string, email
 func Extractmsgcontacts(msg []string) ([]ContactStatus, error) {
 	contactStatuses := []ContactStatus{}
 	for _, message := range msg {
-		// message = strings.TrimSpace(message)
 
 		lines := strings.Split(message, "\n")
 
@@ -109,7 +108,7 @@ func ExtractmsgActivity(msg []string) ([]ContactActivity, error) {
 	fmt.Printf("this is Acticitystring:%s", msg)
 
 	for _, message := range msg {
-		// message = strings.TrimSpace(message)
+
 		lines := strings.Split(message, "\n")
 		for _, line := range lines {
 			values := strings.Split(line, ",")
@@ -126,7 +125,6 @@ func ExtractmsgActivity(msg []string) ([]ContactActivity, error) {
 
 				// Remove double quotes from activitydateStr.
 				activitydateStr = strings.Trim(activitydateStr, `"`)
-				fmt.Printf("activitydatestr=%s\n", activitydateStr)
 				layout := "2006-01-02 15:04:05 -0700 MST"
 				// Parse 'activitydate' string to a time.Time object.
 				activitydate, _ := time.Parse(layout, activitydateStr)

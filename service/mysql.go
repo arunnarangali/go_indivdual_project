@@ -41,7 +41,6 @@ func (m *MySQLConnector) Connect() (*sql.DB, error) {
 		m.Config.Hostname,
 		m.Config.Port,
 		m.Config.DBName)
-	fmt.Println(dataSourceName)
 
 	db, err := sql.Open("mysql", dataSourceName)
 	if err != nil {

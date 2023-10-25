@@ -16,3 +16,4 @@
 [ERROR] 2023/10/24 12:14:40 log.go:80: error:: dial tcp :0: connect: connection refused
 [ERROR] 2023/10/24 12:17:43 log.go:80: error:: dial tcp :0: connect: connection refused
 [ERROR] 2023/10/24 15:05:02 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/10/25 10:30:32 log.go:80: error:: dial tcp :0: connect: connection refused

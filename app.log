@@ -801,3 +801,250 @@
 
 [INFO] 2023/10/24 17:29:18 log.go:88: inserted Successfully
 [INFO] 2023/10/24 17:29:18 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 85: 13549
+[INFO] 2023/10/24 17:29:30 log.go:88: Contactid length: 100
+
+[INFO] 2023/10/24 17:29:30 log.go:88: inserted Successfully
+[INFO] 2023/10/24 17:29:30 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 86: 13549
+[INFO] 2023/10/24 17:29:31 log.go:88: activityid length: 4615
+
+[INFO] 2023/10/24 17:29:31 log.go:88: inserted Successfully
+[INFO] 2023/10/24 17:29:31 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 215: 464776
+[INFO] 2023/10/24 17:29:42 log.go:88: Contactid length: 100
+
+[INFO] 2023/10/24 17:29:42 log.go:88: inserted Successfully
+[INFO] 2023/10/24 17:29:42 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 87: 13549
+[ERROR] 2023/10/24 17:29:49 log.go:80: error:: invalid connection
+[ERROR] 2023/10/24 17:29:49 log.go:80: error inserting contact:: invalid connection
+[ERROR] 2023/10/24 17:29:49 log.go:80: error inserting contact activity: : error inserting contact: invalid connection
+[ERROR] 2023/10/24 17:29:49 log.go:80: error in handle topic:: error inserting contact activity: error inserting contact: invalid connection
+[INFO] 2023/10/24 17:29:49 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 216: 502053
+[ERROR] 2023/10/24 17:29:49 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:49 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:49 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 217: 423171
+[ERROR] 2023/10/24 17:29:49 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:49 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:49 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 218: 463087
+[ERROR] 2023/10/24 17:29:49 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:49 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:49 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 219: 469139
+[ERROR] 2023/10/24 17:29:49 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:49 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:49 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 220: 403685
+[ERROR] 2023/10/24 17:29:49 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:49 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:49 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 221: 414416
+[ERROR] 2023/10/24 17:29:49 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:49 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 222: 444627
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 223: 420102
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 224: 411895
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 225: 422187
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 226: 490592
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 227: 487641
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 228: 503953
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 229: 471417
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 230: 458266
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 231: 494303
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 232: 514583
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 233: 507867
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 234: 406565
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 235: 334489
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 236: 473177
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 237: 432629
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 238: 493180
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 239: 471085
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 240: 459733
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 241: 453150
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 242: 453694
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 243: 412254
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 244: 454564
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 245: 379987
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 246: 431478
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 247: 445295
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 248: 471219
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 249: 495599
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 250: 493800
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 251: 407886
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 252: 448559
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 253: 496818
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 254: 444454
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 255: 426891
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 256: 425128
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:50 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 257: 472447
+[ERROR] 2023/10/24 17:29:50 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:50 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:51 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 258: 516984
+[ERROR] 2023/10/24 17:29:51 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:51 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:51 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 259: 473249
+[ERROR] 2023/10/24 17:29:51 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:51 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:51 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 260: 428268
+[ERROR] 2023/10/24 17:29:51 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:51 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:51 log.go:88: Received message from topic ActivityContactTopicNew54, partition 0, offset 261: 73800
+[ERROR] 2023/10/24 17:29:51 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:51 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:51 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:51 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:51 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 88: 13549
+[ERROR] 2023/10/24 17:29:51 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:51 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:51 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 89: 13549
+[ERROR] 2023/10/24 17:29:51 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:51 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:51 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 90: 13552
+[ERROR] 2023/10/24 17:29:51 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:51 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:51 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 91: 13549
+[ERROR] 2023/10/24 17:29:51 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:51 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:51 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 92: 13549
+[ERROR] 2023/10/24 17:29:51 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:51 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:51 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 93: 13549
+[ERROR] 2023/10/24 17:29:51 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:51 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:51 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 94: 13549
+[ERROR] 2023/10/24 17:29:51 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:51 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[INFO] 2023/10/24 17:29:51 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 95: 407
+[ERROR] 2023/10/24 17:29:51 log.go:80: error:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/24 17:29:51 log.go:80: error connecting to the database:: dial tcp 192.168.1.137:3306: connect: connection refused
+[ERROR] 2023/10/25 13:44:00 log.go:80: Error in get: http: no such file
+[INFO] 2023/10/25 13:44:06 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 96 
+
+[INFO] 2023/10/25 13:44:06 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/25 13:44:06 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 0 
+
+[INFO] 2023/10/25 13:44:06 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 1 
+
+[INFO] 2023/10/25 13:44:06 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/25 13:44:06 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/25 13:44:06 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 96: 7166
+[INFO] 2023/10/25 13:44:06 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 0: 468206
+[INFO] 2023/10/25 13:44:18 log.go:88: Contactid length: 50
+
+[INFO] 2023/10/25 13:44:18 log.go:88: inserted Successfully
+[INFO] 2023/10/25 13:44:25 log.go:88: activityid length: 5388
+
+[INFO] 2023/10/25 13:44:25 log.go:88: inserted Successfully
+[INFO] 2023/10/25 13:44:25 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 1: 446364
+[INFO] 2023/10/25 13:44:44 log.go:88: activityid length: 5137
+
+[INFO] 2023/10/25 13:44:44 log.go:88: inserted Successfully
+[INFO] 2023/10/25 13:53:27 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 97 
+
+[INFO] 2023/10/25 13:53:27 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/25 13:53:27 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 2 
+
+[INFO] 2023/10/25 13:53:27 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 3 
+
+[INFO] 2023/10/25 13:53:27 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/25 13:53:27 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/25 13:53:27 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 97: 7166
+[INFO] 2023/10/25 13:53:27 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 2: 501340
+[INFO] 2023/10/25 13:53:39 log.go:88: Contactid length: 50
+
+[INFO] 2023/10/25 13:53:39 log.go:88: inserted Successfully
+[INFO] 2023/10/25 13:53:47 log.go:88: activityid length: 5769
+
+[INFO] 2023/10/25 13:53:47 log.go:88: inserted Successfully
+[INFO] 2023/10/25 13:53:47 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 3: 490620
+[INFO] 2023/10/25 13:54:07 log.go:88: activityid length: 5646
+
+[INFO] 2023/10/25 13:54:07 log.go:88: inserted Successfully
+[INFO] 2023/10/25 13:56:48 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 98 
+
+[INFO] 2023/10/25 13:56:48 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/25 13:56:48 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 4 
+
+[INFO] 2023/10/25 13:56:48 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 5 
+
+[INFO] 2023/10/25 13:56:48 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/25 13:56:48 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/25 13:56:48 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 98: 7166
+[INFO] 2023/10/25 13:56:49 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 4: 480558
+[INFO] 2023/10/25 13:57:00 log.go:88: Contactid length: 50
+
+[INFO] 2023/10/25 13:57:00 log.go:88: inserted Successfully
+[INFO] 2023/10/25 13:57:08 log.go:88: activityid length: 5530
+
+[INFO] 2023/10/25 13:57:08 log.go:88: inserted Successfully
+[INFO] 2023/10/25 13:57:08 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 5: 528491
+[INFO] 2023/10/25 13:57:29 log.go:88: activityid length: 6081
+
+[INFO] 2023/10/25 13:57:29 log.go:88: inserted Successfully
