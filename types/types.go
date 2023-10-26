@@ -127,7 +127,11 @@ func ExtractmsgActivity(msg []string) ([]ContactActivity, error) {
 				activitydateStr = strings.Trim(activitydateStr, `"`)
 				layout := "2006-01-02 15:04:05 -0700 MST"
 				// Parse 'activitydate' string to a time.Time object.
-				activitydate, _ := time.Parse(layout, activitydateStr)
+				activitydate, err := time.Parse(layout, activitydateStr)
+				if err != nil {
+					logs.Logger.Error("error in activitydate parsing", err)
+					return nil, err
+				}
 
 				fmt.Printf("Processing message:contactid=%s, campaindid=%d, activitytype=%d, activitydate=%s\n",
 					contactsid, campaignid, activitytype, activitydate)

@@ -156,7 +156,7 @@ func TestResultHandler(t *testing.T) {
 		{
 			name:    "Query2",
 			query:   "?button=query2",
-			pattern: `\[{"ContactID":"[a-f0-9]+","Click":\d+},\{"ContactID":"id\d+","Click":\d+},\{"ContactID":"id\d+","Click":\d+},\{"ContactID":"id\d+","Click":\d+},\{"ContactID":"id\d+","Click":\d+},\{"ContactID":"id\d+","Click":\d+},\{"ContactID":"id\d+","Click":\d+},\{"ContactID":"id\d+","Click":\d+},\{"ContactID":"id\d+","Click":\d+},\{"ContactID":"id\d+","Click":\d+}\]`,
+			pattern: `\[{"ContactID":"[a-f0-9]+","Click":\d+},\{"ContactID":"[a-f0-9]+","Click":\d+},\{"ContactID":"[a-f0-9]+","Click":\d+},\{"ContactID":"[a-f0-9]+","Click":\d+},\{"ContactID":"[a-f0-9]+","Click":\d+},\{"ContactID":"[a-f0-9]+","Click":\d+},\{"ContactID":"[a-f0-9]+","Click":\d+},\{"ContactID":"[a-f0-9]+","Click":\d+},\{"ContactID":"[a-f0-9]+","Click":\d+},\{"ContactID":"[a-f0-9]+","Click":\d+}\]`,
 			status:  http.StatusOK,
 		},
 		{
@@ -191,74 +191,3 @@ func TestResultHandler(t *testing.T) {
 		})
 	}
 }
-
-// func TestResultHandler(t *testing.T) {
-// 	tests := []struct {
-// 		name    string
-// 		query   string
-// 		pattern string
-// 		status  int
-// 	}{
-// 		{
-// 			name:    "Query1",
-// 			query:   "?button=query1",
-// 			pattern: `{"ContactID":"[a-zA-Z0-9]+","Click":\d+}`,
-// 			status:  http.StatusOK,
-// 		},
-// 		{
-// 			name:    "Query2",
-// 			query:   "?button=query2",
-// 			pattern: `{"ContactID":"[a-zA-Z0-9]+","Click":\d+}`,
-// 			status:  http.StatusOK,
-// 		},
-// 		{
-// 			name:   "InvalidButtonValue",
-// 			query:  "?button=invalid",
-// 			status: http.StatusBadRequest,
-// 		},
-// 		// Add more test cases as needed
-// 	}
-
-// 	for _, tt := range tests {
-// 		t.Run(tt.name, func(t *testing.T) {
-// 			req, err := http.NewRequest("GET", "/"+tt.query, nil)
-// 			if err != nil {
-// 				t.Fatal(err)
-// 			}
-
-// 			rr := httptest.NewRecorder()
-// 			handler := http.HandlerFunc(api.ResultHandler)
-
-// 			handler.ServeHTTP(rr, req)
-
-// 			if status := rr.Code; status != tt.status {
-// 				t.Errorf("Handler returned wrong status code for %s: got %v, want %v", tt.name, status, tt.status)
-// 			}
-
-// 			if tt.pattern != "" {
-// 				// Check if the response body matches the expected pattern
-// 				var response []map[string]interface{}
-// 				if err := json.Unmarshal(rr.Body.Bytes(), &response); err != nil {
-// 					t.Errorf("Failed to unmarshal response body: %v", err)
-// 				}
-
-// 				for _, item := range response {
-// 					for key, value := range item {
-// 						stringValue, ok := value.(string)
-// 						fmt.Println("hi")
-// 						fmt.Println(stringValue)
-// 						fmt.Println("hi")
-
-// 						if !ok {
-// 							t.Errorf("Value for key %s in %v is not a string", key, item)
-// 							continue
-// 						}
-// 						if match, _ := regexp.MatchString(tt.pattern, stringValue); !match {
-// 							t.Errorf("Handler response doesn't match the expected pattern for %s: key %s, value %s, pattern %s", tt.name, key, stringValue, tt.pattern)
-// 						}
-// 					}
-// 				}
-// 			}
-// 		})
-// 	}
-// }

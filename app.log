@@ -1048,3 +1048,91 @@
 [INFO] 2023/10/25 13:57:29 log.go:88: activityid length: 6081
 
 [INFO] 2023/10/25 13:57:29 log.go:88: inserted Successfully
+[INFO] 2023/10/26 11:07:14 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 6 
+
+[INFO] 2023/10/26 11:07:14 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/26 11:07:14 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 6 
+
+[INFO] 2023/10/26 11:07:14 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 7 
+
+[INFO] 2023/10/26 11:07:14 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/26 11:07:14 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/26 11:07:14 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 6: 7166
+[INFO] 2023/10/26 11:07:14 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 6: 456735
+[INFO] 2023/10/26 11:07:26 log.go:88: Contactid length: 50
+
+[INFO] 2023/10/26 11:07:26 log.go:88: inserted Successfully
+[INFO] 2023/10/26 11:07:33 log.go:88: activityid length: 5256
+
+[INFO] 2023/10/26 11:07:33 log.go:88: inserted Successfully
+[INFO] 2023/10/26 11:07:33 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 7: 508565
+[INFO] 2023/10/26 11:07:54 log.go:88: activityid length: 5852
+
+[INFO] 2023/10/26 11:07:54 log.go:88: inserted Successfully
+[INFO] 2023/10/26 17:52:27 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 7 
+
+[INFO] 2023/10/26 17:52:27 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/26 17:52:27 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 8 
+
+[INFO] 2023/10/26 17:52:27 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 9 
+
+[INFO] 2023/10/26 17:52:27 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/26 17:52:27 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/26 17:52:27 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 7: 7166
+[INFO] 2023/10/26 17:52:27 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 8: 430942
+[INFO] 2023/10/26 17:52:39 log.go:88: Contactid length: 50
+
+[INFO] 2023/10/26 17:52:39 log.go:88: inserted Successfully
+[INFO] 2023/10/26 17:52:46 log.go:88: activityid length: 4960
+
+[INFO] 2023/10/26 17:52:46 log.go:88: inserted Successfully
+[INFO] 2023/10/26 17:52:46 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 9: 516935
+[INFO] 2023/10/26 17:53:07 log.go:88: activityid length: 5948
+
+[INFO] 2023/10/26 17:53:07 log.go:88: inserted Successfully
+[INFO] 2023/10/26 18:16:24 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 8 
+
+[INFO] 2023/10/26 18:16:24 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/26 18:16:24 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 10 
+
+[INFO] 2023/10/26 18:16:24 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 11 
+
+[INFO] 2023/10/26 18:16:24 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/26 18:16:24 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/26 18:16:24 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 8: 7166
+[INFO] 2023/10/26 18:16:24 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 10: 529968
+[INFO] 2023/10/26 18:16:36 log.go:88: Contactid length: 50
+
+[INFO] 2023/10/26 18:16:36 log.go:88: inserted Successfully
+[INFO] 2023/10/26 18:16:45 log.go:88: activityid length: 6098
+
+[INFO] 2023/10/26 18:16:45 log.go:88: inserted Successfully
+[INFO] 2023/10/26 18:16:45 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 11: 431872
+[INFO] 2023/10/26 18:17:04 log.go:88: activityid length: 4971
+
+[INFO] 2023/10/26 18:17:04 log.go:88: inserted Successfully
+[INFO] 2023/10/26 18:18:14 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 9 
+
+[INFO] 2023/10/26 18:18:14 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/26 18:18:14 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 12 
+
+[INFO] 2023/10/26 18:18:14 log.go:88: Producer Topic: ActivityContactTopicNew53 Message produced to partition: 0 at offset: 13 
+
+[INFO] 2023/10/26 18:18:14 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/10/26 18:18:14 log.go:88: generate activity func stopped
+
+[INFO] 2023/10/26 18:18:14 log.go:88: Received message from topic ContactStatusTopicNew54, partition 0, offset 9: 7166
+[INFO] 2023/10/26 18:18:14 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 12: 440124
+[INFO] 2023/10/26 18:18:26 log.go:88: Contactid length: 50
+
+[INFO] 2023/10/26 18:18:26 log.go:88: inserted Successfully
+[INFO] 2023/10/26 18:18:33 log.go:88: activityid length: 5065
+
+[INFO] 2023/10/26 18:18:33 log.go:88: inserted Successfully
+[INFO] 2023/10/26 18:18:33 log.go:88: Received message from topic ActivityContactTopicNew53, partition 0, offset 13: 475127
+[INFO] 2023/10/26 18:18:52 log.go:88: activityid length: 5468
+
+[INFO] 2023/10/26 18:18:52 log.go:88: inserted Successfully

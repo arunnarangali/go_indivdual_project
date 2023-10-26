@@ -71,8 +71,14 @@ func (r MyCSVReader) ReadCSV(reader io.Reader, batchSize int, resultCh chan []Co
 }
 
 func isValidName(name string) bool {
+	if len(name) == 0 {
+		return false
+	}
 	for _, char := range name {
 		if (char < 'A' || char > 'Z') && (char < 'a' || char > 'z') && char != ' ' {
+			return false
+		} else if char >= 33 && char <= 47 {
+			// Special characters are not allowed (ASCII range 33-47).
 			return false
 		}
 	}

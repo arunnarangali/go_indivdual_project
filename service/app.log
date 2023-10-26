@@ -17,3 +17,87 @@
 [ERROR] 2023/10/24 12:17:43 log.go:80: error:: dial tcp :0: connect: connection refused
 [ERROR] 2023/10/24 15:05:02 log.go:80: error:: dial tcp :0: connect: connection refused
 [ERROR] 2023/10/25 10:30:32 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/10/26 14:22:10 log.go:80: Error:: code: 516, message: myuser: Authentication failed: password is incorrect, or there is no user with such name.
+[ERROR] 2023/10/26 14:23:30 log.go:80: Error:: code: 516, message: myuser: Authentication failed: password is incorrect, or there is no user with such name.
+[ERROR] 2023/10/26 14:26:30 log.go:80: Error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/10/26 14:26:39 log.go:80: Error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/10/26 14:35:24 log.go:80: Error:
+[ERROR] 2023/10/26 14:43:49 log.go:80: Error:
+[WARNING] 2023/10/26 15:20:53 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/10/26 15:20:53 log.go:80: failed to load database config: unsupported DB_TYPE: wrongConfigMsg
+[ERROR] 2023/10/26 15:20:55 log.go:80: expected ClickHouseConfig, but got
+[WARNING] 2023/10/26 15:21:04 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/10/26 15:21:04 log.go:80: failed to load database config: unsupported DB_TYPE: 
+[WARNING] 2023/10/26 15:27:35 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/10/26 15:27:35 log.go:80: failed to load database config: unsupported DB_TYPE: wrongConfigMsg
+[ERROR] 2023/10/26 15:27:35 log.go:80: expected ClickHouseConfig, but got
+[WARNING] 2023/10/26 15:27:35 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/10/26 15:27:35 log.go:80: failed to load database config: unsupported DB_TYPE: 
+[INFO] 2023/10/26 15:30:52 log.go:88: Database connection is available
+[ERROR] 2023/10/26 15:30:52 log.go:80: error executing query:: code: 62, message: Syntax error: failed at position 46 ('.'): .... Expected one of: expression with optional alias, element of expression with optional alias, lambda expression, CAST operator, NOT, INTERVAL, CASE, DATE, TIMESTAMP, tuple, collection of literals, array, number, literal, NULL, Bool, true, false, string literal, asterisk, qualified asterisk, compound identifier, list of elements, identifier, COLUMNS matcher, COLUMNS, qualified COLUMNS matcher, substitution, MySQL-style global variable
+[INFO] 2023/10/26 15:39:52 log.go:88: Database connection is available
+[INFO] 2023/10/26 15:40:16 log.go:88: Database connection is available
+[ERROR] 2023/10/26 15:40:16 log.go:80: error executing query:: code: 62, message: Syntax error: failed at position 46 ('.'): .... Expected one of: expression with optional alias, element of expression with optional alias, lambda expression, CAST operator, NOT, INTERVAL, CASE, DATE, TIMESTAMP, tuple, collection of literals, array, number, literal, NULL, Bool, true, false, string literal, asterisk, qualified asterisk, compound identifier, list of elements, identifier, COLUMNS matcher, COLUMNS, qualified COLUMNS matcher, substitution, MySQL-style global variable
+[INFO] 2023/10/26 16:11:30 log.go:88: Database connection is available
+[ERROR] 2023/10/26 16:11:30 log.go:80: error executing query:: code: 60, message: Table arun_campaign.NonExistentTable does not exist
+[INFO] 2023/10/26 16:11:52 log.go:88: Database connection is available
+[ERROR] 2023/10/26 16:11:52 log.go:80: error executing query:: code: 60, message: Table arun_campaign.YourTable does not exist
+[INFO] 2023/10/26 16:17:46 log.go:88: Database connection is available
+[ERROR] 2023/10/26 16:42:14 log.go:80: error:: kafka: client has run out of available brokers to talk to: dial tcp: address invalid-broker: missing port in address
+[ERROR] 2023/10/26 16:42:50 log.go:80: error:: kafka: client has run out of available brokers to talk to: dial tcp: address invalid-broker: missing port in address
+[ERROR] 2023/10/26 16:43:04 log.go:80: error:: kafka: client has run out of available brokers to talk to: dial tcp: address invalid-broker: missing port in address
+[ERROR] 2023/10/26 16:46:32 log.go:80: error:: kafka: client has run out of available brokers to talk to: dial tcp: address invalid-broker: missing port in address
+[ERROR] 2023/10/26 16:46:45 log.go:80: error:: kafka: client has run out of available brokers to talk to: dial tcp: address invalid-broker: missing port in address
+[ERROR] 2023/10/26 16:46:45 log.go:80: error:: kafka: client has run out of available brokers to talk to: dial tcp: address invalid-broker: missing port in address
+[ERROR] 2023/10/26 16:47:02 log.go:80: error:: kafka: client has run out of available brokers to talk to: dial tcp: address invalid-broker: missing port in address
+[ERROR] 2023/10/26 16:50:34 log.go:80: error:: kafka: client has run out of available brokers to talk to: dial tcp: address invalid-broker: missing port in address
+[ERROR] 2023/10/26 16:51:29 log.go:80: error:: kafka: client has run out of available brokers to talk to: dial tcp: address invalid-broker: missing port in address
+[ERROR] 2023/10/26 16:51:29 log.go:80: error:: kafka: client has run out of available brokers to talk to: dial tcp: address invalid-broker: missing port in address
+[ERROR] 2023/10/26 16:53:38 log.go:80: error:: kafka: client has run out of available brokers to talk to: dial tcp: address invalid-broker: missing port in address
+[ERROR] 2023/10/26 16:54:04 log.go:80: error:: kafka: client has run out of available brokers to talk to: dial tcp: address invalid-broker: missing port in address
+[INFO] 2023/10/26 17:21:38 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 0 
+
+[INFO] 2023/10/26 17:25:02 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 1 
+
+[INFO] 2023/10/26 17:26:27 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 2 
+
+[INFO] 2023/10/26 17:27:54 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 3 
+
+[INFO] 2023/10/26 17:53:30 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 4 
+
+[INFO] 2023/10/26 18:03:59 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 5 
+
+[INFO] 2023/10/26 18:03:59 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 6 
+
+[INFO] 2023/10/26 18:07:32 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 7 
+
+[INFO] 2023/10/26 18:07:32 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 8 
+
+[INFO] 2023/10/26 18:09:32 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 9 
+
+[INFO] 2023/10/26 18:10:47 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 10 
+
+[INFO] 2023/10/26 18:10:48 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 11 
+
+[INFO] 2023/10/26 18:10:51 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 12 
+
+[INFO] 2023/10/26 18:11:00 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 13 
+
+[INFO] 2023/10/26 18:11:18 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 14 
+
+[INFO] 2023/10/26 18:17:41 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 15 
+
+[INFO] 2023/10/26 18:17:41 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 16 
+
+[INFO] 2023/10/26 18:19:41 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 17 
+
+[ERROR] 2023/10/26 18:19:56 log.go:80: Erorr: messageValues is empty
+[INFO] 2023/10/26 18:23:21 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 18 
+
+[INFO] 2023/10/26 18:25:19 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 19 
+
+[INFO] 2023/10/26 18:25:51 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 20 
+
+[ERROR] 2023/10/26 18:25:51 log.go:80: Erorr: messageValues is empty
+[INFO] 2023/10/26 18:25:51 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 21 
+

@@ -168,6 +168,7 @@ func ResultHandler(w http.ResponseWriter, r *http.Request) {
 		ORDER BY clicked DESC
 		LIMIT 5
 	`
+
 	}
 	if buttonValue == "query2" {
 		query = `

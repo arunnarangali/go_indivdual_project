@@ -3,6 +3,7 @@ package service
 import (
 	"datastream/config"
 	"datastream/logs"
+	"errors"
 	"fmt"
 	"log"
 	"strings"
@@ -56,21 +57,26 @@ func (kc *KafkaConnector) Close() error {
 }
 
 func (kc *KafkaConnector) ProduceMessages(topic string, messageValues []string) error {
-	msgToProduce := &sarama.ProducerMessage{
-		Topic: topic,
-		Value: sarama.StringEncoder(strings.Join(messageValues, "\n")),
+	if len(messageValues) > 0 {
+		msgToProduce := &sarama.ProducerMessage{
+			Topic: topic,
+			Value: sarama.StringEncoder(strings.Join(messageValues, "\n")),
+		}
+
+		partition, offset, err := kc.Producer.SendMessage(msgToProduce)
+		if err != nil {
+			logs.Logger.Error("error:", err)
+			return err
+		}
+
+		logs.Logger.Info(fmt.Sprintf("Producer Topic: %s Message produced to partition: %d at offset: %d \n",
+			topic, partition, offset))
+
+		return nil
+	} else {
+		logs.Logger.Error("Erorr", errors.New("messageValues is empty"))
+		return errors.New("messageValues is empty")
 	}
-
-	partition, offset, err := kc.Producer.SendMessage(msgToProduce)
-	if err != nil {
-		logs.Logger.Error("error:", err)
-		return err
-	}
-
-	logs.Logger.Info(fmt.Sprintf("Producer Topic: %s Message produced to partition: %d at offset: %d \n",
-		topic, partition, offset))
-
-	return nil
 }
 
 func (kc *KafkaConnector) ConsumeMessages(topic string) error {

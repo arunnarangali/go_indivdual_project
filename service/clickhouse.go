@@ -53,8 +53,8 @@ func (c *ClickHouseConnector) Close() error {
 	return nil
 }
 
-func ConfigureClickHouseDB() (*ClickHouseConnector, error) {
-	configData, err := config.LoadDatabaseConfig("clickhouse")
+func ConfigureClickHouseDB(configmsg string) (*ClickHouseConnector, error) {
+	configData, err := config.LoadDatabaseConfig(configmsg)
 	if err != nil {
 		logs.Logger.Error("failed to load database config", err)
 		return nil, fmt.Errorf("failed to load database config: %v", err)
@@ -72,7 +72,7 @@ func ConfigureClickHouseDB() (*ClickHouseConnector, error) {
 
 func QueryTopContactActivity(query string) ([]types.QueryOutput, error) {
 
-	dbConnector, err := ConfigureClickHouseDB()
+	dbConnector, err := ConfigureClickHouseDB("clickhouse")
 	if err != nil {
 		logs.Logger.Error("failed to configure ClickHouse DB:", err)
 		return nil, fmt.Errorf("failed to configure ClickHouse DB: %v", err)
