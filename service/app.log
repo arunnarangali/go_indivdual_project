@@ -101,3 +101,86 @@
 [ERROR] 2023/10/26 18:25:51 log.go:80: Erorr: messageValues is empty
 [INFO] 2023/10/26 18:25:51 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 21 
 
+[ERROR] 2023/10/26 18:59:59 log.go:80: Error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/10/26 18:59:59 log.go:80: Error:
+[WARNING] 2023/10/26 18:59:59 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/10/26 18:59:59 log.go:80: failed to load database config: unsupported DB_TYPE: wrongConfigMsg
+[ERROR] 2023/10/26 18:59:59 log.go:80: expected ClickHouseConfig, but got
+[WARNING] 2023/10/26 18:59:59 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/10/26 18:59:59 log.go:80: failed to load database config: unsupported DB_TYPE: 
+[INFO] 2023/10/26 18:59:59 log.go:88: Database connection is available
+[INFO] 2023/10/26 18:59:59 log.go:88: Database connection is available
+[ERROR] 2023/10/26 18:59:59 log.go:80: error executing query:: code: 60, message: Table arun_campaign.NonExistentTable does not exist
+[INFO] 2023/10/26 18:59:59 log.go:88: Database connection is available
+[ERROR] 2023/10/26 18:59:59 log.go:80: error:: kafka: client has run out of available brokers to talk to: dial tcp: address invalid-broker: missing port in address
+[INFO] 2023/10/26 18:59:59 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 22 
+
+[ERROR] 2023/10/26 18:59:59 log.go:80: Erorr: messageValues is empty
+[INFO] 2023/10/26 18:59:59 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 23 
+
+[ERROR] 2023/10/26 19:00:12 log.go:80: error:: dial tcp :0: connect: connection refused
+[WARNING] 2023/10/27 12:45:51 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/10/27 12:45:51 log.go:80: error:: unsupported DB_TYPE: wrongConfigMsg
+[WARNING] 2023/10/27 12:45:51 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/10/27 12:45:51 log.go:80: error:: unsupported DB_TYPE: 
+[WARNING] 2023/10/27 12:47:31 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/10/27 12:47:31 log.go:80: error:: unsupported DB_TYPE: wrongConfigMsg
+[WARNING] 2023/10/27 12:50:16 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/10/27 12:50:16 log.go:80: error:: unsupported DB_TYPE: wrongConfigMsg
+[WARNING] 2023/10/27 12:50:25 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/10/27 12:50:25 log.go:80: error:: unsupported DB_TYPE: 
+[ERROR] 2023/10/27 12:54:40 log.go:80: error:: configmsg is nil
+[ERROR] 2023/10/27 12:55:32 log.go:80: error:: configmsg is nil
+[WARNING] 2023/10/27 12:55:42 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/10/27 12:55:42 log.go:80: error:: unsupported DB_TYPE: wrongConfigMsg
+[WARNING] 2023/10/27 12:55:50 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/10/27 12:55:50 log.go:80: error:: unsupported DB_TYPE: wrongConfigMsg
+[ERROR] 2023/10/27 12:55:50 log.go:80: error:: configmsg is nil
+[INFO] 2023/10/27 13:10:14 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 12 
+
+[INFO] 2023/10/27 13:10:14 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/27 13:10:59 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/27 13:14:40 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/27 13:26:12 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 13 
+
+[INFO] 2023/10/27 13:26:12 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/27 13:26:18 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/27 15:23:09 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 14 
+
+[INFO] 2023/10/27 15:23:09 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/27 15:23:14 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 15 
+
+[INFO] 2023/10/27 15:23:14 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/27 15:24:06 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 16 
+
+[INFO] 2023/10/27 15:24:06 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 17 
+
+[INFO] 2023/10/27 15:24:06 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 18 
+
+[INFO] 2023/10/27 15:24:06 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 19 
+
+[INFO] 2023/10/27 15:24:06 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 20 
+
+[INFO] 2023/10/27 15:24:06 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 21 
+
+[INFO] 2023/10/27 15:24:06 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 22 
+
+[INFO] 2023/10/27 15:24:06 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 23 
+
+[INFO] 2023/10/27 15:24:06 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 24 
+
+[INFO] 2023/10/27 15:24:06 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 25 
+
+[INFO] 2023/10/27 15:24:06 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/27 15:24:34 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 26 
+
+[INFO] 2023/10/27 15:24:34 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/27 15:35:14 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 27 
+
+[INFO] 2023/10/27 15:35:14 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/27 15:35:20 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 28 
+
+[INFO] 2023/10/27 15:35:20 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/10/27 15:35:20 log.go:88: Producer Topic: ContactStatusTopicNew54 Message produced to partition: 0 at offset: 29 
+
+[INFO] 2023/10/27 15:35:20 log.go:88: Messages successfully send contact to kafka

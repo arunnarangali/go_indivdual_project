@@ -11,6 +11,8 @@ import (
 	"github.com/IBM/sarama"
 )
 
+// var kafkaConnector, contactTopic, activityTopic, err = ConfigureKafka("kafka")
+
 // KafkaConnector implements the DBConnector interface for Kafka using IBM's sarama package.
 type KafkaConnector struct {
 	Config   config.KafkaConfig
@@ -87,7 +89,7 @@ func (kc *KafkaConnector) ConsumeMessages(topic string) error {
 		return err
 	}
 	defer partitionConsumer.Close()
-
+	fmt.Println("hi")
 	for {
 		select {
 		case err := <-partitionConsumer.Errors():
@@ -116,9 +118,12 @@ func (kc *KafkaConnector) ConsumeMessages(topic string) error {
 	}
 }
 
-func ConfigureKafka() (*KafkaConnector, *string, *string, error) {
-
-	kafkaConfig, err := config.LoadDatabaseConfig("kafka")
+func ConfigureKafka(configMsg string) (*KafkaConnector, *string, *string, error) {
+	if len(configMsg) <= 0 {
+		logs.Logger.Error("error:", fmt.Errorf("configmsg is nil"))
+		return nil, nil, nil, fmt.Errorf("configmsg is nil")
+	}
+	kafkaConfig, err := config.LoadDatabaseConfig(configMsg)
 	if err != nil {
 		logs.Logger.Error("error:", err)
 		return nil, nil, nil, err
@@ -139,7 +144,7 @@ func ConfigureKafka() (*KafkaConnector, *string, *string, error) {
 func RunKafkaProducerContacts(messages []string) error {
 	var msg []string
 	count := 0
-	kafkaConnector, contactTopic, _, err := ConfigureKafka()
+	kafkaConnector, contactTopic, _, err := ConfigureKafka("kafka")
 	if err != nil {
 		logs.Logger.Error("Error:", err)
 		return err
@@ -176,7 +181,7 @@ func RunKafkaProducerContacts(messages []string) error {
 
 func RunKafkaConsumerContacts() error {
 
-	kafkaConnector, contactTopic, _, err := ConfigureKafka()
+	kafkaConnector, contactTopic, _, err := ConfigureKafka("kafka")
 	if err != nil {
 		logs.Logger.Error("error in configure:", err)
 		return err
@@ -197,7 +202,7 @@ func RunKafkaConsumerContacts() error {
 func RunKafkaProducerActivity(messages []string) error {
 	var msg []string
 	count := 0
-	kafkaConnector, _, activityTopic, err := ConfigureKafka()
+	kafkaConnector, _, activityTopic, err := ConfigureKafka("kafka")
 	if err != nil {
 		logs.Logger.Error("error:", err)
 		return err
@@ -234,7 +239,7 @@ func RunKafkaProducerActivity(messages []string) error {
 
 func RunKafkaConsumerActivity() error {
 
-	kafkaConnector, _, activityTopic, err := ConfigureKafka()
+	kafkaConnector, _, activityTopic, err := ConfigureKafka("kafka")
 	if err != nil {
 		logs.Logger.Error("error:", err)
 		return err

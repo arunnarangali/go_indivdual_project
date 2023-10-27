@@ -145,3 +145,182 @@ func TestKafkaConnector_ProduceMessages(t *testing.T) {
 		}
 	})
 }
+
+func TestKafkaConnector_ConsumeMessages(t *testing.T) {
+	t.Run("Successful Message Consumption", func(t *testing.T) {
+
+		testkafkaConfig := config.KafkaConfig{
+			Broker: "localhost:9092",
+		}
+		kc, err := NewKafkaConnector(testkafkaConfig)
+		if err != nil {
+			t.Fatalf("Error creating KafkaConnector: %v", err)
+		}
+		defer kc.Close()
+
+		topic := "test-topic"
+
+		done := make(chan struct{})
+		go func() {
+			defer close(done)
+			err := kc.ConsumeMessages(topic)
+			if err != nil {
+				t.Errorf("Error consuming messages: %v", err)
+			}
+		}()
+
+		time.Sleep(5 * time.Second)
+	})
+
+	t.Run("Consumer Error Handling", func(t *testing.T) {
+
+		testkafkaConfig := config.KafkaConfig{
+			Broker: "localhost:9092",
+		}
+
+		kc, err := NewKafkaConnector(testkafkaConfig)
+		if err != nil {
+			t.Fatalf("Error creating KafkaConnector: %v", err)
+		}
+		defer kc.Close()
+
+		topic := "test-topic"
+
+		// Simulate a consumer error
+
+		done := make(chan struct{})
+		go func() {
+			defer close(done)
+			err := kc.ConsumeMessages(topic)
+			if err == nil {
+				t.Errorf("Expected a consumer error, but got nil")
+			}
+		}()
+
+		time.Sleep(5 * time.Second)
+	})
+}
+
+func TestConfigureKafka(t *testing.T) {
+	// Test case 1: Valid configuration
+	t.Run("Valid Configuration", func(t *testing.T) {
+		// Create a test Kafka configuration
+		testKafkaConfig := config.KafkaConfig{
+			Broker: "localhost:9092",
+			Topic1: "ActivityContactTopicNew53",
+			Topic2: "ContactStatusTopicNew54",
+		}
+
+		// Test the ConfigureKafka function
+		kafkaConnector, contactTopic, activityTopic, err := ConfigureKafka("kafka")
+		if err != nil {
+			t.Fatalf("Error configuring Kafka: %v", err)
+		}
+
+		if kafkaConnector == nil {
+			t.Fatal("KafkaConnector is nil")
+		}
+		if *contactTopic != testKafkaConfig.Topic2 {
+			t.Errorf("Expected contactTopic to be '%s', but got '%s'", testKafkaConfig.Topic2, *contactTopic)
+		}
+		if *activityTopic != testKafkaConfig.Topic1 {
+			t.Errorf("Expected activityTopic to be '%s', but got '%s'", testKafkaConfig.Topic1, *activityTopic)
+		}
+	})
+
+	// Test case 2: Error when loading Kafka configuration
+	t.Run("Error loading Kafka configuration", func(t *testing.T) {
+
+		// Inject an error by providing an invalid Kafka configuration type
+		_, _, _, err := ConfigureKafka("wrongConfigMsg")
+
+		if err == nil {
+			t.Error("Expected an error, got nil")
+		}
+		expectedErrorMsg :=
+			"unsupported DB_TYPE: wrongConfigMsg"
+		if err.Error() != expectedErrorMsg {
+			t.Errorf("Expected error message '%s', but got '%s'", expectedErrorMsg, err.Error())
+		}
+	})
+
+	// Test case 3: Error when creating KafkaConnector
+	t.Run("Missing Configuration Data", func(t *testing.T) {
+
+		// Set up your test environment to simulate missing configuration data.
+		_, _, _, err := ConfigureKafka("")
+
+		if err == nil {
+			t.Error("Expected an error, got nil")
+		}
+		expectedErrorMsg := "configmsg is nil"
+		if err.Error() != expectedErrorMsg {
+			t.Errorf("Expected error message '%s', but got '%s'", expectedErrorMsg, err.Error())
+		}
+	})
+}
+
+func TestRunKafkaProducerContacts(t *testing.T) {
+	// Set up the global Kafka configurations
+	kafkaConnector, contactTopic, _, _ := ConfigureKafka("kafka")
+
+	// Test case 1: Producing Messages Successfully
+	t.Run("Producing Messages Successfully", func(t *testing.T) {
+		messages := []string{"message1", "message2", "message3"}
+
+		// Reset the global Kafka configurations just for this test
+		origKafkaConnector := kafkaConnector
+		origcontactTopic := contactTopic
+
+		kafkaConnector, contactTopic, _, _ = ConfigureKafka("kafka")
+
+		err := RunKafkaProducerContacts(messages)
+
+		// Restore the original Kafka configurations
+		kafkaConnector, contactTopic = origKafkaConnector, origcontactTopic
+
+		if err != nil {
+			t.Errorf("Expected no error, but got: %v", err)
+		}
+	})
+
+	// Test case 2: Kafka Connection Error
+	t.Run("Kafka Connection Error", func(t *testing.T) {
+		// Simulate a Kafka connection error
+		origKafkaConnector := kafkaConnector
+		kafkaConnector = nil
+
+		messages := []string{"message1", "message2", "message3"}
+
+		err := RunKafkaProducerContacts(messages)
+
+		// Restore the original Kafka configurations
+		kafkaConnector = origKafkaConnector
+
+		if err == nil {
+			t.Error("Expected an error, but got none.")
+		}
+	})
+
+	// Test case 3: Producing Large Number of Messages
+	t.Run("Producing Large Number of Messages", func(t *testing.T) {
+		messages := make([]string, 1000)
+		for i := 0; i < 1000; i++ {
+			messages[i] = fmt.Sprintf("message%d", i)
+		}
+
+		// Reset the global Kafka configurations just for this test
+		origKafkaConnector := kafkaConnector
+		origcontactTopic := contactTopic
+		kafkaConnector, contactTopic, _, _ = ConfigureKafka("kafka")
+
+		err := RunKafkaProducerContacts(messages)
+
+		// Restore the original Kafka configurations
+		kafkaConnector, contactTopic = origKafkaConnector, origcontactTopic
+
+		if err != nil {
+			t.Errorf("Expected no error, but got: %v", err)
+		}
+	})
+}
