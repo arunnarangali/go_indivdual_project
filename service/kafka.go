@@ -82,19 +82,18 @@ func (kc *KafkaConnector) ProduceMessages(topic string, messageValues []string) 
 }
 
 func (kc *KafkaConnector) ConsumeMessages(topic string) error {
-	// Create a new consumer for the specified topic and partition.
+
 	partitionConsumer, err := kc.Consumer.ConsumePartition(topic, 0, sarama.ReceiveTime)
 	if err != nil {
 		logs.Logger.Error("error:", err)
 		return err
 	}
 	defer partitionConsumer.Close()
-	fmt.Println("hi")
 	for {
 		select {
 		case err := <-partitionConsumer.Errors():
 			log.Printf("Error in Kafka consumer: %v", err)
-			// Handle the error as needed.
+
 		case msg := <-partitionConsumer.Messages():
 
 			log.Printf("Received message from topic %s, partition %d, offset %d: %s",
@@ -129,7 +128,6 @@ func ConfigureKafka(configMsg string) (*KafkaConnector, *string, *string, error)
 		return nil, nil, nil, err
 	}
 
-	// Create a KafkaConnector instance.
 	kafkaConnector, err := NewKafkaConnector(kafkaConfig.(config.KafkaConfig))
 	if err != nil {
 		logs.Logger.Error("error:", err)
@@ -186,12 +184,12 @@ func RunKafkaConsumerContacts() error {
 		logs.Logger.Error("error in configure:", err)
 		return err
 	}
-	// Consume messages from the Kafka topic.
+
 	if err := kafkaConnector.ConsumeMessages(*contactTopic); err != nil {
 		logs.Logger.Error("Error:", err)
 		return err
 	}
-	// Close the KafkaConnector when done (this will only be reached after receiving a signal to stop).
+
 	if err := kafkaConnector.Close(); err != nil {
 		logs.Logger.Error("err in kafkaclose", err)
 		return err
@@ -208,7 +206,6 @@ func RunKafkaProducerActivity(messages []string) error {
 		return err
 	}
 
-	// Produce a message to the Kafka topic.
 	for _, messageValue := range messages {
 		msg = append(msg, messageValue)
 		count++
@@ -244,13 +241,12 @@ func RunKafkaConsumerActivity() error {
 		logs.Logger.Error("error:", err)
 		return err
 	}
-	// Consume messages from the Kafka topic.
+
 	if err := kafkaConnector.ConsumeMessages(*activityTopic); err != nil {
 		logs.Logger.Error("error:", err)
 		return err
 	}
 
-	// Close the KafkaConnector when done (this will only be reached after receiving a signal to stop).
 	if err := kafkaConnector.Close(); err != nil {
 		logs.Logger.Error("error:", err)
 		return err

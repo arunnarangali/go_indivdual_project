@@ -7,3 +7,7 @@
 [WARNING] 2023/10/23 17:51:16 log.go:66: unsupported DB_TYPE:
 [WARNING] 2023/10/25 10:30:20 log.go:66: unsupported DB_TYPE:
 [WARNING] 2023/10/26 14:54:22 log.go:66: unsupported DB_TYPE:
+[WARNING] 2023/10/28 15:37:57 log.go:66: unsupported DB_TYPE:
+[WARNING] 2023/10/28 18:03:20 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/10/28 18:05:35 log.go:80: Error loading .env file:: unexpected character "\n" in variable name near "MySafka ConfQL Configuration\nMYSQL_USERNAME=root\nMYSQL_PASSWORD=root\nMYSQL_HOSTNAME=localhost\nMYSQL_PORT=3306\nMYSQL_DBNAME=mydatabase\n\n# Kiguration\nKAFKA_BROKER=localhost:9092\nKAFAKA_ACTIVITY_TOPIC=ActivityContactTopicNew53\nKAFAKA_CONTACT_TOPIC=ContactStatusTopicNew54\n\n# ClickHouse Configuration\nCLICKHOUSE_USERNAME=default\nCLICKHOUSE_PASSWORD=root\nCLICKHOUSE_HOSTNAME=localhost\nCLICKHOUSE_PORT=9000\nCLICKHOUSE_DBNAME=arun_campaign"
+[WARNING] 2023/10/28 18:06:34 log.go:66: unsupported DB_TYPE:

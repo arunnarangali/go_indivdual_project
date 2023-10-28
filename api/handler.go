@@ -4,6 +4,7 @@ import (
 	"datastream/dataprocessing"
 	"datastream/logs"
 	"datastream/service"
+
 	"datastream/types"
 	"encoding/json"
 	"fmt"
@@ -119,6 +120,7 @@ func ProcessCSVData(csvData []types.Contacts) error {
 }
 
 func generateActivitiesInBackground(csvData []types.Contacts, wg *sync.WaitGroup) {
+
 	defer logs.Logger.Info("generate activity func stopped\n")
 	defer wg.Done()
 
@@ -157,8 +159,8 @@ func ResultpageHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func ResultHandler(w http.ResponseWriter, r *http.Request) {
-	buttonValue := r.FormValue("button")
 
+	buttonValue := r.FormValue("button")
 	var query string
 
 	if buttonValue == "query1" {

@@ -9,7 +9,7 @@ import (
 
 func TestClickHouseConnector_Connect(t *testing.T) {
 	t.Run("Successful Connection", func(t *testing.T) {
-		// Create a ClickHouseConfig with valid connection details
+
 		validConfig := config.ClickHouseConfig{
 			Hostname: "localhost",
 			Port:     "9000",
@@ -22,16 +22,14 @@ func TestClickHouseConnector_Connect(t *testing.T) {
 
 		db, err := connector.Connect()
 
-		// Check for errors when establishing the connection
 		if err != nil {
 			t.Errorf("Expected no error during connection, got: %v", err)
 		} else {
-			// Check if the database connection is not nil
+
 			if db == nil {
 				t.Error("Expected a valid database connection, got nil")
 			}
 
-			// Close the connection and check for errors
 			closeErr := db.Close()
 			if closeErr != nil {
 				t.Errorf("Error when closing the database connection: %v", closeErr)
@@ -39,7 +37,7 @@ func TestClickHouseConnector_Connect(t *testing.T) {
 		}
 	})
 	t.Run("Reconnecting", func(t *testing.T) {
-		// Create a ClickHouseConfig with valid connection details
+
 		validConfig := config.ClickHouseConfig{
 			Hostname: "localhost",
 			Port:     "9000",
@@ -121,7 +119,6 @@ func TestClickHouseConnector_Close(t *testing.T) {
 			t.Errorf("Expected no error when closing, got: %v", err)
 		}
 
-		// Check that the database connection is closed
 		if connector.db != nil {
 			t.Error("Expected the database connection to be nil after closing, but it is not nil")
 		}
@@ -139,7 +136,6 @@ func TestClickHouseConnector_Close(t *testing.T) {
 
 		connector := &ClickHouseConnector{config: validConfig}
 
-		// Ensure the connection is already closed (set db to nil)
 		connector.db = nil
 
 		err := connector.Close()
@@ -207,7 +203,7 @@ func TestConfigureClickHouseDB(t *testing.T) {
 
 func TestQueryTopContactActivity(t *testing.T) {
 	t.Run("Successful Query Execution", func(t *testing.T) {
-		// Set up a test ClickHouse configuration and database with a valid query.
+
 		// Ensure it returns expected results.
 
 		query := `
@@ -235,7 +231,7 @@ func TestQueryTopContactActivity(t *testing.T) {
 
 	t.Run("Failed Query Execution", func(t *testing.T) {
 		// Set up a test ClickHouse configuration and database with a query
-		// that is expected to fail.
+
 		query := "SELECT * FROM NonExistentTable"
 		results, err := QueryTopContactActivity(query)
 		if err == nil {
@@ -248,7 +244,7 @@ func TestQueryTopContactActivity(t *testing.T) {
 
 	t.Run("No Rows Returned", func(t *testing.T) {
 		// Set up a test ClickHouse configuration and database with a query
-		// that returns no rows.
+		// that returns no rows
 		query := `SELECT ContactsID, clicked
 		FROM arun_campaign.contact_activity_summary_mv_last_three_month_summery  FINAL
 		ORDER BY clicked DESC
