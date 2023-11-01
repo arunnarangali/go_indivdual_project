@@ -3,43 +3,66 @@ package Process
 import (
 	"database/sql"
 	"datastream/logs"
+	"datastream/service"
 	"datastream/types"
 	"fmt"
 	"os"
-	"strconv"
 
 	"github.com/joho/godotenv"
 )
 
+func Insertmsg(msg []string, topic string) error {
+
+	dbConnector, err := service.ConfigureMySQLDB("mysql")
+	if err != nil {
+		logs.Logger.Error("error to get config", err)
+		return fmt.Errorf("error to get config: %v", err)
+	}
+
+	// Connect to the database
+	db, err := dbConnector.Connect()
+	if err != nil {
+		logs.Logger.Error("error connecting to the database:", err)
+		return fmt.Errorf("error connecting to the database: %v", err)
+	}
+
+	defer db.Close()
+
+	err = HandleTopic(db, msg, topic)
+
+	if err != nil {
+		logs.Logger.Error("error in handle topic:", err)
+		return fmt.Errorf("error in handle topic: %v", err)
+	}
+
+	return nil
+}
+
 func HandleTopic(db *sql.DB, msg []string, topic string) error {
 
-	if err := godotenv.Load("/home/arun/test 5/go_indivdual_project/.env"); err != nil {
+	if err := godotenv.Load("/home/arun/test 7/go_indivdual_project/.env"); err != nil {
 		logs.Logger.Error("Error loading .env file: ", err)
 		return err
 	}
 
 	if topic == os.Getenv("KAFAKA_CONTACT_TOPIC") {
 
-		Contactid, err := InsertContacts(db, msg)
+		err := ExtractContactsFromMessage(db, msg)
 
 		if err != nil {
 			logs.Logger.Error("error inserting contact: ", err)
 			return fmt.Errorf("error inserting contact: %v", err)
 		}
 
-		fmt.Printf("Contactid length: %d\n", len(Contactid))
-		logs.Logger.Info(fmt.Sprintf("Contactid length: %d\n", len(Contactid)))
 	} else if topic == os.Getenv("KAFAKA_ACTIVITY_TOPIC") {
 
-		activityid, err := InsertContactActivity(db, msg)
+		err := ExtractActivityFromMessage(db, msg)
 
 		if err != nil {
 			logs.Logger.Error("error inserting contact activity: ", err)
 			return fmt.Errorf("error inserting contact activity: %v", err)
 		}
 
-		logs.Logger.Info(fmt.Sprintf("activityid length: %d\n", len(activityid)))
-		fmt.Printf("activityid length: %d\n", len(activityid))
 	} else {
 		logs.Logger.Error("error ", fmt.Errorf("invalid Topic"))
 		return fmt.Errorf("invalid Topic")
@@ -48,117 +71,65 @@ func HandleTopic(db *sql.DB, msg []string, topic string) error {
 	return nil
 }
 
-// InsertContacts inserts multiple contact records into the database in a transaction.
-func InsertContacts(db *sql.DB, msg []string) ([]int64, error) {
-
-	tx, err := db.Begin()
-	if err != nil {
-		logs.Logger.Error("error starting a transaction", err)
-		return nil, fmt.Errorf("error starting a transaction: %v", err)
-	}
-	defer tx.Rollback()
-
-	contactIDs := []int64{}
-
+func ExtractContactsFromMessage(db *sql.DB, msg []string) error {
 	contactStatuses, err := types.Extractmsgcontacts(msg)
 	if err != nil {
-		logs.Logger.Error("error extracting contact statuses", err)
-		return nil, err
+		logs.Logger.Error("error extracting contact statuses:", err)
+		return err
 	}
 
-	stmt, err := tx.Prepare("INSERT INTO Contacts (ID,Name, Email, Details, Status) VALUES (?,?, ?, ?, ?)")
-	if err != nil {
-		logs.Logger.Error("error preparing statement:", err)
-		return nil, fmt.Errorf("error preparing statement: %v", err)
-	}
-	defer stmt.Close()
+	tableName := "Contacts"
+	columnNames := []string{"ID", "Name", "Email", "Details", "Status"}
 
-	for _, contactStatus := range contactStatuses {
-		lastInsertID, err := insertSingleContactWithTx(stmt, contactStatus.Contact, contactStatus.Status)
-		if err != nil {
-			logs.Logger.Error("error inserting contact:", err)
-			return nil, fmt.Errorf("error inserting contact: %v", err)
+	contactData := make([][]interface{}, len(contactStatuses))
+	for i, status := range contactStatuses {
+		contactData[i] = []interface{}{
+			status.Contact.ID,
+			status.Contact.Name,
+			status.Contact.Email,
+			status.Contact.Details,
+			status.Status,
 		}
-		contactIDs = append(contactIDs, lastInsertID)
 	}
 
-	if err := tx.Commit(); err != nil {
-		logs.Logger.Error("error committing transaction:", err)
-		return nil, fmt.Errorf("error committing transaction: %v", err)
+	contactIDs, err := service.InsertDataToMySql(db, tableName, columnNames, contactData)
+	if err != nil {
+		logs.Logger.Error("error inserting contact activity:", err)
+		return err
 	}
 
-	return contactIDs, nil
+	logs.Logger.Info(fmt.Sprintf("ContactID length: %d\n", len(contactIDs)))
+	fmt.Printf("ContactId length: %d\n", len(contactIDs))
+	return err
 }
 
-func insertSingleContactWithTx(stmt *sql.Stmt, contact types.Contacts, status int) (int64, error) {
-
-	res, err := stmt.Exec(contact.ID, contact.Name, contact.Email, contact.Details, status)
+func ExtractActivityFromMessage(db *sql.DB, msg []string) error {
+	activity, err := types.ExtractmsgActivity(msg)
 	if err != nil {
-		logs.Logger.Error("error:", err)
-		return 0, err
+		logs.Logger.Error("error extracting activity:", err)
+		return err
 	}
 
-	lastInsertID, err := res.LastInsertId()
-	if err != nil {
-		logs.Logger.Error("error:", err)
-		return 0, err
-	}
+	tableName := "ContactActivity"
+	columnNames := []string{"ContactsID", "CampaignID", "ActivityType", "ActivityDate"}
 
-	return lastInsertID, nil
-}
-
-func InsertContactActivity(db *sql.DB, msg []string) ([]string, error) {
-	// Begin a transaction
-	tx, err := db.Begin()
-	if err != nil {
-		logs.Logger.Error("error starting a transation:", err)
-		return nil, fmt.Errorf("error starting a transaction: %v", err)
-	}
-	defer tx.Rollback()
-
-	activityIDs := []string{}
-
-	contactActivity, err := types.ExtractmsgActivity(msg)
-	if err != nil {
-		logs.Logger.Error("error extracting contact stauses:", err)
-		return nil, fmt.Errorf("error extracting contact statuses: %v", err)
-	}
-
-	// Perform the insert operation with the transaction
-	for _, activity := range contactActivity {
-		lastInsertID, err := InsertSingleContactActivityWithTx(tx, activity)
-		if err != nil {
-			logs.Logger.Error("error inserting contact:", err)
-			return nil, fmt.Errorf("error inserting contact: %v", err)
+	activityData := make([][]interface{}, len(activity))
+	for i, status := range activity {
+		activityData[i] = []interface{}{
+			status.ContactID,
+			status.CampaignID,
+			status.ActivityType,
+			status.ActivityDate,
 		}
-		activityIDs = append(activityIDs, lastInsertID)
 	}
 
-	// Commit the transaction if all inserts were successful
-	if err := tx.Commit(); err != nil {
-		logs.Logger.Error("error commiting transaction:", err)
-		return nil, fmt.Errorf("error committing transaction: %v", err)
-	}
-
-	return activityIDs, nil
-}
-
-func InsertSingleContactActivityWithTx(tx *sql.Tx, activity types.ContactActivity) (string, error) {
-
-	result, err := tx.Exec(
-		"INSERT INTO ContactActivity (ContactsID, CampaignID, ActivityType, ActivityDate) VALUES (?, ?, ?, ?)",
-		activity.ContactID, activity.CampaignID, activity.ActivityType, activity.ActivityDate)
+	activityIDs, err := service.InsertDataToMySql(db, tableName, columnNames, activityData)
 	if err != nil {
-		logs.Logger.Error("error:", err)
-		return "", err
+		logs.Logger.Error("error inserting contact activity:", err)
+		return err
 	}
 
-	lastInsertID, err := result.LastInsertId()
-	if err != nil {
-		logs.Logger.Error("error:", err)
-		return "", err
-	}
-
-	lastInsertIDStr := strconv.FormatInt(lastInsertID, 10) // Convert int64 to string
-	return lastInsertIDStr, nil
+	logs.Logger.Info(fmt.Sprintf("activityid length: %d\n", len(activityIDs)))
+	fmt.Printf("activityid length: %d\n", len(activityIDs))
+	return err
 }

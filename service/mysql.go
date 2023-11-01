@@ -2,8 +2,8 @@ package service
 
 import (
 	"database/sql"
+	"strings"
 
-	"datastream/Process"
 	"datastream/config"
 	"datastream/logs"
 	"fmt"
@@ -82,29 +82,45 @@ func ConfigureMySQLDB(configmsg string) (*MySQLConnector, error) {
 	return &mysqlConnector, nil
 }
 
-func Insertmsg(msg []string, topic string) error {
-
-	dbConnector, err := ConfigureMySQLDB("mysql")
+func InsertDataToMySql(db *sql.DB, tablename string, columnNames []string, dataSlice [][]interface{}) ([]int64, error) {
+	tx, err := db.Begin()
 	if err != nil {
-		logs.Logger.Error("error to get config", err)
-		return fmt.Errorf("error to get config: %v", err)
+		logs.Logger.Error("error starting a transaction:", err)
+		return nil, fmt.Errorf("error starting a transaction: %v", err)
+	}
+	defer tx.Rollback()
+
+	ids := []int64{}
+
+	query := "INSERT INTO " + tablename + " (" + strings.Join(columnNames, ", ") + ") VALUES ("
+	query += strings.Repeat("?, ", len(columnNames)-1) + "?)"
+
+	stmt, err := tx.Prepare(query)
+	if err != nil {
+		logs.Logger.Error("error preparing statement:", err)
+		return nil, fmt.Errorf("error preparing statement: %v", err)
+	}
+	defer stmt.Close()
+
+	for _, rowData := range dataSlice {
+		res, err := stmt.Exec(rowData...)
+		if err != nil {
+			logs.Logger.Error("error inserting data:", err)
+			return nil, fmt.Errorf("error inserting data: %v", err)
+		}
+
+		lastInsertID, err := res.LastInsertId()
+		if err != nil {
+			logs.Logger.Error("error:", err)
+			return nil, fmt.Errorf("error getting last insert ID: %v", err)
+		}
+		ids = append(ids, lastInsertID)
 	}
 
-	// Connect to the database
-	db, err := dbConnector.Connect()
-	if err != nil {
-		logs.Logger.Error("error connecting to the database:", err)
-		return fmt.Errorf("error connecting to the database: %v", err)
+	if err := tx.Commit(); err != nil {
+		logs.Logger.Error("error committing transaction:", err)
+		return nil, fmt.Errorf("error committing transaction: %v", err)
 	}
 
-	defer db.Close()
-
-	err = Process.HandleTopic(db, msg, topic)
-
-	if err != nil {
-		logs.Logger.Error("error in handle topic:", err)
-		return fmt.Errorf("error in handle topic: %v", err)
-	}
-
-	return nil
+	return ids, nil
 }

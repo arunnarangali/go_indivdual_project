@@ -81,12 +81,12 @@ func (kc *KafkaConnector) ProduceMessages(topic string, messageValues []string) 
 	}
 }
 
-func (kc *KafkaConnector) ConsumeMessages(topic string) error {
+func (kc *KafkaConnector) ConsumeMessages(topic string) ([]string, error) {
 
-	partitionConsumer, err := kc.Consumer.ConsumePartition(topic, 0, sarama.ReceiveTime)
+	partitionConsumer, err := kc.Consumer.ConsumePartition(topic, 0, sarama.OffsetNewest)
 	if err != nil {
 		logs.Logger.Error("error:", err)
-		return err
+		return nil, err
 	}
 	defer partitionConsumer.Close()
 	for {
@@ -105,14 +105,7 @@ func (kc *KafkaConnector) ConsumeMessages(topic string) error {
 			message := string(msg.Value)
 			msgStrings := []string{message}
 
-			err := Insertmsg(msgStrings, topic) //send message into insert sql func
-			if err != nil {
-				log.Printf("Error inserting contact: %v", err)
-
-			} else {
-				logs.Logger.Info("inserted Successfully")
-				log.Printf(" inserted successfully ")
-			}
+			return msgStrings, err
 		}
 	}
 }
@@ -133,124 +126,8 @@ func ConfigureKafka(configMsg string) (*KafkaConnector, *string, *string, error)
 		logs.Logger.Error("error:", err)
 		return nil, nil, nil, err
 	}
-	// Specify the topic and message value you want to produce.
+
 	contactTopic := kafkaConfig.(config.KafkaConfig).Topic2
 	activityTopic := kafkaConfig.(config.KafkaConfig).Topic1
 	return kafkaConnector, &contactTopic, &activityTopic, nil
-}
-
-func RunKafkaProducerContacts(messages []string) error {
-	var msg []string
-	count := 0
-	kafkaConnector, contactTopic, _, err := ConfigureKafka("kafka")
-	if err != nil {
-		logs.Logger.Error("Error:", err)
-		return err
-	}
-	// Produce a message to the Kafka topic.
-	for _, messageValue := range messages {
-		msg = append(msg, messageValue)
-		count++
-		if count == 100 {
-			if err := kafkaConnector.ProduceMessages(*contactTopic, msg); err != nil {
-				logs.Logger.Error("Error:", err)
-				return err
-			}
-			count = 0
-			msg = []string{}
-		}
-	}
-
-	if count > 0 {
-		if err := kafkaConnector.ProduceMessages(*contactTopic, msg); err != nil {
-			logs.Logger.Error("Error:", err)
-			return err
-		}
-	}
-	// Close the KafkaConnector when done.
-	if err := kafkaConnector.Close(); err != nil {
-		logs.Logger.Error("Error:", err)
-		return err
-	}
-	logs.Logger.Info("Messages successfully send contact to kafka")
-	fmt.Println("Messages successfully produced to Kafka.")
-	return nil
-}
-
-func RunKafkaConsumerContacts() error {
-
-	kafkaConnector, contactTopic, _, err := ConfigureKafka("kafka")
-	if err != nil {
-		logs.Logger.Error("error in configure:", err)
-		return err
-	}
-
-	if err := kafkaConnector.ConsumeMessages(*contactTopic); err != nil {
-		logs.Logger.Error("Error:", err)
-		return err
-	}
-
-	if err := kafkaConnector.Close(); err != nil {
-		logs.Logger.Error("err in kafkaclose", err)
-		return err
-	}
-	return nil
-}
-
-func RunKafkaProducerActivity(messages []string) error {
-	var msg []string
-	count := 0
-	kafkaConnector, _, activityTopic, err := ConfigureKafka("kafka")
-	if err != nil {
-		logs.Logger.Error("error:", err)
-		return err
-	}
-
-	for _, messageValue := range messages {
-		msg = append(msg, messageValue)
-		count++
-		if count == 25 {
-			if err := kafkaConnector.ProduceMessages(*activityTopic, msg); err != nil {
-				logs.Logger.Error("Error:", err)
-				return err
-			}
-			count = 0
-			msg = []string{}
-		}
-	}
-
-	if count > 0 {
-		if err := kafkaConnector.ProduceMessages(*activityTopic, msg); err != nil {
-			logs.Logger.Error("Error:", err)
-			return err
-		}
-	}
-	if err := kafkaConnector.Close(); err != nil {
-		logs.Logger.Error("Error:", err)
-		return err
-	}
-	logs.Logger.Info("Message successfully send activity to Kafka")
-	fmt.Println("Message successfully produced to  activity Kafka.")
-	return nil
-}
-
-func RunKafkaConsumerActivity() error {
-
-	kafkaConnector, _, activityTopic, err := ConfigureKafka("kafka")
-	if err != nil {
-		logs.Logger.Error("error:", err)
-		return err
-	}
-
-	if err := kafkaConnector.ConsumeMessages(*activityTopic); err != nil {
-		logs.Logger.Error("error:", err)
-		return err
-	}
-
-	if err := kafkaConnector.Close(); err != nil {
-		logs.Logger.Error("error:", err)
-		return err
-	}
-
-	return nil
 }

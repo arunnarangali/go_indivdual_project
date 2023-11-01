@@ -62,7 +62,7 @@ func (c ClickHouseConfig) GetConfig() map[string]string {
 }
 
 func LoadDatabaseConfig(dbType string) (DatabaseConfig, error) {
-	if err := godotenv.Load("/home/arun/test 5/go_indivdual_project/.env"); err != nil {
+	if err := godotenv.Load("/home/arun/test 7/go_indivdual_project/.env"); err != nil {
 		logs.Logger.Error("Error loading .env file:", err)
 		log.Fatalf("Error loading .env file: %v", err)
 		return nil, err

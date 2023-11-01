@@ -185,7 +185,7 @@ func TestKafkaConnector_ConsumeMessages(t *testing.T) {
 		done := make(chan struct{})
 		go func() {
 			defer close(done)
-			err := kc.ConsumeMessages(topic)
+			_, err := kc.ConsumeMessages(topic)
 			if err != nil {
 				t.Errorf("Error consuming messages: %v", err)
 			}
@@ -211,7 +211,8 @@ func TestKafkaConnector_ConsumeMessages(t *testing.T) {
 		done := make(chan struct{})
 		go func() {
 			defer close(done)
-			err := kc.ConsumeMessages(topic)
+
+			_, err := kc.ConsumeMessages(topic)
 			if err == nil {
 				t.Errorf("Expected a consumer error, but got nil")
 			}
@@ -226,8 +227,8 @@ func TestConfigureKafka(t *testing.T) {
 	t.Run("Valid Configuration", func(t *testing.T) {
 		testKafkaConfig := config.KafkaConfig{
 			Broker: "localhost:9092",
-			Topic1: "ActivityContactTopicNew53",
-			Topic2: "ContactStatusTopicNew54",
+			Topic1: "ActivityContactTopicNew60",
+			Topic2: "ContactStatusTopicNew60",
 		}
 
 		kafkaConnector, contactTopic, activityTopic, err := ConfigureKafka("kafka")
@@ -274,41 +275,4 @@ func TestConfigureKafka(t *testing.T) {
 			t.Errorf("Expected error message '%s', but got '%s'", expectedErrorMsg, err.Error())
 		}
 	})
-}
-
-func TestRunKafkaProducerContacts(t *testing.T) {
-	t.Run("EmptyMessages", func(t *testing.T) {
-		messages := []string{}
-		err := RunKafkaProducerContacts(messages)
-
-		if err != nil {
-			t.Errorf("Expected no error, but got: %v", err)
-		}
-
-	})
-
-	t.Run("LessThan100Messages", func(t *testing.T) {
-		messages := []string{"message1", "message2", "message3", "message4", "message5"}
-		err := RunKafkaProducerContacts(messages)
-
-		if err != nil {
-			t.Errorf("Expected no error, but got: %v", err)
-		}
-
-	})
-
-	t.Run("MoreThan100Messages", func(t *testing.T) {
-		messages := make([]string, 110)
-		for i := 0; i < 110; i++ {
-			messages[i] = fmt.Sprintf("message%d", i+1)
-		}
-
-		err := RunKafkaProducerContacts(messages)
-
-		if err != nil {
-			t.Errorf("Expected no error, but got: %v", err)
-		}
-
-	})
-
 }

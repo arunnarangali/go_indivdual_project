@@ -2,7 +2,6 @@ package service
 
 import (
 	"datastream/config"
-	"os"
 	"testing"
 
 	_ "github.com/mattn/go-sqlite3"
@@ -80,51 +79,43 @@ func TestConfigureMySQLDB(t *testing.T) {
 	})
 }
 
-func TestInsertmsgIntegration(t *testing.T) {
-	// Set up a test MySQL database for integration testing.
+func TestInsertDataToMySql(t *testing.T) {
 
-	t.Run("Valid Data Insertion", func(t *testing.T) {
+	configData, err := config.LoadDatabaseConfig("mysql")
+	if err != nil {
+		t.Errorf("Expected no error for MySQL config, got: %v", err)
+	}
 
-		testdatabase := "testdatabse"
+	mysqlConfig, ok := configData.(config.MySQLConfig)
 
-		os.Setenv("MYSQL_DBNAME", testdatabase)
+	if !ok {
+		t.Errorf("expected MySQLConfig, but got %T", configData)
+	}
 
-		// Insert a test topic into the database.
-		topic := "ActivityContactTopicNew53"
-		err := Insertmsg([]string{`4c88502a43d9444690a8dafdba9c8eeaf7d408378919422f,83,4,"2023-11-02 00:00:00 +0000 UTC"`}, topic)
+	mysqlConnector := MySQLConnector{Config: mysqlConfig}
 
-		assert.Nil(t, err)
+	db, err := mysqlConnector.Connect()
+	if err != nil {
+		t.Errorf("Expected no error, got %v", err)
+	}
+	defer db.Close()
+	// Define test data.
+	tablename := "test_table"
+	columnNames := []string{"id", "name", "age"}
+	dataSlice := [][]interface{}{
+		{1, "John", 30},
+		{2, "Alice", 25},
+		{3, "Bob", 35},
+	}
 
-	})
+	insertedIDs, err := InsertDataToMySql(db, tablename, columnNames, dataSlice)
 
-	t.Run("Invalid Data Insertion (Topic Does Not Exist)", func(t *testing.T) {
-		// Set up a test MySQL database with an empty topics table.
+	if err != nil {
+		t.Errorf("Error inserting data: %v", err)
+	}
 
-		msg := []string{"message1", "message2"}
-		topic := "invalid_topic"
-		err := Insertmsg(msg, topic)
-		assert.Error(t, err)
-
-		// Verify that the error indicates the topic doesn't exist.
-		expectedErrMsg := "invalid Topic"
-		assert.Contains(t, err.Error(), expectedErrMsg)
-
-	})
-
-	t.Run("Database Connection Error", func(t *testing.T) {
-		testdatabase := "testsdatabse"
-
-		os.Setenv("MYSQL_DBNAME", testdatabase)
-
-		msg := []string{"message1", "message2"}
-		topic := "existing_topic"
-		err := Insertmsg(msg, topic)
-
-		// Verify that the error indicates the topic doesn't exist.
-		expectedErrMsg := "Unknown database 'testsdatabse'"
-		assert.Contains(t, err.Error(), expectedErrMsg)
-		assert.Error(t, err)
-
-	})
-
+	expectedLength := len(dataSlice)
+	if len(insertedIDs) != expectedLength {
+		t.Errorf("Expected %d last insert IDs, Got: %d", expectedLength, len(insertedIDs))
+	}
 }

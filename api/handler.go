@@ -1,6 +1,7 @@
 package api
 
 import (
+	"datastream/Process"
 	"datastream/dataprocessing"
 	"datastream/logs"
 	"datastream/service"
@@ -63,11 +64,11 @@ func UploadHandler(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 		go Readfile(filePath)
-
 		time.Sleep(15 * time.Second)
 		http.Redirect(w, r, "/resultpage", http.StatusSeeOther)
 		return
 	}
+
 	logs.Logger.Warning("Use POST method upload a csv file")
 }
 
@@ -88,7 +89,7 @@ func Readfile(filePath string) error {
 	}
 	defer file.Close()
 
-	batchSize := 100
+	batchSize := 25
 
 	resultCh := make(chan []types.Contacts)
 
@@ -133,14 +134,14 @@ func generateActivitiesInBackground(csvData []types.Contacts, wg *sync.WaitGroup
 		activitiesStrings = append(activitiesStrings, activitiesString)
 	}
 
-	go service.RunKafkaConsumerContacts()
+	go Process.RunKafkaConsumerContacts()
 
-	go service.RunKafkaConsumerActivity()
+	go Process.RunKafkaConsumerActivity()
 
-	if err := service.RunKafkaProducerContacts(contactStatuses); err != nil {
+	if err := Process.RunKafkaProducerContacts(contactStatuses); err != nil {
 		logs.Logger.Error("Error running Kafka producer for contacts:", err)
 	}
-	if err := service.RunKafkaProducerActivity(activitiesStrings); err != nil {
+	if err := Process.RunKafkaProducerActivity(activitiesStrings); err != nil {
 		logs.Logger.Error("Error running Kafka producer for activities:", err)
 	}
 
