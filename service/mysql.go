@@ -82,7 +82,8 @@ func ConfigureMySQLDB(configmsg string) (*MySQLConnector, error) {
 	return &mysqlConnector, nil
 }
 
-func InsertDataToMySql(db *sql.DB, tablename string, columnNames []string, dataSlice [][]interface{}) ([]int64, error) {
+func InsertDataToMySql(db *sql.DB, tablename string,
+	columnNames []string, dataSlice [][]interface{}) ([]int64, error) {
 	tx, err := db.Begin()
 	if err != nil {
 		logs.Logger.Error("error starting a transaction:", err)
