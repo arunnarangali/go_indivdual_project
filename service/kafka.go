@@ -11,16 +11,12 @@ import (
 	"github.com/IBM/sarama"
 )
 
-// var kafkaConnector, contactTopic, activityTopic, err = ConfigureKafka("kafka")
-
-// KafkaConnector implements the DBConnector interface for Kafka using IBM's sarama package.
 type KafkaConnector struct {
 	Config   config.KafkaConfig
 	Producer sarama.SyncProducer
 	Consumer sarama.Consumer
 }
 
-// NewKafkaConnector creates a new KafkaConnector instance.
 func NewKafkaConnector(kafkaConfig config.KafkaConfig) (*KafkaConnector, error) {
 	config := sarama.NewConfig()
 	config.Consumer.Return.Errors = true

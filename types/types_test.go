@@ -33,7 +33,7 @@ func TestExtractmsgcontacts(t *testing.T) {
 			},
 		}
 
-		result, err := Extractmsgcontacts(input)
+		result, err := Convertmsgcontacts(input)
 		if err != nil {
 			t.Errorf("Expected no error, but got an error: %v", err)
 		}
@@ -59,7 +59,7 @@ func TestExtractmsgcontacts(t *testing.T) {
 			},
 		}
 
-		result, err := Extractmsgcontacts(input)
+		result, err := Convertmsgcontacts(input)
 		if err != nil {
 			t.Errorf("Expected no error, but got an error: %v", err)
 		}
@@ -74,7 +74,7 @@ func TestExtractmsgcontacts(t *testing.T) {
 			"2,Jane Smith,janesmith@example.com,invalid,Another detail",
 		}
 
-		_, err := Extractmsgcontacts(input)
+		_, err := Convertmsgcontacts(input)
 		if err == nil {
 			t.Error("Expected an error, but got no error.")
 		}
@@ -84,7 +84,7 @@ func TestExtractmsgcontacts(t *testing.T) {
 		input := []string{}
 		expected := []ContactStatus{}
 
-		result, err := Extractmsgcontacts(input)
+		result, err := Convertmsgcontacts(input)
 		if err != nil {
 			t.Errorf("Expected no error, but got an error: %v", err)
 		}
@@ -120,7 +120,7 @@ func TestExtractmsgcontacts(t *testing.T) {
 			},
 		}
 
-		result, err := Extractmsgcontacts(input)
+		result, err := Convertmsgcontacts(input)
 		if err != nil {
 			t.Errorf("Expected no error, but got an error: %v", err)
 		}
@@ -146,7 +146,7 @@ func TestExtractmsgcontacts(t *testing.T) {
 			},
 		}
 
-		result, err := Extractmsgcontacts(input)
+		result, err := Convertmsgcontacts(input)
 		if err != nil {
 			t.Errorf("Expected no error, but got an error: %v", err)
 		}
@@ -177,7 +177,7 @@ func TestExtractmsgActivity(t *testing.T) {
 			},
 		}
 
-		result, err := ExtractmsgActivity(input)
+		result, err := ConvertmsgActivity(input)
 		if err != nil {
 			t.Errorf("Expected no error, but got an error: %v", err)
 		}
@@ -206,7 +206,7 @@ func TestExtractmsgActivity(t *testing.T) {
 			},
 		}
 
-		result, err := ExtractmsgActivity(input)
+		result, err := ConvertmsgActivity(input)
 		if err != nil {
 			t.Errorf("Expected no error, but got an error: %v", err)
 		}
@@ -221,7 +221,7 @@ func TestExtractmsgActivity(t *testing.T) {
 			"2,456,2,\"Invalid Date Format\"",
 		}
 
-		_, err := ExtractmsgActivity(input)
+		_, err := ConvertmsgActivity(input)
 		if err == nil {
 			t.Error("Expected an error, but got no error.")
 		}
@@ -231,7 +231,7 @@ func TestExtractmsgActivity(t *testing.T) {
 		input := []string{}
 		expected := []ContactActivity{}
 
-		result, err := ExtractmsgActivity(input)
+		result, err := ConvertmsgActivity(input)
 		if err != nil {
 			t.Errorf("Expected no error, but got an error: %v", err)
 		}
@@ -261,7 +261,7 @@ func TestExtractmsgActivity(t *testing.T) {
 			},
 		}
 
-		result, err := ExtractmsgActivity(input)
+		result, err := ConvertmsgActivity(input)
 		if err != nil {
 			t.Errorf("Expected no error, but got an error: %v", err)
 		}
@@ -284,7 +284,7 @@ func TestExtractmsgActivity(t *testing.T) {
 			},
 		}
 
-		result, err := ExtractmsgActivity(input)
+		result, err := ConvertmsgActivity(input)
 		if err != nil {
 			t.Errorf("Expected no error, but got an error: %v", err)
 		}

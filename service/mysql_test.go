@@ -99,7 +99,7 @@ func TestInsertDataToMySql(t *testing.T) {
 		t.Errorf("Expected no error, got %v", err)
 	}
 	defer db.Close()
-	// Define test data.
+
 	tablename := "test_table"
 	columnNames := []string{"id", "name", "age"}
 	dataSlice := [][]interface{}{

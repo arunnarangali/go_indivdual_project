@@ -36,9 +36,9 @@ func RunKafkaProducerContacts(messages []string) error {
 	return nil
 }
 
-func RunKafkaConsumerContacts() error {
+func RunKafkaConsumerContacts(configmsg string) error {
 
-	kafkaConnector, contactTopic, _, err := service.ConfigureKafka("kafka")
+	kafkaConnector, contactTopic, _, err := service.ConfigureKafka(configmsg)
 	if err != nil {
 		logs.Logger.Error("error in configure:", err)
 		return err
@@ -51,7 +51,6 @@ func RunKafkaConsumerContacts() error {
 	}
 
 	err = Insertmsg(ContactsMSg, *contactTopic)
-
 	if err != nil {
 		log.Printf("Error inserting Contacts: %v", err)
 		logs.Logger.Error("Error inserting contacts:", err)
@@ -97,9 +96,9 @@ func RunKafkaProducerActivity(messages []string) error {
 	return nil
 }
 
-func RunKafkaConsumerActivity() error {
+func RunKafkaConsumerActivity(configmsg string) error {
 
-	kafkaConnectoractivity, _, activityTopic, err := service.ConfigureKafka("kafka")
+	kafkaConnectoractivity, _, activityTopic, err := service.ConfigureKafka(configmsg)
 	if err != nil {
 		logs.Logger.Error("error:", err)
 		return err

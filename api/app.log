@@ -301,3 +301,103 @@
 
 [INFO] 2023/11/01 12:48:46 log.go:88: Database connection is available
 [INFO] 2023/11/01 12:48:46 log.go:88: Database connection is available
+[ERROR] 2023/11/02 11:35:30 log.go:80: Error in reading: parse error on line 1, column 24: bare " in non-quoted-field
+[INFO] 2023/11/02 11:35:45 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 3 
+
+[INFO] 2023/11/02 11:35:45 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 11:35:45 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 3 
+
+[INFO] 2023/11/02 11:35:45 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:35:45 log.go:88: generate activity func stopped
+
+[ERROR] 2023/11/02 11:35:45 log.go:80: unable to open the file:: open nonexistentfile.csv: no such file or directory
+[INFO] 2023/11/02 11:35:45 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 4 
+
+[INFO] 2023/11/02 11:35:45 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 11:35:45 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 4 
+
+[INFO] 2023/11/02 11:35:45 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:35:45 log.go:88: generate activity func stopped
+
+[INFO] 2023/11/02 11:35:45 log.go:88: Database connection is available
+[INFO] 2023/11/02 11:35:45 log.go:88: Database connection is available
+[ERROR] 2023/11/02 11:38:08 log.go:80: Error in reading: parse error on line 1, column 24: bare " in non-quoted-field
+[INFO] 2023/11/02 11:38:23 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 14 
+
+[INFO] 2023/11/02 11:38:23 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 11:38:23 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 12 
+
+[INFO] 2023/11/02 11:38:23 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:38:23 log.go:88: generate activity func stopped
+
+[ERROR] 2023/11/02 11:38:23 log.go:80: unable to open the file:: open nonexistentfile.csv: no such file or directory
+[INFO] 2023/11/02 11:38:23 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 15 
+
+[INFO] 2023/11/02 11:38:23 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 11:38:23 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 13 
+
+[INFO] 2023/11/02 11:38:23 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:38:23 log.go:88: generate activity func stopped
+
+[INFO] 2023/11/02 11:38:23 log.go:88: Database connection is available
+[INFO] 2023/11/02 11:38:23 log.go:88: Database connection is available
+[ERROR] 2023/11/02 11:41:48 log.go:80: Error in reading: parse error on line 1, column 24: bare " in non-quoted-field
+[INFO] 2023/11/02 11:42:03 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 19 
+
+[INFO] 2023/11/02 11:42:03 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 11:42:03 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 17 
+
+[INFO] 2023/11/02 11:42:03 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:42:03 log.go:88: generate activity func stopped
+
+[ERROR] 2023/11/02 11:42:03 log.go:80: unable to open the file:: open nonexistentfile.csv: no such file or directory
+[INFO] 2023/11/02 11:42:03 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 20 
+
+[INFO] 2023/11/02 11:42:03 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 11:42:03 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 18 
+
+[INFO] 2023/11/02 11:42:03 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:42:03 log.go:88: generate activity func stopped
+
+[INFO] 2023/11/02 11:42:03 log.go:88: Database connection is available
+[INFO] 2023/11/02 11:42:03 log.go:88: Database connection is available
+[ERROR] 2023/11/02 11:52:59 log.go:80: Error in reading: parse error on line 1, column 24: bare " in non-quoted-field
+[INFO] 2023/11/02 11:53:14 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 33 
+
+[INFO] 2023/11/02 11:53:14 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 11:53:14 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 31 
+
+[INFO] 2023/11/02 11:53:14 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:53:14 log.go:88: generate activity func stopped
+
+[ERROR] 2023/11/02 11:53:14 log.go:80: unable to open the file:: open nonexistentfile.csv: no such file or directory
+[INFO] 2023/11/02 11:53:14 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 34 
+
+[INFO] 2023/11/02 11:53:14 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 11:53:14 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 32 
+
+[INFO] 2023/11/02 11:53:14 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:53:14 log.go:88: generate activity func stopped
+
+[INFO] 2023/11/02 11:53:14 log.go:88: Database connection is available
+[INFO] 2023/11/02 11:53:14 log.go:88: Database connection is available
+[ERROR] 2023/11/02 12:05:51 log.go:80: Error in reading: parse error on line 1, column 24: bare " in non-quoted-field
+[INFO] 2023/11/02 12:06:06 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 47 
+
+[INFO] 2023/11/02 12:06:06 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 12:06:06 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 45 
+
+[INFO] 2023/11/02 12:06:06 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 12:06:06 log.go:88: generate activity func stopped
+
+[ERROR] 2023/11/02 12:06:06 log.go:80: unable to open the file:: open nonexistentfile.csv: no such file or directory
+[INFO] 2023/11/02 12:06:06 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 48 
+
+[INFO] 2023/11/02 12:06:06 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 12:06:06 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 46 
+
+[INFO] 2023/11/02 12:06:06 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 12:06:06 log.go:88: generate activity func stopped
+
+[INFO] 2023/11/02 12:06:06 log.go:88: Database connection is available
+[INFO] 2023/11/02 12:06:06 log.go:88: Database connection is available

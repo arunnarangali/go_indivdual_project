@@ -62,7 +62,7 @@ func (f DefaultContactFactory) CreateContactStatus(id string, name string, email
 		Status:  status,
 	}
 }
-func Extractmsgcontacts(msg []string) ([]ContactStatus, error) {
+func Convertmsgcontacts(msg []string) ([]ContactStatus, error) {
 	contactStatuses := []ContactStatus{}
 	for _, message := range msg {
 
@@ -103,7 +103,7 @@ func Extractmsgcontacts(msg []string) ([]ContactStatus, error) {
 	return contactStatuses, nil
 }
 
-func ExtractmsgActivity(msg []string) ([]ContactActivity, error) {
+func ConvertmsgActivity(msg []string) ([]ContactActivity, error) {
 	contactStatuses := []ContactActivity{} // Corrected declaration to create a slice
 	fmt.Printf("this is Acticitystring:%s", msg)
 

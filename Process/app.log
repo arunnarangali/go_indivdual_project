@@ -74,3 +74,862 @@
 [INFO] 2023/11/01 12:48:31 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 965 
 
 [INFO] 2023/11/01 12:48:31 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/01 15:07:30 log.go:88: ContactID length: 2
+
+[INFO] 2023/11/01 15:07:30 log.go:88: ContactID length: 0
+
+[INFO] 2023/11/01 15:07:30 log.go:88: ContactID length: 0
+
+[INFO] 2023/11/01 15:07:30 log.go:88: ContactID length: 0
+
+[INFO] 2023/11/01 15:07:30 log.go:88: ContactID length: 0
+
+[INFO] 2023/11/01 15:44:05 log.go:88: ContactID length: 2
+
+[INFO] 2023/11/01 15:44:05 log.go:88: ContactID length: 0
+
+[INFO] 2023/11/01 15:44:05 log.go:88: ContactID length: 0
+
+[INFO] 2023/11/01 15:44:05 log.go:88: ContactID length: 0
+
+[INFO] 2023/11/01 15:44:05 log.go:88: ContactID length: 0
+
+[INFO] 2023/11/01 15:44:22 log.go:88: ContactID length: 2
+
+[ERROR] 2023/11/01 15:44:22 log.go:80: error extracting contact statuses:: empty message string
+[INFO] 2023/11/01 15:44:22 log.go:88: ContactID length: 0
+
+[INFO] 2023/11/01 15:44:22 log.go:88: ContactID length: 0
+
+[INFO] 2023/11/01 15:44:22 log.go:88: ContactID length: 0
+
+[INFO] 2023/11/01 15:45:45 log.go:88: ContactID length: 2
+
+[ERROR] 2023/11/01 15:45:45 log.go:80: error extracting contact statuses:: empty message string
+[INFO] 2023/11/01 15:45:45 log.go:88: ContactID length: 0
+
+[INFO] 2023/11/01 15:51:10 log.go:88: ContactID length: 2
+
+[ERROR] 2023/11/01 15:51:10 log.go:80: error extracting contact statuses:: empty message string
+[ERROR] 2023/11/01 15:52:10 log.go:80: error in activitydate parsing: parsing time "1" as "2006-01-02 15:04:05 -0700 MST": cannot parse "1" as "2006"
+[ERROR] 2023/11/01 15:52:10 log.go:80: error extracting activity:: parsing time "1" as "2006-01-02 15:04:05 -0700 MST": cannot parse "1" as "2006"
+[INFO] 2023/11/01 15:52:10 log.go:88: activityid length: 0
+
+[INFO] 2023/11/01 15:53:42 log.go:88: ContactID length: 0
+
+[ERROR] 2023/11/01 15:53:42 log.go:80: error extracting contact statuses:: empty message string
+[ERROR] 2023/11/01 15:54:27 log.go:80: error in activitydate parsing: parsing time "1" as "2006-01-02 15:04:05 -0700 MST": cannot parse "1" as "2006"
+[ERROR] 2023/11/01 15:54:27 log.go:80: error extracting activity:: parsing time "1" as "2006-01-02 15:04:05 -0700 MST": cannot parse "1" as "2006"
+[INFO] 2023/11/01 15:54:27 log.go:88: activityid length: 0
+
+[INFO] 2023/11/01 15:55:21 log.go:88: ContactID length: 2
+
+[INFO] 2023/11/01 15:55:21 log.go:88: ContactID length: 0
+
+[INFO] 2023/11/01 15:55:31 log.go:88: ContactID length: 2
+
+[ERROR] 2023/11/01 15:55:31 log.go:80: error extracting contact statuses:: empty message string
+[INFO] 2023/11/01 15:55:31 log.go:88: ContactID length: 2
+
+[ERROR] 2023/11/01 15:55:31 log.go:80: error extracting contact statuses:: empty message string
+[INFO] 2023/11/01 15:57:50 log.go:88: activityid length: 1
+
+[INFO] 2023/11/01 15:57:50 log.go:88: activityid length: 0
+
+[INFO] 2023/11/01 15:58:25 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/01 15:58:25 log.go:80: error extracting contact statuses:: empty message string
+[ERROR] 2023/11/01 16:02:28 log.go:80: Error: message string is empty
+[INFO] 2023/11/01 16:02:28 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 4010 
+
+[INFO] 2023/11/01 16:02:28 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/01 16:02:28 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 4011 
+
+[INFO] 2023/11/01 16:02:28 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/01 16:19:49 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 4017 
+
+[INFO] 2023/11/01 16:19:49 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/01 16:29:35 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/01 16:29:35 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/01 16:29:35 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[WARNING] 2023/11/01 16:30:01 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/01 16:30:01 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/01 16:30:01 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[WARNING] 2023/11/01 16:31:01 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/01 16:31:01 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/01 16:31:01 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/01 16:35:30 log.go:80: Error: message string is empty
+[INFO] 2023/11/01 16:37:55 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 4018 
+
+[INFO] 2023/11/01 16:37:55 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/01 16:40:34 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 4019 
+
+[INFO] 2023/11/01 16:40:34 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/01 16:41:01 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 4020 
+
+[INFO] 2023/11/01 16:41:01 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/01 16:41:46 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 4021 
+
+[INFO] 2023/11/01 16:41:46 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/01 16:41:51 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 4022 
+
+[INFO] 2023/11/01 16:41:51 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/01 16:43:01 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 4023 
+
+[INFO] 2023/11/01 16:43:01 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/01 16:43:01 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/01 16:43:01 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/01 16:43:01 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/01 16:43:01 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 4024 
+
+[INFO] 2023/11/01 16:43:01 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/01 16:43:01 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/01 16:43:01 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/01 16:43:01 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/01 16:53:32 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 4025 
+
+[INFO] 2023/11/01 16:53:32 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/01 16:53:43 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/01 16:53:43 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/01 16:53:43 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/01 16:54:50 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 4026 
+
+[INFO] 2023/11/01 16:54:50 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/01 16:55:55 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/01 16:55:55 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/01 16:55:55 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/01 16:56:02 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 4012 
+
+[INFO] 2023/11/01 16:56:02 log.go:88: Message successfully send activity to Kafka
+[ERROR] 2023/11/02 11:35:30 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:35:30 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 0 
+
+[INFO] 2023/11/02 11:35:30 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 11:35:30 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 1 
+
+[INFO] 2023/11/02 11:35:30 log.go:88: Messages successfully send contact to kafka
+[ERROR] 2023/11/02 11:35:30 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:35:30 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 0 
+
+[INFO] 2023/11/02 11:35:30 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:35:30 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 1 
+
+[INFO] 2023/11/02 11:35:30 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:35:30 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 2 
+
+[INFO] 2023/11/02 11:35:30 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/02 11:35:30 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:35:30 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:35:30 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:35:30 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 2 
+
+[INFO] 2023/11/02 11:35:30 log.go:88: Message successfully send activity to Kafka
+[WARNING] 2023/11/02 11:35:30 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:35:30 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:35:30 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:35:31 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 11:35:31 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 11:35:31 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 11:35:31 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:35:31 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:35:31 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:35:31 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:36:27 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:36:27 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 5 
+
+[INFO] 2023/11/02 11:36:27 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 11:36:28 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 6 
+
+[INFO] 2023/11/02 11:36:28 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 11:36:33 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 7 
+
+[INFO] 2023/11/02 11:36:33 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/02 11:36:33 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:36:33 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:36:33 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:36:37 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 5 
+
+[INFO] 2023/11/02 11:36:37 log.go:88: Message successfully send activity to Kafka
+[WARNING] 2023/11/02 11:36:37 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:36:37 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:36:37 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:36:44 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 11:36:44 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 11:36:44 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 11:36:44 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:36:44 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[INFO] 2023/11/02 11:36:52 log.go:88: ContactID length: 2
+
+[ERROR] 2023/11/02 11:36:52 log.go:80: error extracting contact statuses:: empty message string
+[INFO] 2023/11/02 11:36:56 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 11:36:56 log.go:80: error extracting contact statuses:: empty message string
+[ERROR] 2023/11/02 11:37:04 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:37:04 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 8 
+
+[INFO] 2023/11/02 11:37:04 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 11:37:04 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 9 
+
+[INFO] 2023/11/02 11:37:04 log.go:88: Messages successfully send contact to kafka
+[ERROR] 2023/11/02 11:37:04 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:37:04 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 6 
+
+[INFO] 2023/11/02 11:37:04 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:37:04 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 7 
+
+[INFO] 2023/11/02 11:37:04 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:37:04 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 10 
+
+[INFO] 2023/11/02 11:37:04 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/02 11:37:04 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:37:04 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:37:04 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:37:04 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 8 
+
+[INFO] 2023/11/02 11:37:04 log.go:88: Message successfully send activity to Kafka
+[WARNING] 2023/11/02 11:37:04 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:37:04 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:37:04 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:37:04 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 11:37:04 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 11:37:04 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 11:37:04 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:37:04 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:37:04 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:37:04 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[INFO] 2023/11/02 11:37:38 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 11:37:38 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 11:37:38 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 11:37:38 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:37:38 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[INFO] 2023/11/02 11:37:43 log.go:88: ContactID length: 2
+
+[ERROR] 2023/11/02 11:37:43 log.go:80: error extracting contact statuses:: empty message string
+[INFO] 2023/11/02 11:37:48 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 11:37:48 log.go:80: error extracting contact statuses:: empty message string
+[ERROR] 2023/11/02 11:38:08 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:38:08 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 11 
+
+[INFO] 2023/11/02 11:38:08 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 11:38:08 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 12 
+
+[INFO] 2023/11/02 11:38:08 log.go:88: Messages successfully send contact to kafka
+[ERROR] 2023/11/02 11:38:08 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:38:08 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 9 
+
+[INFO] 2023/11/02 11:38:08 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:38:08 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 10 
+
+[INFO] 2023/11/02 11:38:08 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:38:08 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 13 
+
+[INFO] 2023/11/02 11:38:08 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/02 11:38:08 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:38:08 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:38:08 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:38:08 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 11 
+
+[INFO] 2023/11/02 11:38:08 log.go:88: Message successfully send activity to Kafka
+[WARNING] 2023/11/02 11:38:08 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:38:08 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:38:08 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:38:08 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 11:38:08 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 11:38:08 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 11:38:08 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:38:08 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:38:08 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:38:08 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[INFO] 2023/11/02 11:39:27 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 11:39:27 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 11:39:27 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 11:39:27 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:39:27 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[INFO] 2023/11/02 11:41:15 log.go:88: activityid length: 1
+
+[INFO] 2023/11/02 11:41:15 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 11:41:48 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:41:48 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 16 
+
+[INFO] 2023/11/02 11:41:48 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 11:41:48 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 17 
+
+[INFO] 2023/11/02 11:41:48 log.go:88: Messages successfully send contact to kafka
+[ERROR] 2023/11/02 11:41:48 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:41:48 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 14 
+
+[INFO] 2023/11/02 11:41:48 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:41:48 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 15 
+
+[INFO] 2023/11/02 11:41:48 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:41:48 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 18 
+
+[INFO] 2023/11/02 11:41:48 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/02 11:41:48 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:41:48 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:41:48 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:41:48 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 16 
+
+[INFO] 2023/11/02 11:41:48 log.go:88: Message successfully send activity to Kafka
+[WARNING] 2023/11/02 11:41:48 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:41:48 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:41:48 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:41:48 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 11:41:48 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 11:41:48 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 11:41:48 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:41:48 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:41:48 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:41:48 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:45:50 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:45:50 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 21 
+
+[INFO] 2023/11/02 11:45:50 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 11:45:50 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 22 
+
+[INFO] 2023/11/02 11:45:50 log.go:88: Messages successfully send contact to kafka
+[ERROR] 2023/11/02 11:45:50 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:45:50 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 19 
+
+[INFO] 2023/11/02 11:45:50 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:45:50 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 20 
+
+[INFO] 2023/11/02 11:45:50 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:45:50 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 23 
+
+[INFO] 2023/11/02 11:45:50 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/02 11:45:50 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:45:50 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:45:50 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:45:50 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 21 
+
+[INFO] 2023/11/02 11:45:50 log.go:88: Message successfully send activity to Kafka
+[WARNING] 2023/11/02 11:45:50 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:45:50 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:45:50 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:45:50 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 11:45:50 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 11:45:50 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 11:45:50 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:45:50 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:45:50 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:45:50 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:46:25 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 11:46:25 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 11:46:28 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:46:28 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[INFO] 2023/11/02 11:46:30 log.go:88: ContactID length: 2
+
+[ERROR] 2023/11/02 11:46:30 log.go:80: error extracting contact statuses:: empty message string
+[ERROR] 2023/11/02 11:47:30 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:47:30 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 24 
+
+[INFO] 2023/11/02 11:47:30 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 11:47:30 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 25 
+
+[INFO] 2023/11/02 11:47:30 log.go:88: Messages successfully send contact to kafka
+[ERROR] 2023/11/02 11:47:30 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:47:30 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 22 
+
+[INFO] 2023/11/02 11:47:30 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:47:30 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 23 
+
+[INFO] 2023/11/02 11:47:30 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:47:30 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 26 
+
+[INFO] 2023/11/02 11:47:30 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/02 11:47:30 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:47:30 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:47:30 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:47:30 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 24 
+
+[INFO] 2023/11/02 11:47:30 log.go:88: Message successfully send activity to Kafka
+[WARNING] 2023/11/02 11:47:30 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:47:30 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:47:30 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:48:43 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:48:43 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 27 
+
+[INFO] 2023/11/02 11:48:43 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 11:48:43 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 28 
+
+[INFO] 2023/11/02 11:48:43 log.go:88: Messages successfully send contact to kafka
+[ERROR] 2023/11/02 11:48:43 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:48:43 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 25 
+
+[INFO] 2023/11/02 11:48:43 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:48:43 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 26 
+
+[INFO] 2023/11/02 11:48:43 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:48:43 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 29 
+
+[INFO] 2023/11/02 11:48:43 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/02 11:48:43 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:48:43 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:48:43 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:48:43 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 27 
+
+[INFO] 2023/11/02 11:48:43 log.go:88: Message successfully send activity to Kafka
+[WARNING] 2023/11/02 11:48:43 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:48:43 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:48:43 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:48:43 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 11:48:43 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 11:48:43 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 11:48:43 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:48:43 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:48:43 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:48:43 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[INFO] 2023/11/02 11:48:55 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 11:48:55 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 11:48:55 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 11:48:55 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:48:55 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:52:59 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:52:59 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 30 
+
+[INFO] 2023/11/02 11:52:59 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 11:52:59 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 31 
+
+[INFO] 2023/11/02 11:52:59 log.go:88: Messages successfully send contact to kafka
+[ERROR] 2023/11/02 11:52:59 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:52:59 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 28 
+
+[INFO] 2023/11/02 11:52:59 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:52:59 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 29 
+
+[INFO] 2023/11/02 11:52:59 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:52:59 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 32 
+
+[INFO] 2023/11/02 11:52:59 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/02 11:52:59 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:52:59 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:52:59 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:52:59 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 30 
+
+[INFO] 2023/11/02 11:52:59 log.go:88: Message successfully send activity to Kafka
+[WARNING] 2023/11/02 11:52:59 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:52:59 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:52:59 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:52:59 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 11:52:59 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 11:52:59 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 11:52:59 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:52:59 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:52:59 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:52:59 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[INFO] 2023/11/02 11:53:50 log.go:88: ContactID length: 2
+
+[ERROR] 2023/11/02 11:53:50 log.go:80: error extracting contact statuses:: empty message string
+[INFO] 2023/11/02 11:54:22 log.go:88: ContactID length: 2
+
+[ERROR] 2023/11/02 11:55:07 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:55:07 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 35 
+
+[INFO] 2023/11/02 11:55:07 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 11:55:07 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 36 
+
+[INFO] 2023/11/02 11:55:07 log.go:88: Messages successfully send contact to kafka
+[ERROR] 2023/11/02 11:55:07 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:55:07 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 33 
+
+[INFO] 2023/11/02 11:55:07 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:55:07 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 34 
+
+[INFO] 2023/11/02 11:55:07 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:55:07 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 37 
+
+[INFO] 2023/11/02 11:55:07 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/02 11:55:07 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:55:07 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:55:07 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:55:07 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 35 
+
+[INFO] 2023/11/02 11:55:07 log.go:88: Message successfully send activity to Kafka
+[WARNING] 2023/11/02 11:55:07 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:55:07 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:55:07 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:55:07 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 11:55:07 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 11:55:07 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 11:55:07 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:55:07 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:55:07 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:55:07 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:55:39 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:55:39 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 38 
+
+[INFO] 2023/11/02 11:55:39 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 11:55:39 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 39 
+
+[INFO] 2023/11/02 11:55:39 log.go:88: Messages successfully send contact to kafka
+[ERROR] 2023/11/02 11:55:39 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:55:39 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 36 
+
+[INFO] 2023/11/02 11:55:39 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:55:39 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 37 
+
+[INFO] 2023/11/02 11:55:39 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:55:39 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 40 
+
+[INFO] 2023/11/02 11:55:39 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/02 11:55:39 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:55:39 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:55:39 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:55:39 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 38 
+
+[INFO] 2023/11/02 11:55:39 log.go:88: Message successfully send activity to Kafka
+[WARNING] 2023/11/02 11:55:39 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:55:39 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:55:39 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:55:39 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 11:55:39 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 11:55:39 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 11:55:39 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:55:39 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:55:39 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:55:39 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:57:55 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:57:55 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 41 
+
+[INFO] 2023/11/02 11:57:55 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 11:57:55 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 42 
+
+[INFO] 2023/11/02 11:57:55 log.go:88: Messages successfully send contact to kafka
+[ERROR] 2023/11/02 11:57:55 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 11:57:55 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 39 
+
+[INFO] 2023/11/02 11:57:55 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:57:55 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 40 
+
+[INFO] 2023/11/02 11:57:55 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 11:57:55 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 43 
+
+[INFO] 2023/11/02 11:57:55 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/02 11:57:55 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:57:55 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:57:55 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:57:55 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 41 
+
+[INFO] 2023/11/02 11:57:55 log.go:88: Message successfully send activity to Kafka
+[WARNING] 2023/11/02 11:57:55 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:57:55 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 11:57:55 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 11:57:55 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 11:57:55 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 11:57:55 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 11:57:55 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:57:55 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:57:55 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 11:57:55 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[INFO] 2023/11/02 12:00:53 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 12:00:53 log.go:80: error extracting contact statuses:: empty message string
+[ERROR] 2023/11/02 12:05:51 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 12:05:51 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 44 
+
+[INFO] 2023/11/02 12:05:51 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 12:05:51 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 45 
+
+[INFO] 2023/11/02 12:05:51 log.go:88: Messages successfully send contact to kafka
+[ERROR] 2023/11/02 12:05:51 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 12:05:51 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 42 
+
+[INFO] 2023/11/02 12:05:51 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 12:05:51 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 43 
+
+[INFO] 2023/11/02 12:05:51 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 12:05:51 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 46 
+
+[INFO] 2023/11/02 12:05:51 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/02 12:05:51 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 12:05:51 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 12:05:51 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 12:05:51 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 44 
+
+[INFO] 2023/11/02 12:05:51 log.go:88: Message successfully send activity to Kafka
+[WARNING] 2023/11/02 12:05:51 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 12:05:51 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 12:05:51 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 12:05:51 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 12:05:51 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 12:05:51 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 12:05:51 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 12:05:51 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 12:05:51 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 12:05:51 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 12:10:16 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 12:10:16 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 49 
+
+[INFO] 2023/11/02 12:10:16 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 12:10:16 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 50 
+
+[INFO] 2023/11/02 12:10:16 log.go:88: Messages successfully send contact to kafka
+[ERROR] 2023/11/02 12:10:16 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 12:10:16 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 47 
+
+[INFO] 2023/11/02 12:10:16 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 12:10:16 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 48 
+
+[INFO] 2023/11/02 12:10:16 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 12:10:16 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 51 
+
+[INFO] 2023/11/02 12:10:16 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/02 12:10:16 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 12:10:16 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 12:10:16 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 12:10:16 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 49 
+
+[INFO] 2023/11/02 12:10:16 log.go:88: Message successfully send activity to Kafka
+[WARNING] 2023/11/02 12:10:16 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 12:10:16 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 12:10:16 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 12:10:16 log.go:88: ContactID length: 2
+
+[ERROR] 2023/11/02 12:10:16 log.go:80: error extracting contact statuses:: empty message string
+[INFO] 2023/11/02 12:10:16 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 12:10:16 log.go:80: error extracting contact statuses:: empty message string
+[ERROR] 2023/11/02 12:13:04 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 12:13:04 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdatabse'
+[ERROR] 2023/11/02 12:13:17 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdastabse'
+[ERROR] 2023/11/02 12:13:17 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdastabse'
+[INFO] 2023/11/02 12:15:52 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 12:16:48 log.go:80: error:: Error 1049 (42000): Unknown database 'testsdastabse'
+[ERROR] 2023/11/02 12:16:48 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'testsdastabse'
+[ERROR] 2023/11/02 12:18:07 log.go:80: error:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:18:07 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:18:07 log.go:80: error:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:18:07 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:18:11 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 12:18:11 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 52 
+
+[INFO] 2023/11/02 12:18:11 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 12:18:11 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 53 
+
+[INFO] 2023/11/02 12:18:11 log.go:88: Messages successfully send contact to kafka
+[ERROR] 2023/11/02 12:18:11 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 12:18:11 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 50 
+
+[INFO] 2023/11/02 12:18:11 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 12:18:11 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 51 
+
+[INFO] 2023/11/02 12:18:11 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 12:18:11 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 54 
+
+[INFO] 2023/11/02 12:18:11 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/02 12:18:11 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 12:18:11 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 12:18:11 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 12:18:11 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 52 
+
+[INFO] 2023/11/02 12:18:11 log.go:88: Message successfully send activity to Kafka
+[WARNING] 2023/11/02 12:18:11 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 12:18:11 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 12:18:11 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 12:18:11 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 12:18:11 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 12:18:11 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 12:18:11 log.go:80: error:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:18:11 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:18:11 log.go:80: error:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:18:11 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:18:20 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 12:18:20 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 55 
+
+[INFO] 2023/11/02 12:18:20 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 12:18:20 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 56 
+
+[INFO] 2023/11/02 12:18:20 log.go:88: Messages successfully send contact to kafka
+[ERROR] 2023/11/02 12:18:20 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 12:18:20 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 53 
+
+[INFO] 2023/11/02 12:18:20 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 12:18:20 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 54 
+
+[INFO] 2023/11/02 12:18:20 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 12:18:20 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 57 
+
+[INFO] 2023/11/02 12:18:20 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/02 12:18:20 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 12:18:20 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 12:18:20 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 12:18:20 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 55 
+
+[INFO] 2023/11/02 12:18:20 log.go:88: Message successfully send activity to Kafka
+[WARNING] 2023/11/02 12:18:20 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 12:18:20 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 12:18:20 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 12:18:20 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 12:18:20 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 12:18:20 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 12:18:20 log.go:80: error:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:18:20 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:18:20 log.go:80: error:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:18:20 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:18:30 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 12:18:30 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 58 
+
+[INFO] 2023/11/02 12:18:30 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 12:18:30 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 59 
+
+[INFO] 2023/11/02 12:18:30 log.go:88: Messages successfully send contact to kafka
+[ERROR] 2023/11/02 12:18:30 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 12:18:30 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 56 
+
+[INFO] 2023/11/02 12:18:30 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 12:18:30 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 57 
+
+[INFO] 2023/11/02 12:18:30 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 12:18:30 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 60 
+
+[INFO] 2023/11/02 12:18:30 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/02 12:18:30 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 12:18:30 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 12:18:30 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 12:18:30 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 58 
+
+[INFO] 2023/11/02 12:18:30 log.go:88: Message successfully send activity to Kafka
+[WARNING] 2023/11/02 12:18:30 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 12:18:30 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 12:18:30 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 12:18:30 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 12:18:30 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 12:18:30 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 12:18:30 log.go:80: error:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:18:30 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:18:30 log.go:80: error:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:18:30 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:19:35 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 12:19:35 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 61 
+
+[INFO] 2023/11/02 12:19:35 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 12:19:35 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 62 
+
+[INFO] 2023/11/02 12:19:35 log.go:88: Messages successfully send contact to kafka
+[ERROR] 2023/11/02 12:19:35 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 12:19:35 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 59 
+
+[INFO] 2023/11/02 12:19:35 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 12:19:35 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 60 
+
+[INFO] 2023/11/02 12:19:35 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 12:19:35 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 63 
+
+[INFO] 2023/11/02 12:19:35 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/02 12:19:35 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 12:19:35 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 12:19:35 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 12:19:35 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 61 
+
+[INFO] 2023/11/02 12:19:35 log.go:88: Message successfully send activity to Kafka
+[WARNING] 2023/11/02 12:19:35 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 12:19:35 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 12:19:35 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 12:19:35 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 12:19:35 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 12:19:35 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 12:19:35 log.go:80: error:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:19:35 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:19:35 log.go:80: error:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:19:35 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:20:44 log.go:80: error:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:20:44 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[INFO] 2023/11/02 12:20:53 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 12:20:53 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 12:20:53 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 12:20:53 log.go:80: error:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:20:53 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:22:06 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 12:22:06 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 64 
+
+[INFO] 2023/11/02 12:22:06 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 12:22:06 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 65 
+
+[INFO] 2023/11/02 12:22:06 log.go:88: Messages successfully send contact to kafka
+[ERROR] 2023/11/02 12:22:06 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 12:22:06 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 62 
+
+[INFO] 2023/11/02 12:22:06 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 12:22:06 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 63 
+
+[INFO] 2023/11/02 12:22:06 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 12:22:06 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 66 
+
+[INFO] 2023/11/02 12:22:06 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/02 12:22:06 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 12:22:06 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 12:22:06 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 12:22:06 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 64 
+
+[INFO] 2023/11/02 12:22:06 log.go:88: Message successfully send activity to Kafka
+[WARNING] 2023/11/02 12:22:06 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 12:22:06 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 12:22:06 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 12:22:06 log.go:88: ContactID length: 2
+
+[ERROR] 2023/11/02 12:22:06 log.go:80: error extracting contact statuses:: empty message string
+[INFO] 2023/11/02 12:22:06 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 12:22:06 log.go:80: error extracting contact statuses:: empty message string
+[ERROR] 2023/11/02 12:32:16 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 12:32:16 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 67 
+
+[INFO] 2023/11/02 12:32:16 log.go:88: Messages successfully send contact to kafka
+[INFO] 2023/11/02 12:32:16 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 68 
+
+[INFO] 2023/11/02 12:32:16 log.go:88: Messages successfully send contact to kafka
+[ERROR] 2023/11/02 12:32:16 log.go:80: Error: message string is empty
+[INFO] 2023/11/02 12:32:16 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 65 
+
+[INFO] 2023/11/02 12:32:16 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 12:32:16 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 66 
+
+[INFO] 2023/11/02 12:32:16 log.go:88: Message successfully send activity to Kafka
+[INFO] 2023/11/02 12:32:16 log.go:88: Producer Topic: ContactStatusTopicNew60 Message produced to partition: 0 at offset: 69 
+
+[INFO] 2023/11/02 12:32:16 log.go:88: Messages successfully send contact to kafka
+[WARNING] 2023/11/02 12:32:16 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 12:32:16 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 12:32:16 log.go:80: error in configure:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 12:32:17 log.go:88: Producer Topic: ActivityContactTopicNew60 Message produced to partition: 0 at offset: 67 
+
+[INFO] 2023/11/02 12:32:17 log.go:88: Message successfully send activity to Kafka
+[WARNING] 2023/11/02 12:32:17 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 12:32:17 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[ERROR] 2023/11/02 12:32:17 log.go:80: error:: unsupported DB_TYPE: invalidconfig
+[INFO] 2023/11/02 12:32:17 log.go:88: ContactID length: 2
+
+[ERROR] 2023/11/02 12:32:17 log.go:80: error extracting contact statuses:: empty message string
+[INFO] 2023/11/02 12:32:17 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 12:32:17 log.go:80: error extracting contact statuses:: empty message string
+[INFO] 2023/11/02 12:32:17 log.go:88: activityid length: 1
+
+[ERROR] 2023/11/02 12:32:17 log.go:80: error : invalid Topic
+[ERROR] 2023/11/02 12:32:17 log.go:80: error in handle topic:: invalid Topic
+[ERROR] 2023/11/02 12:32:17 log.go:80: error:: Error 1049 (42000): Unknown database 'wrongdatabase'
+[ERROR] 2023/11/02 12:32:17 log.go:80: error connecting to the database:: Error 1049 (42000): Unknown database 'wrongdatabase'

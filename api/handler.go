@@ -134,9 +134,9 @@ func generateActivitiesInBackground(csvData []types.Contacts, wg *sync.WaitGroup
 		activitiesStrings = append(activitiesStrings, activitiesString)
 	}
 
-	go Process.RunKafkaConsumerContacts()
+	go Process.RunKafkaConsumerContacts("kafka")
 
-	go Process.RunKafkaConsumerActivity()
+	go Process.RunKafkaConsumerActivity("kafka")
 
 	if err := Process.RunKafkaProducerContacts(contactStatuses); err != nil {
 		logs.Logger.Error("Error running Kafka producer for contacts:", err)

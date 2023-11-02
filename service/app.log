@@ -20783,3 +20783,133 @@
 [ERROR] 2023/11/01 12:48:43 log.go:80: error:: unsupported DB_TYPE: invalid_json
 [WARNING] 2023/11/01 12:48:43 log.go:66: unsupported DB_TYPE:
 [ERROR] 2023/11/01 12:48:43 log.go:80: error:: unsupported DB_TYPE: clickHouse
+[ERROR] 2023/11/02 11:35:30 log.go:80: Error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/11/02 11:35:30 log.go:80: Error:
+[WARNING] 2023/11/02 11:35:30 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:35:30 log.go:80: failed to load database config: unsupported DB_TYPE: wrongConfigMsg
+[ERROR] 2023/11/02 11:35:30 log.go:80: expected ClickHouseConfig, but got
+[WARNING] 2023/11/02 11:35:30 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:35:30 log.go:80: failed to load database config: unsupported DB_TYPE: 
+[INFO] 2023/11/02 11:35:30 log.go:88: Database connection is available
+[INFO] 2023/11/02 11:35:30 log.go:88: Database connection is available
+[ERROR] 2023/11/02 11:35:30 log.go:80: error executing query:: code: 60, message: Table arun_campaign.NonExistentTable does not exist
+[INFO] 2023/11/02 11:35:30 log.go:88: Database connection is available
+[ERROR] 2023/11/02 11:35:31 log.go:80: error:: kafka: client has run out of available brokers to talk to: dial tcp: address invalid-broker: missing port in address
+[INFO] 2023/11/02 11:35:31 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 0 
+
+[ERROR] 2023/11/02 11:35:31 log.go:80: Erorr: messageValues is empty
+[INFO] 2023/11/02 11:35:31 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 1 
+
+[WARNING] 2023/11/02 11:35:42 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:35:42 log.go:80: error:: unsupported DB_TYPE: wrongConfigMsg
+[ERROR] 2023/11/02 11:35:42 log.go:80: error:: configmsg is nil
+[ERROR] 2023/11/02 11:35:42 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/11/02 11:35:42 log.go:80: error:: configmsg is nil
+[WARNING] 2023/11/02 11:35:42 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:35:42 log.go:80: error:: unsupported DB_TYPE: invalid_json
+[WARNING] 2023/11/02 11:35:42 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:35:42 log.go:80: error:: unsupported DB_TYPE: clickHouse
+[ERROR] 2023/11/02 11:38:08 log.go:80: Error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/11/02 11:38:08 log.go:80: Error:
+[WARNING] 2023/11/02 11:38:08 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:38:08 log.go:80: failed to load database config: unsupported DB_TYPE: wrongConfigMsg
+[ERROR] 2023/11/02 11:38:08 log.go:80: expected ClickHouseConfig, but got
+[WARNING] 2023/11/02 11:38:08 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:38:08 log.go:80: failed to load database config: unsupported DB_TYPE: 
+[INFO] 2023/11/02 11:38:08 log.go:88: Database connection is available
+[INFO] 2023/11/02 11:38:08 log.go:88: Database connection is available
+[ERROR] 2023/11/02 11:38:08 log.go:80: error executing query:: code: 60, message: Table arun_campaign.NonExistentTable does not exist
+[INFO] 2023/11/02 11:38:08 log.go:88: Database connection is available
+[ERROR] 2023/11/02 11:38:09 log.go:80: error:: kafka: client has run out of available brokers to talk to: dial tcp: address invalid-broker: missing port in address
+[INFO] 2023/11/02 11:38:09 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 2 
+
+[ERROR] 2023/11/02 11:38:09 log.go:80: Erorr: messageValues is empty
+[INFO] 2023/11/02 11:38:09 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 3 
+
+[WARNING] 2023/11/02 11:38:20 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:38:20 log.go:80: error:: unsupported DB_TYPE: wrongConfigMsg
+[ERROR] 2023/11/02 11:38:20 log.go:80: error:: configmsg is nil
+[ERROR] 2023/11/02 11:38:20 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/11/02 11:38:20 log.go:80: error:: configmsg is nil
+[WARNING] 2023/11/02 11:38:20 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:38:20 log.go:80: error:: unsupported DB_TYPE: invalid_json
+[WARNING] 2023/11/02 11:38:20 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:38:20 log.go:80: error:: unsupported DB_TYPE: clickHouse
+[ERROR] 2023/11/02 11:41:48 log.go:80: Error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/11/02 11:41:48 log.go:80: Error:
+[WARNING] 2023/11/02 11:41:48 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:41:48 log.go:80: failed to load database config: unsupported DB_TYPE: wrongConfigMsg
+[ERROR] 2023/11/02 11:41:48 log.go:80: expected ClickHouseConfig, but got
+[WARNING] 2023/11/02 11:41:48 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:41:48 log.go:80: failed to load database config: unsupported DB_TYPE: 
+[INFO] 2023/11/02 11:41:48 log.go:88: Database connection is available
+[INFO] 2023/11/02 11:41:48 log.go:88: Database connection is available
+[ERROR] 2023/11/02 11:41:48 log.go:80: error executing query:: code: 60, message: Table arun_campaign.NonExistentTable does not exist
+[INFO] 2023/11/02 11:41:48 log.go:88: Database connection is available
+[ERROR] 2023/11/02 11:41:49 log.go:80: error:: kafka: client has run out of available brokers to talk to: dial tcp: address invalid-broker: missing port in address
+[INFO] 2023/11/02 11:41:49 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 4 
+
+[ERROR] 2023/11/02 11:41:49 log.go:80: Erorr: messageValues is empty
+[INFO] 2023/11/02 11:41:49 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 5 
+
+[WARNING] 2023/11/02 11:42:00 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:42:00 log.go:80: error:: unsupported DB_TYPE: wrongConfigMsg
+[ERROR] 2023/11/02 11:42:00 log.go:80: error:: configmsg is nil
+[ERROR] 2023/11/02 11:42:00 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/11/02 11:42:00 log.go:80: error:: configmsg is nil
+[WARNING] 2023/11/02 11:42:00 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:42:00 log.go:80: error:: unsupported DB_TYPE: invalid_json
+[WARNING] 2023/11/02 11:42:00 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:42:00 log.go:80: error:: unsupported DB_TYPE: clickHouse
+[ERROR] 2023/11/02 11:52:47 log.go:80: Error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/11/02 11:52:47 log.go:80: Error:
+[WARNING] 2023/11/02 11:52:47 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:52:47 log.go:80: failed to load database config: unsupported DB_TYPE: wrongConfigMsg
+[ERROR] 2023/11/02 11:52:47 log.go:80: expected ClickHouseConfig, but got
+[WARNING] 2023/11/02 11:52:47 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:52:47 log.go:80: failed to load database config: unsupported DB_TYPE: 
+[INFO] 2023/11/02 11:52:47 log.go:88: Database connection is available
+[INFO] 2023/11/02 11:52:47 log.go:88: Database connection is available
+[ERROR] 2023/11/02 11:52:47 log.go:80: error executing query:: code: 60, message: Table arun_campaign.NonExistentTable does not exist
+[INFO] 2023/11/02 11:52:47 log.go:88: Database connection is available
+[ERROR] 2023/11/02 11:52:47 log.go:80: error:: kafka: client has run out of available brokers to talk to: dial tcp: address invalid-broker: missing port in address
+[INFO] 2023/11/02 11:52:47 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 6 
+
+[ERROR] 2023/11/02 11:52:47 log.go:80: Erorr: messageValues is empty
+[INFO] 2023/11/02 11:52:47 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 7 
+
+[WARNING] 2023/11/02 11:52:58 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:52:58 log.go:80: error:: unsupported DB_TYPE: wrongConfigMsg
+[ERROR] 2023/11/02 11:52:58 log.go:80: error:: configmsg is nil
+[ERROR] 2023/11/02 11:52:58 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/11/02 11:52:58 log.go:80: error:: configmsg is nil
+[WARNING] 2023/11/02 11:52:58 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:52:58 log.go:80: error:: unsupported DB_TYPE: invalid_json
+[WARNING] 2023/11/02 11:52:58 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 11:52:58 log.go:80: error:: unsupported DB_TYPE: clickHouse
+[ERROR] 2023/11/02 12:05:51 log.go:80: Error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/11/02 12:05:51 log.go:80: Error:
+[WARNING] 2023/11/02 12:05:51 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 12:05:51 log.go:80: failed to load database config: unsupported DB_TYPE: wrongConfigMsg
+[ERROR] 2023/11/02 12:05:51 log.go:80: expected ClickHouseConfig, but got
+[WARNING] 2023/11/02 12:05:51 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 12:05:51 log.go:80: failed to load database config: unsupported DB_TYPE: 
+[INFO] 2023/11/02 12:05:51 log.go:88: Database connection is available
+[INFO] 2023/11/02 12:05:51 log.go:88: Database connection is available
+[ERROR] 2023/11/02 12:05:51 log.go:80: error executing query:: code: 60, message: Table arun_campaign.NonExistentTable does not exist
+[INFO] 2023/11/02 12:05:51 log.go:88: Database connection is available
+[ERROR] 2023/11/02 12:05:52 log.go:80: error:: kafka: client has run out of available brokers to talk to: dial tcp: address invalid-broker: missing port in address
+[INFO] 2023/11/02 12:05:52 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 8 
+
+[ERROR] 2023/11/02 12:05:52 log.go:80: Erorr: messageValues is empty
+[INFO] 2023/11/02 12:05:52 log.go:88: Producer Topic: test-topic Message produced to partition: 0 at offset: 9 
+
+[WARNING] 2023/11/02 12:06:02 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 12:06:02 log.go:80: error:: unsupported DB_TYPE: wrongConfigMsg
+[ERROR] 2023/11/02 12:06:02 log.go:80: error:: configmsg is nil
+[ERROR] 2023/11/02 12:06:02 log.go:80: error:: dial tcp :0: connect: connection refused
+[ERROR] 2023/11/02 12:06:02 log.go:80: error:: configmsg is nil
+[WARNING] 2023/11/02 12:06:02 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 12:06:02 log.go:80: error:: unsupported DB_TYPE: invalid_json
+[WARNING] 2023/11/02 12:06:02 log.go:66: unsupported DB_TYPE:
+[ERROR] 2023/11/02 12:06:02 log.go:80: error:: unsupported DB_TYPE: clickHouse
